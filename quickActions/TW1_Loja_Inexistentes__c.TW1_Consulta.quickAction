@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>TW1_Data__c</field>
+        <formula>TODAY()</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>TW1_Noma_da_Loja__c</field>
+        <formula>TW1_Loja_Inexistentes__c.Name</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>TW1_Shopping__c</field>
+        <formula>TW1_Loja_Inexistentes__c.TW1_Shopping__c</formula>
+    </fieldOverrides>
+    <label>Consulta</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <targetObject>TW1_Consulta_de_Loja_Inexistente__c</targetObject>
+    <targetParentField>TW1_Loja_Inexistentes__c</targetParentField>
+    <type>Create</type>
+</QuickAction>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Caixa</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Caixas</value>
+    </caseValues>
+    <fields>
+        <label><!-- CaixaFechado --></label>
+        <name>TW1_CxFechado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data de Abertura --></label>
+        <name>TW1_Data_de_Abertura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operador --></label>
+        <name>TW1_Operador__c</name>
+        <relationshipLabel><!-- Caixas --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Valor de Fechamento --></label>
+        <name>TW1_Valor_Fechamento_Sum__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor Total --></label>
+        <name>TW1_Valor_Total_Sum__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor de Abertura --></label>
+        <name>TW1_Valor_de_Abertura_Sum__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de Caixa</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

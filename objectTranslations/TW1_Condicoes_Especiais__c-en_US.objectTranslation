@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Condições Especiais</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Condições Especiais</value>
+    </caseValues>
+    <fields>
+        <label><!-- Bônus Mult. Brinde --></label>
+        <name>TW1_Bonus_Mult_Brinde__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bônus Mult. Cupom --></label>
+        <name>TW1_Bonus_Mult_Cupom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cartão --></label>
+        <name>TW1_Cartao__c</name>
+        <picklistValues>
+            <masterLabel>CLUBE RDB</masterLabel>
+            <translation><!-- CLUBE RDB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Caixa</masterLabel>
+            <translation><!-- Cartão Caixa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Caixa ELO</masterLabel>
+            <translation><!-- Cartão Caixa ELO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Credito</masterLabel>
+            <translation><!-- Cartão Credito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Crédito(FDS)</masterLabel>
+            <translation><!-- Cartão Crédito(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Debito</masterLabel>
+            <translation><!-- Cartão Debito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Débito(FDS)</masterLabel>
+            <translation><!-- Cartão Débito(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinheiro</masterLabel>
+            <translation><!-- Dinheiro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinheiro(FDS)</masterLabel>
+            <translation><!-- Dinheiro(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISA INFINITE</masterLabel>
+            <translation><!-- VISA INFINITE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISA PLATINUM</masterLabel>
+            <translation><!-- VISA PLATINUM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Promoção --></label>
+        <name>TW1_Promocao__c</name>
+        <relationshipLabel><!-- Condições Especiais --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Layout de Condições Especiais</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

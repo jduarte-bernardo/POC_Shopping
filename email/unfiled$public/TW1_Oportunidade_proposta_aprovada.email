@@ -1,0 +1,8 @@
+Prezado(a) {!Opportunity.OwnerFullName},
+
+   A proposta Numero  {!Opportunity.Name} - {!Opportunity.TW1_Marca__c}, foi aprovada por {!Opportunity.TW1_Gerente_do_proprietario__c}.
+   Por favor, verifique sua proposta aprovada no link abaixo:
+   {!Opportunity.Link}
+
+Att,
+{!Opportunity.TW1_Gerente_do_proprietario__c}

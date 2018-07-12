@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Loja Participante</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lojas Participantes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Loja --></label>
+        <name>TW1_Loja__c</name>
+        <relationshipLabel><!-- Lojas Participantes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Promoção --></label>
+        <name>TW1_Promocao__c</name>
+        <relationshipLabel><!-- Lojas Participantes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SGL Shopping --></label>
+        <name>TW1_SGL_Shopping__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de Loja Participante</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

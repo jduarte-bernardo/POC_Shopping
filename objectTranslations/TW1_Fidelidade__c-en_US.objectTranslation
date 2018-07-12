@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Fidelidade</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Fidelidade</value>
+    </caseValues>
+    <fields>
+        <help><!-- Marcado quando o Marketing torna o cliente Platinum manualmente. --></help>
+        <label><!-- Ação Marketing --></label>
+        <name>Acao_Marketing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ajuste de Saldo --></label>
+        <name>TW1_Ajuste_de_Saldo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bônus Aniversário --></label>
+        <name>TW1_Bonus_Aniversario__c</name>
+    </fields>
+    <fields>
+        <label><!-- Débito Cartão Estacionamento --></label>
+        <name>TW1_Debito_Cartao_Estacionamento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Histórico --></label>
+        <name>TW1_Historico__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID Externo --></label>
+        <name>TW1_ID_Externo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Modalidade --></label>
+        <name>TW1_Modalidade__c</name>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum</masterLabel>
+            <translation><!-- Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect</masterLabel>
+            <translation><!-- Prospect --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Nome do Cliente --></label>
+        <name>TW1_Nome_Cliente__c</name>
+        <relationshipLabel><!-- Fidelidade --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Perdidos --></label>
+        <name>TW1_Perdidos__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGL --></label>
+        <name>TW1_SGL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Saldo --></label>
+        <name>TW1_Saldo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Saldo inicial --></label>
+        <name>TW1_Saldo_inicial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Fidelidade --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Utilizado --></label>
+        <name>TW1_Utilizado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vinhos diários --></label>
+        <name>Vinhos_diarios__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de Fidelidade</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pontuação do cliente --></label>
+            <section>Pontuação do cliente</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Aniversário --></label>
+        <name>Aniversario</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Cadastro de NTFS --></label>
+        <name>Cadastro_de_NTFS</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Tornar Platinum --></label>
+        <name>Tornar_Platinum</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Vinho --></label>
+        <name>Vinho</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- O registro de fidelidade não pode ser criado com modalidade diferente de &quot;Prospect&quot;. --></errorMessage>
+        <name>TW1_VR_Fidelidade_Criar_Prospect</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Esse cliente já possui cadastro de Fidelidade. Não é possível criar um novo registro. --></errorMessage>
+        <name>TW1_VR_Fidelidade_Duplicidade</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Somente usuário do Marketing podem tonar um usuário Platinum manualmente. --></errorMessage>
+        <name>TW1_VR_Fidelidade_Impede_marcar_AcaoMark</name>
+    </validationRules>
+</CustomObjectTranslation>

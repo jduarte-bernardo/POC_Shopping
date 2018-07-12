@@ -1,0 +1,323 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" controller="TabelaComercializacaoController">
+    <aura:attribute name="hideTabela" type="Boolean" default="true" />
+    <aura:attribute name="hideHead" type="Boolean" default="false" />
+    <aura:attribute name="hideLista" type="Boolean" default="true" />
+    <aura:attribute name="shoppingBuscado" type="String" default="" />
+    <aura:attribute name="shoppingId" type="String" />
+    <aura:attribute name="shoppingName" type="String" />
+    <aura:attribute name="listaShopping" type="TW1_Shopping__c[]" />
+    <aura:attribute name="tabelaDados" type="TW1_Propriedade__c[]" />
+    
+    <aura:attribute name="piso" type="Boolean" default="false" />
+    <aura:attribute name="statusProspeccao" type="Boolean" default="false" />
+    <aura:attribute name="status" type="Boolean" default="false" />
+    <aura:attribute name="area" type="Boolean" default="false" />
+    <aura:attribute name="amm" type="Boolean" default="true" />
+    <aura:attribute name="ammM2" type="Boolean" default="true" />
+    <aura:attribute name="fundo" type="Boolean" default="false" />
+    <aura:attribute name="otn" type="Boolean" default="false" />
+    <aura:attribute name="ammOtn" type="Boolean" default="false" />
+    <aura:attribute name="valorTr" type="Boolean" default="false" />
+    <aura:attribute name="condominio" type="Boolean" default="false" />
+    <aura:attribute name="cto" type="Boolean" default="false" />
+    <aura:attribute name="resM2" type="Boolean" default="false" />
+    <aura:attribute name="resSperata" type="Boolean" default="false" />
+    <aura:attribute name="iptu" type="Boolean" default="false" />
+    <aura:attribute name="observacao" type="Boolean" default="false" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getShoppingLista}"/>
+    <aura:handler name="exibirOcultarColuna" event="c:historicoTabelaDadosExibeOcultaColuna" action="{! c.exibirOcultarColuna }" />
+    
+    
+    <div class="{! v.hideHead ? 'hideHead' : '' }">
+        <div class="slds-form-element slds-p-around_xx-large slds-box">
+            <label class="slds-form-element__label" for="text-input-id-1">Busca por Shopping</label>
+            
+            <div class="slds-form-element__control slds-input-has-fixed-addon">
+                <ui:inputText class="slds-input" placeholder="Shopping" value="{!v.shoppingBuscado}" keyup="{!c.keyUpBusca}"></ui:inputText>
+                <div class="slds-button-group" role="group">
+                    <lightning:button class="slds-button slds-button_neutral" onclick="{!c.getShoppingLista}">Buscar</lightning:button>
+                	<lightning:button class="slds-button slds-button_neutral" onclick="{!c.limparShoppingBuscado}">Limpar</lightning:button>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="{! v.hideLista ? 'hideLista' : '' }">
+        Buscando por {! v.shoppingBuscado }
+        <div class="slds-align_absolute-center slds-grid slds-wrap">
+            {! v.listaShopping.length == 0 ? 'Sem resultados' : ''}
+            <aura:iteration items="{!v.listaShopping}" var="shopping">
+                <lightning:button class="slds-button slds-button_neutral slds-p-around_x-large slds-m-around_x-small slds-size_1-of-1" value="{! shopping.Id }" name="{! shopping.Name }" onclick="{! c.showTabelaDados }">
+                    <span class="slds-text-heading_small">{! shopping.Name }</span>
+                </lightning:button>
+            </aura:iteration>
+        </div>
+    </div>
+    
+    
+    <div class="{! v.hideTabela ? 'hideTabela' : '' }">
+        <div class="slds-align_absolute-center slds-size_12-of-12 slds-grid slds-wrap">
+            <!--<div class="slds-size_12-of-12" />-->
+            <button class="slds-button slds-button_neutral slds-size_12-of-12" onclick="{! c.showHead }">
+                &lt;&lt; Busca por Shopping
+            </button>
+            <!--<div class="slds-size_1-of-12" />-->
+        </div>
+        <div class="slds-grid slds-wrap">
+            <!--<div class="slds-size_1-of-12" />-->
+            <div class="slds-size_12-of-12 slds-card">
+                <div class="slds-m-around--medium">
+                    <section id="accordion">
+                        <input type="checkbox" checked="" name="accordion-role" id="colorId" />
+                        <label for="colorId">Exibir/ocultar colunas (máx. 2)</label>
+                        
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Piso" exibeColuna="{! v.piso }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Status de Prospecção" exibeColuna="{! v.statusProspeccao }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Status" exibeColuna="{! v.status }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Área" exibeColuna="{! v.area }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="AMM" exibeColuna="{! v.amm }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="AMM/m²" exibeColuna="{! v.ammM2 }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Fundo" exibeColuna="{! v.fundo }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="OTN" exibeColuna="{! v.otn }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="AMM/OTN" exibeColuna="{! v.ammOtn }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Valor TR" exibeColuna="{! v.valorTr }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Condomínio" exibeColuna="{! v.condominio }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="CTO" exibeColuna="{! v.cto }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Res/m²" exibeColuna="{! v.resM2 }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Res Sperata" exibeColuna="{! v.resSperata }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="IPTU" exibeColuna="{! v.iptu }" />
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Observação" exibeColuna="{! v.observacao }" />
+                    </section>
+                </div> 
+            </div>
+            <!--<div class="slds-size_1-of-12" />-->
+        </div>
+        <div style="background-color:#ffffff;" class="slds-align_absolute-center">
+            <p>{! v.shoppingName }</p>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-size_4-of-12" >
+                <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_cell-buffer">
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Nº da Loja">Nº da Loja</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.tabelaDados}" var="dado">
+                            <tr>
+                                <td data-label="Nº da Loja">
+                                    <div class="slds-truncate" title="{! dado.Name }">{! dado.Name}</div>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+            <div class="slds-size_8-of-12" >
+                <ui:scrollerWrapper >
+                    <div class="{! $Browser.isAndroid ? 'slds-scrollable' : 'slds-scrollable-ios-friendly' }">
+                        <article>
+                            <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_cell-buffer">
+                                <thead>
+                                    <tr class="slds-text-title_caps">
+                                        <aura:if isTrue="{! v.piso }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Piso">Piso</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.statusProspeccao }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Status de Prospecção">Status de Prospecção</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.status }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Status">Status</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.area }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Área">Área</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.amm }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="AMM">AMM</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.ammM2 }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="AMM/m²">AMM/m²</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.fundo }">
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Fundo">Fundo</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.otn }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="OTN">OTN</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.ammOtn }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="AMM/OTN">AMM/OTN</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.valorTr }">
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Valor TR">Valor TR</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{!v.condominio}">
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Condomínio">Condomínio</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{!v.cto}">
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="CTO">CTO</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.resM2 }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Res/m²">Res/m²</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.resSperata }">
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Res Sperata">Res Sperata</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.iptu }">
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="IPTU">IPTU</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.observacao }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Observação">Observação</div>
+                                            </th>
+                                        </aura:if>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.tabelaDados}" var="dado">
+                                        <tr>
+                                            <aura:if isTrue="{! v.piso }" >
+                                                <td data-label="Piso">
+                                                    <div class="slds-truncate" title="{! dado.TW1_Piso__c }">&nbsp;{! dado.TW1_Piso__c }</div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.statusProspeccao }" >
+                                                <td data-label="Status de Prospecção">
+                                                    <div class="slds-truncate" title="{! dado.TW1_Status_da_prospecao__c }">&nbsp;{! dado.TW1_Status_da_prospecao__c }</div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.status }" >
+                                                <td data-label="Status">
+                                                    <div class="slds-truncate" title="{! dado.TW1_Status__c }">&nbsp;{! dado.TW1_Status__c }</div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.area }" >
+                                                <td data-label="Área">
+                                                    <div class="slds-truncate" title="{! dado.TW1_area_m2__c }">&nbsp;{! dado.TW1_area_m2__c }</div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.amm }" >
+                                                <td data-label="AMM">
+                                                    <div class="slds-truncate" title="{!dado.TW1_AMM__c }">
+                                                        &nbsp;<lightning:formattedNumber value="{!dado.TW1_AMM__c }" style="currency" currencyCode="BRL"/> 
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.ammM2 }" >
+                                                <td data-label="AMM/m²">
+                                                    <div class="slds-truncate" title="{!dado.TW1_AMM_M2__c}">
+                                                    	&nbsp;<lightning:formattedNumber value="{!dado.TW1_AMM_M2__c}" style="currency" currencyCode="BRL"/> 
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.fundo }" >
+                                                <td data-label="Fundo">
+                                                    <div class="slds-truncate" title="{! dado.TW1_Fundo__c }">
+                                                        &nbsp;<lightning:formattedNumber value="{! dado.TW1_Fundo__c }" style="currency" currencyCode="BRL"/> 
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.otn }" >
+                                                <td data-label="OTN">
+                                                    <div class="slds-truncate" title="{! dado.TW1_OTN__c }">
+                                                        &nbsp;<lightning:formattedNumber value="{! dado.TW1_OTN__c }" style="currency" currencyCode="BRL"/> 
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.ammOtn }" >
+                                                <td data-label="AMM/OTN">
+                                                    <div class="slds-truncate" title="{! dado.TW1_AMM_OTN__c }">
+                                                        &nbsp;<lightning:formattedNumber value="{! dado.TW1_AMM_OTN__c }" style="currency" currencyCode="BRL"/> 
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.valorTr }" >
+                                                <td data-label="Valor TR">
+                                                    <div class="slds-truncate" title="{! dado.TW1_Valor_TR__c }">
+                                                    	&nbsp;<lightning:formattedNumber value="{! dado.TW1_Valor_TR__c }" style="currency" currencyCode="BRL"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.condominio }" >
+                                                <td data-label="Condomínio">
+                                                    <div class="slds-truncate" title="{! dado.TW1_Condominio__c }">
+                                                        &nbsp;<lightning:formattedNumber value="{! dado.TW1_Condominio__c }" style="currency" currencyCode="BRL"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.cto }" >
+                                                <td data-label="CTO">
+                                                    <div class="slds-truncate" title="{! dado.TW1_Nota_de_d_bito_ou_CTO__c }">
+                                                    	&nbsp;<lightning:formattedNumber value="{! dado.TW1_Nota_de_d_bito_ou_CTO__c }" style="currency" currencyCode="BRL"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.resM2 }" >
+                                                <td data-label="Res/m²">
+                                                    <div class="slds-truncate" title="{! dado.TW1_RES_m2__c }">
+                                                        &nbsp;<lightning:formattedNumber value="{! dado.TW1_RES_m2__c }" style="currency" currencyCode="BRL"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.resSperata }" >
+                                                <td data-label="Res Sperata">
+                                                    <div class="slds-truncate" title="{! dado.TW1_Res_Perata__c }">
+                                                        &nbsp;<lightning:formattedNumber value="{! dado.TW1_Res_Perata__c }" style="currency" currencyCode="BRL"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.iptu }" >
+                                                <td data-label="IPTU">
+                                                    <div class="slds-truncate" title="{! dado.TW1_IPTU__c }">
+                                                        &nbsp;<lightning:formattedNumber value="{! dado.TW1_IPTU__c }" style="currency" currencyCode="BRL"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.observacao }" >
+                                                <td data-label="Observação">
+                                                    <div class="slds-truncate" title="{! dado.TW1_Observacao__c }">&nbsp;{! dado.TW1_Observacao__c }</div>
+                                                </td>
+                                            </aura:if>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                </ui:scrollerWrapper>
+            </div>
+        </div>
+    </div>
+</aura:component>

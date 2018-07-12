@@ -1,0 +1,6 @@
+Prezado(a) {!Opportunity.OwnerFullName},
+   A proposta {!Opportunity.Name} - {!Opportunity.TW1_Marca__c}, foi rejeitada por {!Opportunity.TW1_Gerente_do_proprietario__c}.
+   Por favor, verifique sua proposta rejeitada no link abaixo:
+   {!Opportunity.Link}
+Att,
+{!Opportunity.TW1_Gerente_do_proprietario__c}

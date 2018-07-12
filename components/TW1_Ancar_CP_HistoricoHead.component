@@ -1,0 +1,16 @@
+<apex:component >
+    <div class="slds-media">
+        <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-standard-opportunity" title="Inf. históricas da propriedade">
+                <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity" />
+                </svg>
+            </span> 
+        </div>
+        <div class="slds-media__body">
+            <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Inf. históricas da propriedade">
+                Inf. históricas da propriedade
+            </h1>
+        </div>
+    </div>
+</apex:component>

@@ -1,0 +1,332 @@
+<apex:page controller="TW1_Ancar_TabelaComercialController" showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="true" applyBodyTag="false" docType="html-5.0">
+    
+    <apex:form >   
+        <html>
+            <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="x-ua-compatible" content="ie=edge" />
+                <title></title>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <!-- Import the Design System style sheet -->
+                
+                <style>
+                    
+                    #exibeEsconde{
+                    cursor:pointer
+                    }
+                    
+                    #tabela{
+                    width:20px
+                    }
+                    
+                    .box-title{
+                    width:100%;
+                    padding:5px;
+                    display:block;
+                    background-color:#EEF2F6;
+                    }
+                    
+                    .barraDeexibeEsconde{
+                    cursor:pointer;
+                    font-weight:bold;
+                    font-size: 15px;
+                    border:1px solid #cccccc
+                    }
+                    
+                    .itens .item{
+                    width:100%;
+                    padding:5px;
+                    display:block;
+                    background-color:#F7F9FB;
+                    }
+                    
+                    .itens .item:hover{
+                    background-color:#EEF2F6;
+                    }
+                    
+                    .col-scroll{
+                    overflow-x:auto;
+                    }
+                   
+                    .box-body{
+                        height:auto;
+                        min-height:500px;
+                    }
+                    
+                </style>
+                
+                <apex:slds />
+            </head>
+            <body>
+                <div class="slds-scope box-body">
+                    <!-- TabelaComercializacao Busca Por Shopping -->
+                    <apex:outputpanel id="BuscarPainel">
+                        <apex:outputpanel layout="block" rendered="{!displayPesquisa}">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size--6-of-6">
+                                    <label class="slds-form-element__label" for="text-input-id-1">Busca por Shopping</label> 
+                                </div>
+                                <div class="slds-col slds-size--4-of-6 slds-text-align_center">
+                                    <apex:inputText styleClass="slds-input" title="Digite o Shopping" value="{!valorPesquisaShopping}"/>
+                                </div>
+                                <div class="slds-col slds-size--1-of-6 slds-text-align_left">
+                                  <apex:commandLink value="Buscar" styleClass="slds-button slds-button_neutral" action="{!getListaShoppings}" rerender="BuscarPainel"/>
+                                </div>
+                                <div class="slds-col slds-size--6-of-6 slds-text-align_center">
+                                    <label class="slds-form-element__label" for="text-input-id-1">&nbsp;</label>
+                                    <div class="slds-form-element__control slds-text-align_left">
+                                        Buscando por 
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size--6-of-6 slds-text-align_center">
+                                    <apex:repeat value="{!listshoppings}" var="acct">
+                                        <apex:commandLink style="width:95%" value="{!acct.Name}" styleClass="slds-button slds-button_neutral slds-p-around_x-large slds-m-around_x-small slds-size_1-of-1" action="{!getLucsByShopping}" target="_top" rerender="BuscarPainel,TabelDeDadosComercializacao">
+                                            <apex:param name="DisplayId" value="{!acct.Id}" assignTo="{!IdObjetoDisplay}"></apex:param>
+                                            <apex:param name="Displayname" value="{!acct.Name}" assignTo="{!nomeDoshopping}"></apex:param>
+                                        </apex:commandlink>                                    
+                                    </apex:repeat>
+                                </div>
+                            </div>
+                        </apex:outputpanel>
+                    </apex:outputpanel>
+                    
+                    <apex:outputpanel id="TabelDeDadosComercializacao">
+                        <apex:outputpanel rendered="{!displayTabela}">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size--6-of-6 slds-text-align_center">
+                                    <div class="slds-form-element">
+                                        <apex:commandLink style="width:95%" value="retornar para Busca por Shopping" styleClass="slds-button slds-button_neutral slds-m-around_x-small slds-size_1-of-1" action="{!TelaInicio}" rerender="BuscarPainel,TabelDeDadosComercializacao"/>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size--6-of-6">
+                                    <div class="box-title barraDeexibeEsconde">
+                                        <label id="exibeEsconde">Exibir/ocultar colunas (máx. 2)</label>
+                                    </div>
+                                    <ul class="itens" id="opcoes" style="display:none">
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'Piso_tbl');" id="Nr_Luc" />&nbsp; Piso</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'StatusDeProspeccao_tbl');" id="StatusDeProspeccao" />&nbsp; Status de Prospecção</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'Status_tbl');" id="Status" />&nbsp; Status</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'area_tbl');" id="area" />&nbsp; Área</li>        
+                                        <li class="item"><apex:inputCheckbox selected="true" onclick="ChecaCheckbox(this,'AMM_tbl');" id="AMM" />&nbsp; AMM</li>        
+                                        <li class="item"><apex:inputCheckbox selected="true" onclick="ChecaCheckbox(this,'AMMm_tbl');" id="AMMm" />&nbsp; AMM/m²</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'Fundo_tbl');" id="Fundo" />&nbsp; Fundo</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'OTN_tbl');" id="OTN" />&nbsp; OTN</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'AMMOTN_tbl');" id="AMMOTN" />&nbsp; AMM/OTN</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'ValorTR_tbl');" id="ValorTR" />&nbsp; Valor TR</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'Condominio_tbl');" id="Condominio" />&nbsp; Condomínio</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'CTO_tbl');" id="CTO" />&nbsp; CTO</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'Resm_tbl');" id="Resm" />&nbsp; Res/m²</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'ResSperata_tbl');" id="ResSperata" />&nbsp; Res Sperata</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'IPTU_tbl');" id="IPTU" />&nbsp; IPTU</li>        
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'Observacao_tbl');" id="Observacao" />&nbsp; Observação</li>        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_12-of-12 slds-text-align_center">
+                                    <p>
+                                       {! nomeDoshopping }
+                                    </p>
+                                </div>
+                                <div class="slds-col slds-size_12-of-12 col-scroll">
+                                    <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_cell-buffer">
+                                        <thead id="tabela">
+                                            <tr  class="slds-text-title_caps">
+                                                <th id="NDALOJA_tbl">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="Ano/Mês"><b>Nº DA LOJA</b></div>
+                                                </th>
+                                                <th id="Piso_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Piso</b></div>
+                                                </th>
+                                                <th id="StatusDeProspeccao_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Status de Prospecção</b></div>
+                                                </th>
+                                                <th id="Status_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Status</b></div>
+                                                </th>
+                                                <th id="area_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Área</b></div>
+                                                </th>
+                                                <th id="AMM_tbl" style="display:">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>AMM</b></div>
+                                                </th>
+                                                <th id="AMMm_tbl" style="display:">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>AMM/m²</b></div>
+                                                </th>
+                                                <th id="Fundo_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Fundo</b></div>
+                                                </th>
+                                                <th id="OTN_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>OTN</b></div>
+                                                </th>
+                                                <th id="AMMOTN_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>AMM/OTN</b></div>
+                                                </th>
+                                                <th id="ValorTR_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Valor TR</b></div>
+                                                </th>
+                                                <th id="Condominio_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Condomínio</b></div>
+                                                </th>
+                                                <th id="CTO_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>CTO</b></div>
+                                                </th>
+                                                <th id="Resm_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Res/m²</b></div>
+                                                </th>
+                                                <th id="ResSperata_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Res Sperata</b></div>
+                                                </th>
+                                                <th id="IPTU_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>IPTU</b></div>
+                                                </th>
+                                                <th id="Observacao_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Observação</b></div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tabela">
+                                             <apex:repeat value="{!listlucs}" var="inf" id="dsf">
+                                            <tr>
+                                                <td id="NDALOJA_tbl_2">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">{!inf.Name}</div>
+                                                </td>
+                                                <td id="Piso_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_Piso__c}</div>
+                                                </td>
+                                                <td id="StatusDeProspeccao_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_Status_da_prospecao__c}</div>
+                                                </td>
+                                                <td id="Status_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_Status__c}</div>
+                                                </td>
+                                                <td id="area_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_area_m2__c}</div>
+                                                </td>
+                                                <td id="AMM_tbl_2" style="display:">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                    	<span >{!IF(inf.TW1_AMM__c < 0, "-", "") & IF(ABS(inf.TW1_AMM__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_AMM__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_AMM__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_AMM__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_AMM__c))), 3) & "," & IF(MOD(ABS(inf.TW1_AMM__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_AMM__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_AMM__c) , 1), 2) * 100, 99)))}</span>
+                                                    </div>
+                                                </td>
+                                                <td id="AMMm_tbl_2" style="display:">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                    	<span >{!IF(inf.TW1_AMM_M2__c < 0, "-", "") & IF(ABS(inf.TW1_AMM_M2__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_AMM_M2__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_AMM_M2__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_AMM_M2__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_AMM_M2__c))), 3) & "," & IF(MOD(ABS(inf.TW1_AMM_M2__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_AMM_M2__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_AMM_M2__c) , 1), 2) * 100, 99)))}</span>
+                                                    </div>
+                                                </td>
+                                                <td id="Fundo_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                    	<span >{!IF(inf.TW1_Fundo__c < 0, "-", "") & IF(ABS(inf.TW1_Fundo__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Fundo__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Fundo__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Fundo__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Fundo__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Fundo__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Fundo__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Fundo__c) , 1), 2) * 100, 99)))}</span>
+                                                    </div>
+                                                </td>
+                                                <td id="OTN_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                    	<span >{!IF(inf.TW1_OTN__c < 0, "-", "") & IF(ABS(inf.TW1_OTN__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_OTN__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_OTN__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_OTN__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_OTN__c))), 3) & "," & IF(MOD(ABS(inf.TW1_OTN__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_OTN__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_OTN__c) , 1), 2) * 100, 99)))}</span>
+                                                    </div>
+                                                </td>
+                                                <td id="AMMOTN_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                    	<span >{!IF(inf.TW1_AMM_OTN__c < 0, "-", "") & IF(ABS(inf.TW1_AMM_OTN__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_AMM_OTN__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_AMM_OTN__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_AMM_OTN__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_AMM_OTN__c))), 3) & "," & IF(MOD(ABS(inf.TW1_AMM_OTN__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_AMM_OTN__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_AMM_OTN__c) , 1), 2) * 100, 99)))}</span>
+                                                    </div>
+                                                </td>
+                                                <td id="ValorTR_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                    	<span >{!IF(inf.TW1_Valor_TR__c < 0, "-", "") & IF(ABS(inf.TW1_Valor_TR__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Valor_TR__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Valor_TR__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Valor_TR__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Valor_TR__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Valor_TR__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Valor_TR__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Valor_TR__c) , 1), 2) * 100, 99)))}</span>
+                                                    </div>
+                                                </td>
+                                                <td id="Condominio_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                    	<span >{!IF(inf.TW1_Condominio__c < 0, "-", "") & IF(ABS(inf.TW1_Condominio__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Condominio__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Condominio__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Condominio__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Condominio__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Condominio__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Condominio__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Condominio__c) , 1), 2) * 100, 99)))}</span>
+                                                    </div>
+                                                </td>
+                                                <td id="CTO_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                    	<span >{!IF(inf.TW1_Nota_de_d_bito_ou_CTO__c < 0, "-", "") & IF(ABS(inf.TW1_Nota_de_d_bito_ou_CTO__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Nota_de_d_bito_ou_CTO__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Nota_de_d_bito_ou_CTO__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Nota_de_d_bito_ou_CTO__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Nota_de_d_bito_ou_CTO__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Nota_de_d_bito_ou_CTO__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Nota_de_d_bito_ou_CTO__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Nota_de_d_bito_ou_CTO__c) , 1), 2) * 100, 99)))}</span>
+                                                    </div>
+                                                </td>
+                                                <td id="Resm_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                    	<span >{!IF(inf.TW1_RES_m2__c < 0, "-", "") & IF(ABS(inf.TW1_RES_m2__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_RES_m2__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_RES_m2__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_RES_m2__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_RES_m2__c))), 3) & "," & IF(MOD(ABS(inf.TW1_RES_m2__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_RES_m2__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_RES_m2__c) , 1), 2) * 100, 99)))}</span>
+                                                    </div>
+                                                </td>
+                                                <td id="ResSperata_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                        <span >{!IF(inf.TW1_Res_Perata__c < 0, "-", "") & IF(ABS(inf.TW1_Res_Perata__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Res_Perata__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Res_Perata__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Res_Perata__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Res_Perata__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Res_Perata__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Res_Perata__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Res_Perata__c) , 1), 2) * 100, 99)))}</span>
+                                                       
+                                                    </div>
+                                                </td>
+                                                <td id="IPTU_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">
+                                                        <span >{!IF(inf.TW1_IPTU__c < 0, "-", "") & IF(ABS(inf.TW1_IPTU__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_IPTU__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_IPTU__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_IPTU__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_IPTU__c))), 3) & "," & IF(MOD(ABS(inf.TW1_IPTU__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_IPTU__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_IPTU__c) , 1), 2) * 100, 99)))}</span>
+                                                    </div>
+                                                </td>
+                                                <td id="Observacao_tbl_2" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_Observacao__c}</div>
+                                                </td>
+                                            </tr>
+                                           </apex:repeat>
+                                        </tbody>
+                                    </table> 
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                            
+                            document.getElementById("exibeEsconde").addEventListener("click", function(){
+                                var _opcoes = document.getElementById("opcoes");
+                                if(_opcoes.style.display=='none'){
+                                    _opcoes.style.display='block';
+                                }else{
+                                    _opcoes.style.display='none';
+                                }
+                            });
+                            
+
+                            function desmarcarchbox() {
+                                var btnSelect = document.getElementsByTagName('input');
+                                for (var i = 0; i < btnSelect.length; i++) {
+                                    if (btnSelect[i].type == 'checkbox') {
+                                        //btnSelect[i].checked = false;
+                                        //console.log(btnSelect[i].id);
+                                        if(btnSelect[i].id =='j_id0:j_id1:AMM' || btnSelect[i].id =='j_id0:j_id1:AMMm'){
+                                            btnSelect[i].checked = true;
+                                        }else{
+                                            btnSelect[i].checked = false;
+                                        }
+                                    }
+                                }
+                            };
+                            
+                            desmarcarchbox();
+
+                            var total=2;
+                            var ChecaCheckbox = function(check,Tabela){
+                                var qtdDeLinhas = document.querySelectorAll('#NDALOJA_tbl_2').length;
+                                console.log(qtdDeLinhas);
+                                if (check.checked){
+                                    total++
+                                    console.log(total);
+                                    if(total > 2){
+                                        check.checked = false;
+                                        total-- 
+                                    }else{
+                                        document.getElementById(Tabela).style.display='';
+                                        for (var i = 0; i <= qtdDeLinhas; i++) {
+                                            document.querySelectorAll('#'+Tabela+'_2')[i].style.display='';
+                                        }                                        }
+                                }else{
+                                    document.getElementById(Tabela).style.display='none'
+                                    total-- 
+                                    for (var i = 0; i <= qtdDeLinhas; i++) {
+                                        document.querySelectorAll('#'+Tabela+'_2')[i].style.display='none';
+                                    }
+                                }
+                            };   
+                            
+                            </script>
+                        </apex:outputpanel>
+                    </apex:outputpanel>    
+                </div>
+                <!-- FIM TabelaComercializacao Busca Por Shopping -->
+            </body>
+        </html>
+    </apex:form>
+</apex:page>

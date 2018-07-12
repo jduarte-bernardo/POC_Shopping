@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>NTFS</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>NTFS</value>
+    </caseValues>
+    <fields>
+        <label><!-- Conta principal --></label>
+        <name>Conta_principal__c</name>
+        <relationshipLabel><!-- NTFS (Conta principal) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Forma de Pagamento --></label>
+        <name>Forma_de_Pagamento__c</name>
+        <picklistValues>
+            <masterLabel>Cartão Credito</masterLabel>
+            <translation><!-- Cartão Credito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Debito</masterLabel>
+            <translation><!-- Cartão Debito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinheiro</masterLabel>
+            <translation><!-- Dinheiro --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Marca --></label>
+        <name>Marca__c</name>
+        <relationshipLabel><!-- NTFS (Marca) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cliente --></label>
+        <name>TW1_Cliente__c</name>
+        <relationshipLabel><!-- NTFS (Cliente) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Data da Nota --></label>
+        <name>TW1_Data_da_Nota__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forma de pagamento --></label>
+        <name>TW1_Forma_de_pagamento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loja --></label>
+        <name>TW1_Loja__c</name>
+        <relationshipLabel><!-- NTFS --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Nome do Vendedor --></label>
+        <name>TW1_NomeVendedor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promoção --></label>
+        <name>TW1_Promocao__c</name>
+        <relationshipLabel><!-- NTFS --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- NTFS --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Valor (R$) --></label>
+        <name>TW1_Valor_RS__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de NTFS</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

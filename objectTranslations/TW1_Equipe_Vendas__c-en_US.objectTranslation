@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Equipe de vendas</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Equipes de vendas</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Regional__c</name>
+        <relationshipLabel><!-- Equipe de vendas --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Atuação --></label>
+        <name>TW1_Atuacao__c</name>
+        <picklistValues>
+            <masterLabel>Executivo de Loja</masterLabel>
+            <translation><!-- Executivo de Loja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executivo de Mall &amp; Mídia</masterLabel>
+            <translation><!-- Executivo de Mall &amp; Mídia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gerente</masterLabel>
+            <translation><!-- Gerente --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Equipes de vendas --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Usuário --></label>
+        <name>TW1_Usuario__c</name>
+        <relationshipLabel><!-- Equipes de vendas --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Histórico</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Históricos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data --></label>
+        <name>TW1_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data da Nota --></label>
+        <name>TW1_Data_da_Nota__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fidelidade --></label>
+        <name>TW1_Fidelidade__c</name>
+        <relationshipLabel><!-- Históricos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ID Externo --></label>
+        <name>TW1_ID_Externo__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID Shopping --></label>
+        <name>TW1_ID_Shopping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loja --></label>
+        <name>TW1_Loja__c</name>
+        <relationshipLabel><!-- Históricos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- NTFS --></label>
+        <name>TW1_NTFS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número da NTFS --></label>
+        <name>TW1_Numero_da_NTFS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pontos --></label>
+        <name>TW1_Pontos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Saldo --></label>
+        <name>TW1_Saldo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TW1_Status__c</name>
+        <picklistValues>
+            <masterLabel>Expirada</masterLabel>
+            <translation><!-- Expirada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilizada</masterLabel>
+            <translation><!-- Utilizada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Válida</masterLabel>
+            <translation><!-- Válida --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Taça de vinho hoje --></label>
+        <name>TW1_Taca_de_vinho_hoje_del__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo --></label>
+        <name>TW1_Tipo__c</name>
+        <picklistValues>
+            <masterLabel>Ajuste de Saldo</masterLabel>
+            <translation><!-- Ajuste de Saldo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aniversário</masterLabel>
+            <translation><!-- Aniversário --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ação Marketing</masterLabel>
+            <translation><!-- Ação Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cadastro de NTFS</masterLabel>
+            <translation><!-- Cadastro de NTFS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Estacionamento</masterLabel>
+            <translation><!-- Cartão Estacionamento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Downgrade</masterLabel>
+            <translation><!-- Downgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nota Expirada</masterLabel>
+            <translation><!-- Nota Expirada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saldo Inicial</masterLabel>
+            <translation><!-- Saldo Inicial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vinho</masterLabel>
+            <translation><!-- Vinho --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Valor (R$) --></label>
+        <name>TW1_Valor_RS__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de Histórico</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Ação Marketing --></label>
+        <name>Acao_Marketing</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Ajuste de Saldo --></label>
+        <name>Ajuste_de_Saldo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Aniversário --></label>
+        <name>Aniversario</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cartão Estacionamento --></label>
+        <name>Cartao_Estacionamento</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Downgrade --></label>
+        <name>Downgrade</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Nota Expirada --></label>
+        <name>Nota_Expirada</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Saldo Inicial --></label>
+        <name>Saldo_Inicial</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cadastro de NTFS --></label>
+        <name>TW1_Cadastro_de_NTFS</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Vinho --></label>
+        <name>Vinho</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Saldo insuficiente. --></errorMessage>
+        <name>TW1_VR_Historico_Cliente_Platinum</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O campo de ponto não pode ser alterado manualmente, crie um novo registro para ajustar os pontos. --></errorMessage>
+        <name>TW1_VR_Historico_Pontos_Nota_Expirada</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- O bônus de aniversário já foi utilizado este ano. --></errorMessage>
+        <name>TW1_VR_Historico_Valida_BonusAniversario</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A data da nota não pode ser maior do que 30 dias corridos. --></errorMessage>
+        <name>TW1_VR_Historico_Valida_Data_da_Nota</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Somente clientes Gold ou Platinum podem usufruir desse tipo de benefício. --></errorMessage>
+        <name>TW1_VR_Historico_Valida_Modalidade</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Clientes de modalidade Gold só podem usufruir de uma taça de vinho por dia. --></errorMessage>
+        <name>TW1_VR_Historico_Valida_Quant_Vinho_Gold</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Clientes de modalidade Platinum só podem usufruir de duas taças de vinho por dia. --></errorMessage>
+        <name>TW1_VR_Historico_Valida_Quant_Vinho_Plat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Saldo insuficiente. --></errorMessage>
+        <name>TW1_VR_Historico_Valida_Saldo</name>
+    </validationRules>
+</CustomObjectTranslation>

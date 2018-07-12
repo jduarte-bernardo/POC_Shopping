@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Achados e Perdidos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Achados e Perdidos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Armazenado em --></label>
+        <name>TW1_Armazenado_em__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cliente --></label>
+        <name>TW1_Cliente__c</name>
+        <relationshipLabel><!-- Achados e Perdidos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Data --></label>
+        <name>TW1_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data da Devolução --></label>
+        <name>TW1_Data_da_Devolucao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data da Doação --></label>
+        <name>TW1_Data_da_Doacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data da Perda --></label>
+        <name>TW1_Data_da_Perda__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descrição --></label>
+        <name>TW1_Descricao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Empresa Destino --></label>
+        <name>TW1_Empresa_Destino__c</name>
+    </fields>
+    <fields>
+        <label><!-- Encontrado em --></label>
+        <name>TW1_Encontrado_em__c</name>
+    </fields>
+    <fields>
+        <label><!-- Encontrado por --></label>
+        <name>TW1_Encontrado_por__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID Externo --></label>
+        <name>TW1_ID_Externo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Local --></label>
+        <name>TW1_Local__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nome do Shopping --></label>
+        <name>TW1_Nome_do_Shopping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objeto --></label>
+        <name>TW1_Objeto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observação --></label>
+        <name>TW1_Observacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Achados e Perdidos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TW1_Status__c</name>
+        <picklistValues>
+            <masterLabel>Armazenado</masterLabel>
+            <translation><!-- Armazenado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Destruído</masterLabel>
+            <translation><!-- Destruído --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doado</masterLabel>
+            <translation><!-- Doado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perdido</masterLabel>
+            <translation><!-- Perdido --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Achado</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Devolução --></label>
+            <section>Devolução</section>
+        </sections>
+        <sections>
+            <label><!-- Doação --></label>
+            <section>Doação</section>
+        </sections>
+        <sections>
+            <label><!-- Informações --></label>
+            <section>Informações</section>
+        </sections>
+        <sections>
+            <label><!-- Informações do Sistema --></label>
+            <section>Informações do Sistema</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Perdido</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Novo Perdido --></label>
+            <section>Novo Perdido</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Achado --></label>
+        <name>Achado</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Perdido --></label>
+        <name>Perdido</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Por favor preencha os dados da conta e a data da devolução. --></errorMessage>
+        <name>TW1_Solicita_dados_cliente</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Caso o status seja alterado para Doado se faz necessário os dados da doação nos campos: Empresa Destino e Data da Doação antes de salvar. --></errorMessage>
+        <name>TW1_Solicita_dados_doacao</name>
+    </validationRules>
+</CustomObjectTranslation>

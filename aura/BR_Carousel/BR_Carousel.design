@@ -1,0 +1,5 @@
+<design:component label="AC Image Slider">
+    <design:attribute name="interval"
+                      label="Interval"
+                      description="Sliding interval in milliseconds" />
+</design:component>

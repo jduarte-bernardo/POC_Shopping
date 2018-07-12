@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Auditoria Inf. Histórica</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Auditoria Inf. Históricas</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data da pesquisa --></label>
+        <name>TW1_Data_da_pesquisa__c</name>
+    </fields>
+    <fields>
+        <label><!-- LUC pesquisada --></label>
+        <name>TW1_LUC_pesquisada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marca pesquisada --></label>
+        <name>TW1_Marca_pesquisada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Segmento pesquisado --></label>
+        <name>TW1_Segmento_pesquisado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping pesquisado --></label>
+        <name>TW1_Shopping_pesquisado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de pesquisa --></label>
+        <name>TW1_Tipo_de_pesquisa__c</name>
+    </fields>
+    <fields>
+        <label><!-- Usuário --></label>
+        <name>TW1_Usuario__c</name>
+        <relationshipLabel><!-- Auditoria Inf. Históricas --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

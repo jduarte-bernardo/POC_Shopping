@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Loja São Paulo Usuário de Parceiro</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Loja São Paulo Usuário de Parceiro</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>TW1_Regional_Loja_Centro_Oeste_Norte_2</parentRole>
+</Role>

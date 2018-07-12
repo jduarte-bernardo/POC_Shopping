@@ -1,0 +1,17 @@
+<aura:component >
+    <aura:attribute name="hideFiltrosBuscaShopping" type="Boolean" default="false" />
+    <aura:attribute name="hideFiltrosBuscaLuc" type="Boolean" default="true" />
+    
+    <aura:attribute name="idShopping" type="String" />
+    <aura:attribute name="nomeShopping" type="String" />
+    
+    <aura:handler name="showBuscaShopping" event="c:historicoIrBuscaShopping" action="{! c.showBuscaShopping }" />
+    <aura:handler name="showBuscaLuc" event="c:historicoIrBuscaLuc" action="{! c.showBuscaLuc }" />
+    
+    <div class="{! v.hideFiltrosBuscaShopping ? 'hideTela' : '' }">
+        <c:historicoFiltrosBuscaShopping />
+    </div>
+    <div class="{! v.hideFiltrosBuscaLuc ? 'hideTela' : '' }">
+        <c:historicoFiltrosBuscaLuc idShopping="{! v.idShopping }" nomeShopping="{! v.nomeShopping }" />
+    </div>
+</aura:component>

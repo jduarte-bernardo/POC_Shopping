@@ -1,0 +1,14 @@
+<aura:component >    
+    <div class="slds-p-vertical_xx-large slds-m-vertical_xx-large" >
+        
+        <c:historicoTipoBuscaHeader />
+        
+        <div class="slds-p-vertical_xx-large slds-m-vertical_xx-large slds-button-group slds-align_absolute-center" role="group">
+            
+            <c:historicoBotaoTipoBusca tipoBuscaName="marca" tipoBuscaLabel="Marca" />
+            <c:historicoBotaoTipoBusca tipoBuscaName="segmento" tipoBuscaLabel="Segmento" />
+            <c:historicoBotaoTipoBusca tipoBuscaName="shopping_luc" tipoBuscaLabel="Shopping/LUC" />
+            
+        </div>
+    </div>
+</aura:component>

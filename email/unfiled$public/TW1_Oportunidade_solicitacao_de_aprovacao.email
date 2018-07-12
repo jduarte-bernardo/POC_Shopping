@@ -1,0 +1,7 @@
+Prezado(a) {!Opportunity.TW1_Gerente_do_proprietario__c},
+   A proposta {!Opportunity.Name} - {!Opportunity.TW1_Marca__c},  {!Opportunity.OwnerFullName} está disponível para aprovação no Sales Force.
+   Por favor, solicito que acesse o link abaixo para avaliar a aprovação
+  {!Opportunity.Link}
+
+Att
+{!Opportunity.OwnerFullName}

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>TW1_ID_Ancar</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shopping Ancar</shortDescription>
+        <value>IDsShoppings</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Botafogo_Praia_Shopping</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Botafogo Praia Shopping</shortDescription>
+        <value>a002F000001zv8v</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Boulevard_Rio_Shopping</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Boulevard Rio Shopping</shortDescription>
+        <value>a002F0000020n6S</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Centervale</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Centervale Shopping</shortDescription>
+        <value>a002F0000020n6X</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Conjunto_Nacional</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shopping Conjunto Nacional</shortDescription>
+        <value>Shopping Conjunto Nacional</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Downtown</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Downtown</shortDescription>
+        <value>Downtown</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Ext_Nova_America</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shopping Nova America</shortDescription>
+        <value>a010R000000n9UR</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Golden_Square</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Golden Square Shopping</shortDescription>
+        <value>a002F0000020n6h</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Metro_Itaquera</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shopping Metro Itaquera</shortDescription>
+        <value>Shopping Metro Itaquera</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Natal_Shopping</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Natal Shopping</shortDescription>
+        <value>a002F0000020n6m</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_North_Fortaleza</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>North Shopping Fortaleza</shortDescription>
+        <value>North Shopping Fortaleza</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_North_Joquei</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>North Shopping Joquei</shortDescription>
+        <value>North Shopping Joquei</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_North_Maracanau</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>North Shopping Maracanau</shortDescription>
+        <value>North Shopping Maracanau</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Pantanal</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pantanal Shopping</shortDescription>
+        <value>Pantanal Shopping</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Parque_Bandeiras</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shopping Parque das Bandeiras</shortDescription>
+        <value>a002F0000020n6N</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Porto_Velho</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Porto Velho Shopping</shortDescription>
+        <value>Porto Velho Shopping</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Rio_Design_Barra</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rio Design Barra</shortDescription>
+        <value>a010R000000n9V7QAI</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Rio_Design_Leblon</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rio Design Leblon</shortDescription>
+        <value>Rio Design Leblon</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Shopping_Eldorado</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shopping Eldorado</shortDescription>
+        <value>a002F0000020n6c</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Shopping_Nova_Iguacu</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shopping Nova Iguaçu</shortDescription>
+        <value>a002F0000020n6r</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Shopping_SCIPA</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ID Shopping SCIPA</shortDescription>
+        <value>a010R000000n9VA</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Tipo_de_Conta_Loja</fullName>
+        <categories>IdRecordTypeContas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TW1_ID_Tipo_de_Conta_Loja</shortDescription>
+        <value>0120R0000009F7d</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_Via_Sul_Shopping</fullName>
+        <categories>IDsShoppings</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Via Sul Shopping</shortDescription>
+        <value>Via Sul Shopping</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_tipo_conta_Prospect</fullName>
+        <categories>IdRecordTypeContas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ID tipo conta Prospect</shortDescription>
+        <value>0120R0000009F7i</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_tipo_conta_comercial_PF</fullName>
+        <categories>IdRecordTypeContas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ID tipo conta comercial PF</shortDescription>
+        <value>0120R0000009F7h</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_tipo_conta_comercial_PJ</fullName>
+        <categories>IdRecordTypeContas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ID tipo conta comercial PJ</shortDescription>
+        <value>0120R0000009F7c</value>
+    </labels>
+    <labels>
+        <fullName>TW1_ID_tipo_conta_marca</fullName>
+        <categories>IdRecordTypeContas</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ID tipo conta Marca</shortDescription>
+        <value>0120R0000009Ojj</value>
+    </labels>
+</CustomLabels>

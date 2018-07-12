@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cupom</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cupons</value>
+    </caseValues>
+    <fields>
+        <label><!-- Número --></label>
+        <name>Numero__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sexo --></label>
+        <name>Sexo__c</name>
+        <picklistValues>
+            <masterLabel>Feminino</masterLabel>
+            <translation><!-- Feminino --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Masculino</masterLabel>
+            <translation><!-- Masculino --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bairro --></label>
+        <name>TW1_Bairro__c</name>
+    </fields>
+    <fields>
+        <label><!-- CEP --></label>
+        <name>TW1_CEP__c</name>
+    </fields>
+    <fields>
+        <label><!-- CPF --></label>
+        <name>TW1_CPF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Celular --></label>
+        <name>TW1_Celular__c</name>
+    </fields>
+    <fields>
+        <label><!-- Certificado de Autenticação da Promoção --></label>
+        <name>TW1_Certificado_Autenticao_Promocao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cidade --></label>
+        <name>TW1_Cidade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Complemento --></label>
+        <name>TW1_Complemento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Reimpressão --></label>
+        <name>TW1_Data_Reimpressao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data --></label>
+        <name>TW1_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data de Nascimento --></label>
+        <name>TW1_Data_de_Nascimento__c</name>
+    </fields>
+    <fields>
+        <label><!-- E-mail --></label>
+        <name>TW1_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formas de Pagamento --></label>
+        <name>TW1_Formas_de_Pagamento__c</name>
+        <picklistValues>
+            <masterLabel>CLUBE RIO DESIGN</masterLabel>
+            <translation><!-- CLUBE RIO DESIGN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Caixa</masterLabel>
+            <translation><!-- Cartão Caixa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Caixa ELO</masterLabel>
+            <translation><!-- Cartão Caixa ELO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Credito</masterLabel>
+            <translation><!-- Cartão Credito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Crédito(FDS)</masterLabel>
+            <translation><!-- Cartão Crédito(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Debito</masterLabel>
+            <translation><!-- Cartão Debito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Débito(FDS)</masterLabel>
+            <translation><!-- Cartão Débito(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinheiro</masterLabel>
+            <translation><!-- Dinheiro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinheiro(FDS)</masterLabel>
+            <translation><!-- Dinheiro(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISA INFINITE</masterLabel>
+            <translation><!-- VISA INFINITE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISA PLATINUM</masterLabel>
+            <translation><!-- VISA PLATINUM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visa Vale</masterLabel>
+            <translation><!-- Visa Vale --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gerou Reimpressão --></label>
+        <name>TW1_Gerou_Reimpressao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nome Lojista --></label>
+        <name>TW1_Nome_Lojista__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nome da Loja --></label>
+        <name>TW1_Nome_da_Loja__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nome do Cliente --></label>
+        <name>TW1_Nome_do_Cliente__c</name>
+        <relationshipLabel><!-- Cupons --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Operador --></label>
+        <name>TW1_Operador__c</name>
+        <relationshipLabel><!-- Cupons --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Promoção --></label>
+        <name>TW1_Parametro_Promocao__c</name>
+        <relationshipLabel><!-- Cupons --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pergunta --></label>
+        <name>TW1_Pergunta__c</name>
+    </fields>
+    <fields>
+        <label><!-- RG --></label>
+        <name>TW1_RG__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rua --></label>
+        <name>TW1_Rua__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping_Lookup__c</name>
+        <relationshipLabel><!-- Cupons --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Telefone --></label>
+        <name>TW1_Telefone__c</name>
+    </fields>
+    <fields>
+        <label><!-- UF --></label>
+        <name>TW1_UF__c</name>
+        <picklistValues>
+            <masterLabel>AC</masterLabel>
+            <translation><!-- AC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation><!-- AL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AM</masterLabel>
+            <translation><!-- AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP</masterLabel>
+            <translation><!-- AP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA</masterLabel>
+            <translation><!-- BA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CE</masterLabel>
+            <translation><!-- CE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DF</masterLabel>
+            <translation><!-- DF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES</masterLabel>
+            <translation><!-- ES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GO</masterLabel>
+            <translation><!-- GO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation><!-- MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MG</masterLabel>
+            <translation><!-- MG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation><!-- MS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT</masterLabel>
+            <translation><!-- MT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation><!-- PA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PB</masterLabel>
+            <translation><!-- PB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PE</masterLabel>
+            <translation><!-- PE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PI</masterLabel>
+            <translation><!-- PI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR</masterLabel>
+            <translation><!-- PR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RJ</masterLabel>
+            <translation><!-- RJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RN</masterLabel>
+            <translation><!-- RN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO</masterLabel>
+            <translation><!-- RO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RR</masterLabel>
+            <translation><!-- RR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RS</masterLabel>
+            <translation><!-- RS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation><!-- SC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SE</masterLabel>
+            <translation><!-- SE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SP</masterLabel>
+            <translation><!-- SP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TO</masterLabel>
+            <translation><!-- TO --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Layout de Cupom</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

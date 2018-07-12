@@ -1,0 +1,12 @@
+<aura:component controller="getShoppingsByMarca">
+    <aura:attribute name="marcaBuscada" type="String" default="" />
+    
+    <aura:registerEvent name="showListaShopping" type="c:historicoFiltrosBuscaShowListaShopping"/>
+    <aura:registerEvent name="setListaShopping" type="c:historicoFiltrosBuscaSetListaShopping" />
+    <aura:registerEvent name="setMarcaBuscada" type="c:historicoFiltrosBuscaSetMarcaBuscada" />
+    
+	<div class="slds-form-element__control slds-input-has-fixed-addon">
+        <ui:inputText class="slds-input" placeholder="Digite a Marca" value="{!v.marcaBuscada}" keyup="{!c.keyUpBusca}"></ui:inputText>
+        <lightning:button class="slds-button slds-button_neutral" onclick="{!c.buscarMarca}">Buscar</lightning:button>
+    </div>
+</aura:component>

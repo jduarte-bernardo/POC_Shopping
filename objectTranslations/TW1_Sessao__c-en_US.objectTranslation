@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sessão</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sessões</value>
+    </caseValues>
+    <fields>
+        <label><!-- Programação --></label>
+        <name>Programacao__c</name>
+        <relationshipLabel><!-- Sessões --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Data Fim --></label>
+        <name>TW1_Data_Fim__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Início --></label>
+        <name>TW1_Data_Inicio__c</name>
+    </fields>
+    <fields>
+        <help><!-- Ex.: 12:50 (LEG) / 17:50 (LEG) --></help>
+        <label><!-- Horários --></label>
+        <name>TW1_Horarios__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sala --></label>
+        <name>TW1_Sala__c</name>
+        <relationshipLabel><!-- Sessões --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TW1_Status__c</name>
+        <picklistValues>
+            <masterLabel>Continuação</masterLabel>
+            <translation><!-- Continuação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Encerrado</masterLabel>
+            <translation><!-- Encerrado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estreia</masterLabel>
+            <translation><!-- Estreia --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Layout de Sessão</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

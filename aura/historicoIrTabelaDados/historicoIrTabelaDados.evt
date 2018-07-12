@@ -1,0 +1,9 @@
+<aura:event type="COMPONENT" >
+    <aura:attribute name="shoppingId" type="String" />
+    <aura:attribute name="shoppingName" type="String" />
+    <aura:attribute name="lucName" type="String" />
+    <aura:attribute name="tipoBusca" type="String" />
+    <aura:attribute name="marcaBuscada" type="String" />
+    <aura:attribute name="segmentoBuscado" type="String" />
+    <aura:attribute name="lucBuscada" type="String" />
+</aura:event>

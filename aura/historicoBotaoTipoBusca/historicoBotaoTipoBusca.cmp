@@ -1,0 +1,16 @@
+<aura:component controller="HistoricoBotaoTipoBuscaController">
+    <aura:attribute name="tipoBuscaName" type="String" required="true" />
+    <aura:attribute name="tipoBuscaLabel" type="String" required="true" />
+    
+    <aura:attribute name="buttonShow" type="Boolean" default="false" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:registerEvent name="showBuscaMarca" type="c:historicoIrBuscaMarca"/>
+    <aura:registerEvent name="showBuscaSegmento" type="c:historicoIrBuscaSegmento"/>
+    <aura:registerEvent name="showBuscaShoppingLuc" type="c:historicoIrBuscaShoppingLuc"/>
+    
+    <lightning:button aura:id="btnTipoBusca" name="{!v.tipoBuscaName}" class="{! 'slds-button slds-button_neutral' + (v.buttonShow ? '' : ' btnHide') }" onclick="{! c.selecionaTipoBusca }">
+        {!v.tipoBuscaLabel}
+    </lightning:button>
+</aura:component>

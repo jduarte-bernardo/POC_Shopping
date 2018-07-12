@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute name="tipoBusca" type="String" />
+	
+    <label class="slds-form-element__label" for="text-input-id-1">Busca por {! v.tipoBusca }</label>
+</aura:component>

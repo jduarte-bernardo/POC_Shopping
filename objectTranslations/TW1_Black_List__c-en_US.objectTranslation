@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Black List</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Black Lists</value>
+    </caseValues>
+    <fields>
+        <label><!-- SGL --></label>
+        <name>SGL__c</name>
+    </fields>
+    <fields>
+        <label><!-- CPF do Contato --></label>
+        <name>TW1_CPF__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contato --></label>
+        <name>TW1_Contato__c</name>
+        <relationshipLabel><!-- Black Lists --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Promoção --></label>
+        <name>TW1_Promocao__c</name>
+        <relationshipLabel><!-- Black Lists --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Layout de Black List</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

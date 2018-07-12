@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PostTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <default>true</default>
+    <fields>Account</fields>
+    <fields>TW1_Prazo__c</fields>
+    <fields>TW1_Valor__c</fields>
+    <fields>TW1_VGL_total__c</fields>
+    <label>Template Chatter Aprovação</label>
+</PostTemplate>

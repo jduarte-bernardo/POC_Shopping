@@ -1,0 +1,4 @@
+O executivo {!Account.OwnerFullName}, criou um novo contato comercial com a marca sugerida {!Account.TW1_Marca_pretendida__c}.
+A marca definitiva não foi informada pelo executivo.
+A comercialização do escritório central deverá avaliar e incluir o cadastro da nova marca no VS Web.
+Motivo: Sem o preenchimento da marca definitiva, não será possível sincronizar as cotações do Salesforce para o VS Web.

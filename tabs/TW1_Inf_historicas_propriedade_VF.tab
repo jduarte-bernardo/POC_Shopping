@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Inf. Históricas da Propriedade</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom7: Square</motif>
+    <page>TW1_Ancar_HistoricoTipoDeBusca</page>
+</CustomTab>

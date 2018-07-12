@@ -1,0 +1,15 @@
+<aura:component >
+	<aura:attribute name="hideShoppingLista" type="Boolean" default="false" />
+    <aura:attribute name="listaShopping" type="TW1_Shopping__c[]" />
+    <aura:attribute name="shoppingBuscado" type="String" />
+    
+    <aura:handler name="showListaShopping" event="c:historicoFiltrosBuscaShowListaShopping" action="{! c.showListaShopping }" />
+    <aura:handler name="setListaShopping" event="c:historicoFiltrosBuscaSetListaShopping" action="{! c.setListaShopping }" />
+    <aura:handler name="setShoppingBuscado" event="c:historicoFiltrosBuscaSetShoppingBuscado" action="{! c.setShoppingBuscado }" />
+    
+    <c:historicoFiltrosBuscaShoppingHead />
+    
+    <div class="{! v.hideShoppingLista ? 'hideLista' : '' }">
+        <c:historicoFiltrosBuscaShoppingsListaShoppingLuc listaShopping="{! v.listaShopping }" itemBuscado="{! v.shoppingBuscado }" />
+    </div>
+</aura:component>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>TW1_Data__c</field>
+        <formula>TODAY()</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>TW1_Pontos__c</field>
+        <formula>IF(ISPICKVAL(TW1_Fidelidade__c.TW1_Modalidade__c, &apos;Platinum&apos;) &amp;&amp;  TW1_Fidelidade__c.Vinhos_diarios__c = 0, 0, -100)</formula>
+    </fieldOverrides>
+    <label>Vinho</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>Histórico de vinho cadastrado com sucesso.</successMessage>
+    <targetObject>TW1_Historico__c</targetObject>
+    <targetParentField>TW1_Fidelidade__c</targetParentField>
+    <targetRecordType>TW1_Historico__c.Vinho</targetRecordType>
+    <type>Create</type>
+</QuickAction>

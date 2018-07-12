@@ -1,0 +1,26 @@
+<aura:component controller="TW1_Ancar_Venda_NovaCotacaoConfig_ctrl"  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+	
+    <aura:attribute name="recordId" type="String" default=""/>
+    <aura:attribute name="TipoRegistro" type="String" default=""/>
+    <aura:attribute name="TipoChamada" type="String" default=""/>
+    <aura:attribute name="urlAtual" type="String" default=""/>
+    
+    <aura:handler value="{!this}" name="init" action="{!c.doinit}"/>
+
+    <aura:if isTrue="{!v.TipoRegistro == 'Oportunidade de Mídia' ? true:false}">
+        <c:TW1_Ancar_Venda_CotacaoMidia urlAtual="{!v.urlAtual}" recordId="{!v.recordId}" TipoChamada="{!v.TipoChamada}"/>
+    </aura:if>
+   
+    <aura:if isTrue="{!v.TipoRegistro == 'Oportunidade de Loja' ? true:false}">
+    <c:TW1_Ancar_Venda_CotacaoLoja urlAtual="{!v.urlAtual}" recordId="{!v.recordId}" TipoChamada="{!v.TipoChamada}"/>
+    </aura:if>    
+    
+    <aura:if isTrue="{!v.TipoRegistro == 'Oportunidade de Mall' ? true:false}">
+    <c:TW1_Ancar_Venda_CotacaoMall urlAtual="{!v.urlAtual}" recordId="{!v.recordId}" TipoChamada="{!v.TipoChamada}"/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.TipoRegistro == 'Oportunidade de Feiras e Eventos' ? true:false}">
+    <c:TW1_Ancar_Venda_CotacaoFeira urlAtual="{!v.urlAtual}" recordId="{!v.recordId}" TipoChamada="{!v.TipoChamada}"/>
+    </aura:if>
+   
+</aura:component>

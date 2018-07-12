@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmbeddedServiceFieldService xmlns="http://soap.sforce.com/2006/04/metadata">
+    <embeddedServiceConfig>04IB000000001up</embeddedServiceConfig>
+    <enabled>true</enabled>
+    <masterLabel>EmbeddedServiceFieldService_Parent04IB000000001upMAA_163483c6448</masterLabel>
+</EmbeddedServiceFieldService>

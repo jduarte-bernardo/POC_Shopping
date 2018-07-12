@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ocorrência</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ocorrências</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assunto --></label>
+        <name>Assunto__c</name>
+        <picklistValues>
+            <masterLabel>Comercialização</masterLabel>
+            <translation><!-- Comercialização --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Espaços Publicitários</masterLabel>
+            <translation><!-- Espaços Publicitários --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sugestão/Informação</masterLabel>
+            <translation><!-- Sugestão/Informação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trabalhe Conosco</masterLabel>
+            <translation><!-- Trabalhe Conosco --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Data Quality Description --></label>
+        <name>Data_Quality_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Quality Score --></label>
+        <name>Data_Quality_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email do Cliente --></label>
+        <name>TW1_Email_do_Cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expectativa de Sinistro --></label>
+        <name>TW1_Expectativa_de_Sinistro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Foto --></label>
+        <name>TW1_Foto__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID Externo Shopping --></label>
+        <name>TW1_ID_Externo_Shopping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marca --></label>
+        <name>TW1_Marca__c</name>
+    </fields>
+    <fields>
+        <label><!-- Modelo --></label>
+        <name>TW1_Modelo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nível 1 --></label>
+        <name>TW1_Nivel_1__c</name>
+        <picklistValues>
+            <masterLabel>Acidentes diversos</masterLabel>
+            <translation><!-- Acidentes diversos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administracão</masterLabel>
+            <translation><!-- Administracão --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Area de atendimento</masterLabel>
+            <translation><!-- Area de atendimento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arquitetura e Ambiente</masterLabel>
+            <translation><!-- Arquitetura e Ambiente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atendimento</masterLabel>
+            <translation><!-- Atendimento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atendimento brigada</masterLabel>
+            <translation><!-- Atendimento brigada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clientes x loja</masterLabel>
+            <translation><!-- Clientes x loja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clientes x loja/stands</masterLabel>
+            <translation><!-- Clientes x loja/stands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clientes x shopping</masterLabel>
+            <translation><!-- Clientes x shopping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comercialização lojas e quiosques</masterLabel>
+            <translation><!-- Comercialização lojas e quiosques --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contagem de estoque/balanço/troca de coleção e vitrine (até às 10h)</masterLabel>
+            <translation><!-- Contagem de estoque/balanço/troca de coleção e vitrine (até às 10h) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do lojista</masterLabel>
+            <translation><!-- Do lojista --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Envio de currículos para lojas</masterLabel>
+            <translation><!-- Envio de currículos para lojas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Envio de currículos para o shopping</masterLabel>
+            <translation><!-- Envio de currículos para o shopping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estacionamento</masterLabel>
+            <translation><!-- Estacionamento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informações diversas</masterLabel>
+            <translation><!-- Informações diversas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informações sobre cinema</masterLabel>
+            <translation><!-- Informações sobre cinema --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informações sobre eventos</masterLabel>
+            <translation><!-- Informações sobre eventos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informações sobre lojas</masterLabel>
+            <translation><!-- Informações sobre lojas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informações sobre quiosques</masterLabel>
+            <translation><!-- Informações sobre quiosques --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limpeza</masterLabel>
+            <translation><!-- Limpeza --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limpeza e conservação</masterLabel>
+            <translation><!-- Limpeza e conservação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loja x shopping</masterLabel>
+            <translation><!-- Loja x shopping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loja/stands x shopping</masterLabel>
+            <translation><!-- Loja/stands x shopping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mal súbito</masterLabel>
+            <translation><!-- Mal súbito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manutenção</masterLabel>
+            <translation><!-- Manutenção --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mix de lojas</masterLabel>
+            <translation><!-- Mix de lojas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outros</masterLabel>
+            <translation><!-- Outros --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Predial</masterLabel>
+            <translation><!-- Predial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prestadores de serviço</masterLabel>
+            <translation><!-- Prestadores de serviço --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queda</masterLabel>
+            <translation><!-- Queda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Segurança</masterLabel>
+            <translation><!-- Segurança --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Área de atendimento</masterLabel>
+            <translation><!-- Área de atendimento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Óbito</masterLabel>
+            <translation><!-- Óbito --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Nível 2 --></label>
+        <name>TW1_Nivel_2__c</name>
+        <picklistValues>
+            <masterLabel>Acidentes</masterLabel>
+            <translation><!-- Acidentes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administracao</masterLabel>
+            <translation><!-- Administracao --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adminstração</masterLabel>
+            <translation><!-- Adminstração --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ar condicionado</masterLabel>
+            <translation><!-- Ar condicionado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Area de atendimento</masterLabel>
+            <translation><!-- Area de atendimento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arquitetura e ambiente</masterLabel>
+            <translation><!-- Arquitetura e ambiente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atendimento</masterLabel>
+            <translation><!-- Atendimento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atendimento lojista</masterLabel>
+            <translation><!-- Atendimento lojista --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ações e promoções</masterLabel>
+            <translation><!-- Ações e promoções --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banheiros</masterLabel>
+            <translation><!-- Banheiros --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancela/sem parar</masterLabel>
+            <translation><!-- Cancela/sem parar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cobrança</masterLabel>
+            <translation><!-- Cobrança --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comercial / auditoria</masterLabel>
+            <translation><!-- Comercial / auditoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conservação</masterLabel>
+            <translation><!-- Conservação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dano ao shopping</masterLabel>
+            <translation><!-- Dano ao shopping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Danos a motos</masterLabel>
+            <translation><!-- Danos a motos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Danos a veículos</masterLabel>
+            <translation><!-- Danos a veículos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>De outra loja/lojista</masterLabel>
+            <translation><!-- De outra loja/lojista --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Docas</masterLabel>
+            <translation><!-- Docas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elevadores/escadas rolantes</masterLabel>
+            <translation><!-- Elevadores/escadas rolantes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estacionamento</masterLabel>
+            <translation><!-- Estacionamento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estrutura banheiro familia</masterLabel>
+            <translation><!-- Estrutura banheiro familia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estrutura da loja</masterLabel>
+            <translation><!-- Estrutura da loja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estrutura fraldario</masterLabel>
+            <translation><!-- Estrutura fraldario --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furto de acessórios em motos</masterLabel>
+            <translation><!-- Furto de acessórios em motos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furto de acessórios em veículos</masterLabel>
+            <translation><!-- Furto de acessórios em veículos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furto de motos</masterLabel>
+            <translation><!-- Furto de motos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furto de veículos</masterLabel>
+            <translation><!-- Furto de veículos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furto e roubo e bicicletas</masterLabel>
+            <translation><!-- Furto e roubo e bicicletas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furto shopping</masterLabel>
+            <translation><!-- Furto shopping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Furtos</masterLabel>
+            <translation><!-- Furtos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limpeza</masterLabel>
+            <translation><!-- Limpeza --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mall</masterLabel>
+            <translation><!-- Mall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manutenção</masterLabel>
+            <translation><!-- Manutenção --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Novo</masterLabel>
+            <translation><!-- Novo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Não conformidade cdc</masterLabel>
+            <translation><!-- Não conformidade cdc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Praça de alimentação</masterLabel>
+            <translation><!-- Praça de alimentação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roubo de motos</masterLabel>
+            <translation><!-- Roubo de motos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roubo de veículos</masterLabel>
+            <translation><!-- Roubo de veículos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roubo shopping</masterLabel>
+            <translation><!-- Roubo shopping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roubos</masterLabel>
+            <translation><!-- Roubos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Segurança</masterLabel>
+            <translation><!-- Segurança --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Serviços concierge/espaço cliente</masterLabel>
+            <translation><!-- Serviços concierge/espaço cliente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Serviços do fraldário</masterLabel>
+            <translation><!-- Serviços do fraldário --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Serviços valet</masterLabel>
+            <translation><!-- Serviços valet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site</masterLabel>
+            <translation><!-- Site --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telefone</masterLabel>
+            <translation><!-- Telefone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Troca de mercadorias</masterLabel>
+            <translation><!-- Troca de mercadorias --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vagas especiais</masterLabel>
+            <translation><!-- Vagas especiais --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vazamentos</masterLabel>
+            <translation><!-- Vazamentos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Área de atendimento</masterLabel>
+            <translation><!-- Área de atendimento --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Nome completo (wtc) --></label>
+        <name>TW1_NomeCompleto_Cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observação --></label>
+        <name>TW1_Observacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Placa --></label>
+        <name>TW1_Placa__c</name>
+    </fields>
+    <fields>
+        <label><!-- Setor --></label>
+        <name>TW1_Setor__c</name>
+        <picklistValues>
+            <masterLabel>CAL</masterLabel>
+            <translation><!-- CAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAC</masterLabel>
+            <translation><!-- SAC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Casos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sinistro --></label>
+        <name>TW1_Sinistro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Solução --></label>
+        <name>TW1_Solucao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Telefone do Cliente --></label>
+        <name>TW1_Telefone_do_Cliente__c</name>
+    </fields>
+    <layouts>
+        <layout>Consulta</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dados do Sistema --></label>
+            <section>Dados do Sistema</section>
+        </sections>
+        <sections>
+            <label><!-- Dados do Veículo --></label>
+            <section>Dados do Veículo</section>
+        </sections>
+        <sections>
+            <label><!-- Detalhes da Ocorrência --></label>
+            <section>Detalhes da Ocorrência</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Solução --></label>
+            <section>Solução</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Acompanhamento --></label>
+        <name>Acompanhamento</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Novo Acompanhamento --></label>
+        <name>Novo_Acompanhamento</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email --></label>
+        <name>TW1_CaseAction_EnviarEmail</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Ligação --></label>
+        <name>TW1_CaseAction_RegistrarLigacao</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Elogios --></label>
+        <name>Elogios</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Reclamações --></label>
+        <name>Reclamaoes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Responsabilidade Civil --></label>
+        <name>Responsabilidade_Civil</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Solicitações --></label>
+        <name>Solicitacoes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sugestões --></label>
+        <name>Sugestoes</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Para ocorrências referente a &quot;Estacionamento&quot; se faz necessário o preenchimento da sessão dados do veículo. --></errorMessage>
+        <name>TW1_VR_Ocorrencia_Solicida_Dados_Veiculo</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Printable_View --></label>
+        <name>HTPPV__Printable_View</name>
+    </webLinks>
+</CustomObjectTranslation>

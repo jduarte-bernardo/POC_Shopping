@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <language>pt_BR</language>
+    <masterLabel>logoaliansce8</masterLabel>
+    <originNetwork>Portal do Lojista</originNetwork>
+    <relationships>
+        <workspace>
+            <access>INFERRED</access>
+            <isManagingWorkspace>true</isManagingWorkspace>
+            <name>sfdc_asset_company_assets</name>
+        </workspace>
+    </relationships>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>logo-aliansce.png</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

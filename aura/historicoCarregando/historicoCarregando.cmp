@@ -1,0 +1,5 @@
+<aura:component >
+	<div class="slds-p-vertical_xx-large slds-m-vertical_xx-large slds-text-align_center slds-m-around_x-small slds-text-heading_large" >
+        Carregando...
+    </div>
+</aura:component>

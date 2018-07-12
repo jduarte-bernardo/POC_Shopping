@@ -1,0 +1,12 @@
+<aura:component >
+	<aura:attribute name="luc" type="Product2" />
+    <aura:attribute name="shoppingId" type="String" />
+    <aura:attribute name="shoppingName" type="String" />
+    
+    <aura:registerEvent name="showTabelaDados" type="c:historicoIrTabelaDados"/>
+    
+	<button class="slds-button slds-button_neutral slds-p-around_x-large slds-m-around_x-small slds-size_1-of-1"
+            onclick="{! c.showTabelaDados }">
+        <span class="slds-text-heading_small">{! v.luc.Name }</span>
+    </button>
+</aura:component>

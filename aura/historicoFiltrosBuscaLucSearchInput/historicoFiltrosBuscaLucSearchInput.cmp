@@ -1,0 +1,13 @@
+<aura:component controller="getLucsByLuc">
+    <aura:attribute name="lucBuscada" type="String" default="" />
+    <aura:attribute name="idShopping" type="String" default="" />
+    
+    <aura:registerEvent name="showListaLuc" type="c:historicoFiltrosBuscaShowListaLuc"/>
+    <aura:registerEvent name="setListaLuc" type="c:historicoFiltrosBuscaSetListaLuc" />
+    <aura:registerEvent name="setLucBuscada" type="c:historicoFiltrosBuscaSetLucBuscada" />
+    
+	<div class="slds-form-element__control slds-input-has-fixed-addon">
+        <ui:inputText class="slds-input" placeholder="Digite a LUC" value="{!v.lucBuscada}" keyup="{!c.keyUpBusca}"></ui:inputText>
+        <lightning:button class="slds-button slds-button_neutral" onclick="{!c.buscarLuc}">Buscar</lightning:button>
+    </div>
+</aura:component>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Shopping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Shoppings</value>
+    </caseValues>
+    <fields>
+        <label><!-- DDD --></label>
+        <name>DDD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Imagem --></label>
+        <name>Imagem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planta --></label>
+        <name>Planta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Área Construída --></label>
+        <name>TW1_Area_Construida__c</name>
+    </fields>
+    <fields>
+        <label><!-- Atendimento Comercial --></label>
+        <name>TW1_Atendimento_Comercial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Atendimento ao Público --></label>
+        <name>TW1_Atendimento_ao_Publico__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cidade --></label>
+        <name>TW1_Cidade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Como Chegar --></label>
+        <name>TW1_Como_Chegar__c</name>
+    </fields>
+    <fields>
+        <label><!-- DDI --></label>
+        <name>TW1_DDI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado --></label>
+        <name>TW1_Estado__c</name>
+        <picklistValues>
+            <masterLabel>AC</masterLabel>
+            <translation><!-- AC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation><!-- AL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AM</masterLabel>
+            <translation><!-- AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP</masterLabel>
+            <translation><!-- AP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA</masterLabel>
+            <translation><!-- BA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CE</masterLabel>
+            <translation><!-- CE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DF</masterLabel>
+            <translation><!-- DF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES</masterLabel>
+            <translation><!-- ES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GO</masterLabel>
+            <translation><!-- GO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation><!-- MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MG</masterLabel>
+            <translation><!-- MG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation><!-- MS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT</masterLabel>
+            <translation><!-- MT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation><!-- PA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PB</masterLabel>
+            <translation><!-- PB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PE</masterLabel>
+            <translation><!-- PE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PI</masterLabel>
+            <translation><!-- PI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR</masterLabel>
+            <translation><!-- PR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RJ</masterLabel>
+            <translation><!-- RJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RN</masterLabel>
+            <translation><!-- RN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO</masterLabel>
+            <translation><!-- RO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RR</masterLabel>
+            <translation><!-- RR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RS</masterLabel>
+            <translation><!-- RS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation><!-- SC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SE</masterLabel>
+            <translation><!-- SE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SP</masterLabel>
+            <translation><!-- SP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TO</masterLabel>
+            <translation><!-- TO --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fotos --></label>
+        <name>TW1_Fotos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grupo Empreendimento --></label>
+        <name>TW1_Grupo_Empreendimento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Id Externo VS --></label>
+        <name>TW1_Id_Externo_VS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Id Externo --></label>
+        <name>TW1_Id_Externo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Imagem Fachada --></label>
+        <name>TW1_Imagem_Fachada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Imagem Logotipo --></label>
+        <name>TW1_Imagem_Logo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metragem (m²) --></label>
+        <name>TW1_Metragem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Regional --></label>
+        <name>TW1_Regional__c</name>
+        <picklistValues>
+            <masterLabel>Regional Centro Oeste/ Norte</masterLabel>
+            <translation><!-- Regional Centro Oeste/ Norte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional Nordeste</masterLabel>
+            <translation><!-- Regional Nordeste --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional Rio</masterLabel>
+            <translation><!-- Regional Rio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional Sul</masterLabel>
+            <translation><!-- Regional Sul --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regional São Paulo</masterLabel>
+            <translation><!-- Regional São Paulo --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sigla --></label>
+        <name>TW1_SGL_Empreendimento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Telefone --></label>
+        <name>TW1_Telefone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trabalhe Conosco --></label>
+        <name>TW1_Trabalhe_Conosco__c</name>
+    </fields>
+    <fields>
+        <label><!-- URL Site --></label>
+        <name>TW1_URL_Site__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de Shopping</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Imagens --></label>
+            <section>Imagens</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Condomínio --></label>
+        <name>TW1_Condominio</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Fundo --></label>
+        <name>TW1_Fundo</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

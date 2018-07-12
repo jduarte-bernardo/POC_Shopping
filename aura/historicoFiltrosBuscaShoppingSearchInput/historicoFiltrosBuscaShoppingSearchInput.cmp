@@ -1,0 +1,17 @@
+<aura:component controller="getShoppingsByShopping">
+	<aura:attribute name="shoppingBuscado" type="String" default="" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.buscarShopping}"/>
+    
+    <aura:registerEvent name="showListaShopping" type="c:historicoFiltrosBuscaShowListaShopping"/>
+    <aura:registerEvent name="setListaShopping" type="c:historicoFiltrosBuscaSetListaShopping" />
+    <aura:registerEvent name="setShoppingBuscado" type="c:historicoFiltrosBuscaSetShoppingBuscado" />
+    
+	<div class="slds-form-element__control slds-input-has-fixed-addon">
+        <ui:inputText class="slds-input" placeholder="Digite o Shopping" value="{!v.shoppingBuscado}" keyup="{!c.keyUpBusca}"></ui:inputText>
+        <div class="slds-button-group" role="group">
+            <lightning:button class="slds-button slds-button_neutral" onclick="{!c.buscarShopping}">Buscar</lightning:button>
+            <lightning:button class="slds-button slds-button_neutral" onclick="{!c.limparShoppingBuscado}">Limpar</lightning:button>
+        </div>
+    </div>
+</aura:component>

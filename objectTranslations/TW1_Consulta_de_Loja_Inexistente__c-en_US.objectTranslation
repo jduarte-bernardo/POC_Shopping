@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Consulta de Loja Inexistente</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Consultas de Lojas Inexistentes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data --></label>
+        <name>TW1_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Loja Inexistentes --></label>
+        <name>TW1_Loja_Inexistentes__c</name>
+        <relationshipLabel><!-- Consultas de Lojas Inexistentes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Noma da Loja --></label>
+        <name>TW1_Noma_da_Loja__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Consultas de Lojas Inexistentes --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

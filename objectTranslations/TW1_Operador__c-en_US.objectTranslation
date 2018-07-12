@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Operador</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Operadores</value>
+    </caseValues>
+    <fields>
+        <label><!-- E-mail --></label>
+        <name>TW1_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Empresa --></label>
+        <name>TW1_Empresa__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nome do Usuário --></label>
+        <name>TW1_Nome_do_Usuario__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGL --></label>
+        <name>TW1_SGL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Senha --></label>
+        <name>TW1_Senha__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Operadores --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tipo --></label>
+        <name>TW1_Tipo__c</name>
+        <picklistValues>
+            <masterLabel>Coordenador</masterLabel>
+            <translation><!-- Coordenador --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operador</masterLabel>
+            <translation><!-- Operador --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Layout de Operador</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

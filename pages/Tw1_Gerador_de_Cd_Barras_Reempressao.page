@@ -1,0 +1,61 @@
+<apex:page showHeader="false" sidebar="false" extensions="Tw1_Cartao_Estacio_Ctr_Reempressao" standardController="TW1_Cartoes_Estacionamento__c" tabStyle="TW1_Cartoes_Estacionamento__c" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false"
+           docType="html-5.0" action="{!GerarPdf}">  
+    <html>
+        <head>
+            <style>
+                #lado1{ 
+                    margin-top:35%;
+                    border:0px solid black;
+                    align:center;
+                    line-height:13px;
+                }
+                #lado2{ 
+                    border:0px solid black;
+                    align:center;
+                    line-height:13px;
+                } 
+            </style>
+        </head>
+        <body align="center" margin="0px">
+            <div id="lado1">
+                <!--<h1 style="font-family: Arial Unicode MS"></h1>-->
+                <span style="font-family: verdana;font-size:10px">{!vaFidelidade.Name}</span>
+
+                <!--<h1 style="font-family: Arial Unicode MS; text-transform: uppercase;"> </h1> -->  
+                <br/><span style="font-family: verdana; text-transform: uppercase;font-size:13px">{! If(vaAccount.TW1_Apelido__c=='',vaAccount.Name,vaAccount.TW1_Apelido__c) }</span> 
+                <br/><span style="font-family: verdana; font-size:10px">
+                    <apex:outputText value=" Válido até: {0,date,dd/MM/yyyy}">
+                        <apex:param value="{!vaCartao.TW1_Data_Fim__c}" />
+                    </apex:outputText>
+                </span>
+            </div>
+
+            <div id="lado2">  
+                <apex:includeScript value="/resource/PacoteGerarCartao/js/jsBarcode/JsBarcode.all.min.js"/>
+                <apex:image width="65%" id="barcode" styleClass="barcode"/>
+                <script>
+                
+                var numero = {!vaCartao.TW1_Numero__c}; 
+                var numeroFinal = CompletarCodigoDeBarras(numero) + numero.toString();
+                var canvas = document.createElement("canvas");
+                JsBarcode(canvas, numeroFinal, {format: "ITF"});
+                canvas.toDataURL("image/png");
+                var x = document.querySelector(".barcode");
+                x.src = canvas.toDataURL("image/png");   
+                
+                window.print();
+                
+                function CompletarCodigoDeBarras(numero)
+                {
+                    var n ='';
+                    var j = numero.toString().length;
+                    for (i=j;i<8;i++){
+                        n= n + '0';
+                    }
+                    return n;
+                }
+                </script>
+            </div>              
+        </body>
+    </html>
+</apex:page>

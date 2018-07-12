@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BRMALLS</letterhead>
+    <name>Aprovacao BRMALLS</name>
+    <style>formalLetter</style>
+    <subject>A oportunidade {!Opportunity.Name} requer sua aprovação.</subject>
+    <textOnly>{!Opportunity.OwnerFullName} solicitou sua aprovação para o seguinte item:
+
+Para aprovar ou rejeitar este item, clique neste link https://promoshopping.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view ou responda este email com uma dessas palavras na primeira linha da mensagem: APROVAR, APROVADO, SIM, REJEITAR, REJEITADO, NÃO
+
+Se responder por email, você também poderá adicionar comentários na segunda linha. Os comentários serão armazenados com a solicitação de aprovação no Salesforce CRM.
+
+Também é possível aprovar, rejeitar e comentar sobre essa solicitação em seu feed: https://promoshopping.my.salesforce.com/_ui/core/chatter/ui/ChatterPage
+
+Obrigado,
+Salesforce</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

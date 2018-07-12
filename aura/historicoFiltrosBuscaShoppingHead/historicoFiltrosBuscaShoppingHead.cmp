@@ -1,0 +1,15 @@
+<aura:component >
+	<aura:registerEvent name="showTipoBusca" type="c:historicoIrTipoBusca"/>
+    
+    <div class="slds-align_absolute-center slds-grid slds-wrap">
+        <div class="slds-size_1-of-12" />
+        <lightning:button class="slds-button slds-button_neutral slds-size_10-of-12" onclick="{! c.irTipoBusca }">
+            &lt;&lt; Tipo de Busca 
+        </lightning:button>
+        <div class="slds-size_1-of-12" />
+    </div>
+	<div class="slds-form-element slds-p-around_xx-large slds-box">
+        <c:historicoFiltrosBuscaHeadTitle tipoBusca="Shopping" />
+        <c:historicoFiltrosBuscaShoppingSearchInput />
+    </div>
+</aura:component>

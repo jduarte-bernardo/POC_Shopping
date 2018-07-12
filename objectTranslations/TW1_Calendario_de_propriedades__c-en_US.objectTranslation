@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Calendário de propriedade</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Calendário de propriedades</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data de fim --></label>
+        <name>TW1_Data_de_fim__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data de início --></label>
+        <name>TW1_Data_de_inicio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunidade --></label>
+        <name>TW1_Opportunidade__c</name>
+        <relationshipLabel><!-- Calendário de propriedades --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Propriedade --></label>
+        <name>TW1_Propriedade__c</name>
+        <relationshipLabel><!-- Calendário de propriedades --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ShoppingId --></label>
+        <name>TW1_ShoppingId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TW1_Status__c</name>
+        <picklistValues>
+            <masterLabel>Ocupada</masterLabel>
+            <translation><!-- Ocupada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reservada</masterLabel>
+            <translation><!-- Reservada --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

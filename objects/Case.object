@@ -1,0 +1,3975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloneAsChild</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CloseCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MassClose</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewCase</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Case_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Elogio</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Cancelada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encerrada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Resolvida</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Reclamação</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Cancelada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encerrada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Resolvida</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Reclamações</fullName>
+        <description>Reclamações</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Cancelada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encerrada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Resolvida</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Responsabilidade Civil</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Cancelada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encerrada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Resolvida</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Solicitações</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Cancelada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encerrada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Resolvida</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Sugestão</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Cancelada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encerrada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Resolvida</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <businessProcesses>
+        <fullName>Sugestões</fullName>
+        <description>Sugestões</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Cancelada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encerrada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendente</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Resolvida</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Case_compact_layout</fullName>
+        <fields>Subject</fields>
+        <fields>Priority</fields>
+        <fields>Status</fields>
+        <fields>CaseNumber</fields>
+        <fields>RecordTypeId</fields>
+        <fields>ContactEmail</fields>
+        <fields>ContactId</fields>
+        <fields>ContactPhone</fields>
+        <fields>TW1_Shopping__c</fields>
+        <label>Case compact layout</label>
+    </compactLayouts>
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>AccountId</fullName>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Loja, Conta pessoal padrão</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssetId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assunto__c</fullName>
+        <externalId>false</externalId>
+        <label>Assunto</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Comercialização</fullName>
+                    <default>false</default>
+                    <label>Comercialização</label>
+                </value>
+                <value>
+                    <fullName>Espaços Publicitários</fullName>
+                    <default>false</default>
+                    <label>Espaços Publicitários</label>
+                </value>
+                <value>
+                    <fullName>Sugestão/Informação</fullName>
+                    <default>false</default>
+                    <label>Sugestão/Informação</label>
+                </value>
+                <value>
+                    <fullName>Trabalhe Conosco</fullName>
+                    <default>false</default>
+                    <label>Trabalhe Conosco</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BusinessHoursId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ClosedDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Comments</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactFax</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContactMobile</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>ContactPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Data_Quality_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Data_Quality_Score__c =100,&quot;All Case Details Captured&quot;, &quot;Missing: &quot;&amp;IF( ISPICKVAL( Status,&quot;&quot;),&quot;Status, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF(ISPICKVAL( Type ,&quot;&quot;), &quot;Type, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL( Origin ,&quot;&quot;), &quot;Origin, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL( Reason ,&quot;&quot;), &quot;Reason, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL( Priority ,&quot;&quot;), &quot;Priority, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( LEN( Subject )&lt;5, &quot;Meaningful Subject Line&quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( OR(LEN(ContactId)=0,LEN( AccountId)=0), &quot;Associated Account and Contact&quot;,&quot;&quot;))</formula>
+        <label>Data Quality Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data_Quality_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( OR(LEN(ContactId)=0,LEN( AccountId)=0), 0,10) + IF( ISPICKVAL( Status ,&quot;&quot;), 0,15) + IF( ISPICKVAL( Type ,&quot;&quot;), 0,15) + IF( ISPICKVAL( Origin ,&quot;&quot;), 0,15) + IF( ISPICKVAL(   Reason ,&quot;&quot;), 0,15) + IF(ISPICKVAL(Priority, &quot;&quot;),0,15) + IF(LEN( Subject )&lt;5,0,15)</formula>
+        <label>Data Quality Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>EntitlementId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IsClosedOnCreate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsEscalated</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsStopped</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatus</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>MilestoneStatusIcon</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Origin</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ProductId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reason</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SlaExitDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SlaStartDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SourceId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StopStartDate</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedCompany</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedEmail</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedName</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>SuppliedPhone</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>TW1_Email_do_Cliente__c</fullName>
+        <externalId>false</externalId>
+        <label>Email do Cliente</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Expectativa_de_Sinistro__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Expectativa de Sinistro</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Foto__c</fullName>
+        <externalId>false</externalId>
+        <label>Foto</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TW1_ID_Externo_Shopping__c</fullName>
+        <externalId>true</externalId>
+        <label>ID Externo Shopping</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Marca__c</fullName>
+        <externalId>false</externalId>
+        <label>Marca</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Modelo__c</fullName>
+        <externalId>false</externalId>
+        <label>Modelo</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Nivel_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Nível 1</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Type</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Administracão</fullName>
+                    <default>false</default>
+                    <label>Administracão</label>
+                </value>
+                <value>
+                    <fullName>Area de atendimento</fullName>
+                    <default>false</default>
+                    <label>Area de atendimento</label>
+                </value>
+                <value>
+                    <fullName>Área de atendimento</fullName>
+                    <default>false</default>
+                    <label>Área de atendimento</label>
+                </value>
+                <value>
+                    <fullName>Arquitetura e Ambiente</fullName>
+                    <default>false</default>
+                    <label>Arquitetura e Ambiente</label>
+                </value>
+                <value>
+                    <fullName>Atendimento</fullName>
+                    <default>false</default>
+                    <label>Atendimento</label>
+                </value>
+                <value>
+                    <fullName>Atendimento brigada</fullName>
+                    <default>false</default>
+                    <label>Atendimento brigada</label>
+                </value>
+                <value>
+                    <fullName>Clientes x loja</fullName>
+                    <default>false</default>
+                    <label>Clientes x loja</label>
+                </value>
+                <value>
+                    <fullName>Clientes x loja/stands</fullName>
+                    <default>false</default>
+                    <label>Clientes x loja/stands</label>
+                </value>
+                <value>
+                    <fullName>Clientes x shopping</fullName>
+                    <default>false</default>
+                    <label>Clientes x shopping</label>
+                </value>
+                <value>
+                    <fullName>Comercialização lojas e quiosques</fullName>
+                    <default>false</default>
+                    <label>Comercialização lojas e quiosques</label>
+                </value>
+                <value>
+                    <fullName>Contagem de estoque/balanço/troca de coleção e vitrine (até às 10h)</fullName>
+                    <default>false</default>
+                    <label>Contagem de estoque/balanço/troca de coleção e vitrine (até às 10h)</label>
+                </value>
+                <value>
+                    <fullName>Do lojista</fullName>
+                    <default>false</default>
+                    <label>Do lojista</label>
+                </value>
+                <value>
+                    <fullName>Envio de currículos para lojas</fullName>
+                    <default>false</default>
+                    <label>Envio de currículos para lojas</label>
+                </value>
+                <value>
+                    <fullName>Envio de currículos para o shopping</fullName>
+                    <default>false</default>
+                    <label>Envio de currículos para o shopping</label>
+                </value>
+                <value>
+                    <fullName>Estacionamento</fullName>
+                    <default>false</default>
+                    <label>Estacionamento</label>
+                </value>
+                <value>
+                    <fullName>Informações diversas</fullName>
+                    <default>false</default>
+                    <label>Informações diversas</label>
+                </value>
+                <value>
+                    <fullName>Informações sobre cinema</fullName>
+                    <default>false</default>
+                    <label>Informações sobre cinema</label>
+                </value>
+                <value>
+                    <fullName>Informações sobre eventos</fullName>
+                    <default>false</default>
+                    <label>Informações sobre eventos</label>
+                </value>
+                <value>
+                    <fullName>Informações sobre lojas</fullName>
+                    <default>false</default>
+                    <label>Informações sobre lojas</label>
+                </value>
+                <value>
+                    <fullName>Informações sobre quiosques</fullName>
+                    <default>false</default>
+                    <label>Informações sobre quiosques</label>
+                </value>
+                <value>
+                    <fullName>Limpeza</fullName>
+                    <default>false</default>
+                    <label>Limpeza</label>
+                </value>
+                <value>
+                    <fullName>Limpeza e conservação</fullName>
+                    <default>false</default>
+                    <label>Limpeza e conservação</label>
+                </value>
+                <value>
+                    <fullName>Loja/stands x shopping</fullName>
+                    <default>false</default>
+                    <label>Loja/stands x shopping</label>
+                </value>
+                <value>
+                    <fullName>Loja x shopping</fullName>
+                    <default>false</default>
+                    <label>Loja x shopping</label>
+                </value>
+                <value>
+                    <fullName>Manutenção</fullName>
+                    <default>false</default>
+                    <label>Manutenção</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+                <value>
+                    <fullName>Mix de lojas</fullName>
+                    <default>false</default>
+                    <label>Mix de lojas</label>
+                </value>
+                <value>
+                    <fullName>Outros</fullName>
+                    <default>false</default>
+                    <label>Outros</label>
+                </value>
+                <value>
+                    <fullName>Prestadores de serviço</fullName>
+                    <default>false</default>
+                    <label>Prestadores de serviço</label>
+                </value>
+                <value>
+                    <fullName>Segurança</fullName>
+                    <default>false</default>
+                    <label>Segurança</label>
+                </value>
+                <value>
+                    <fullName>Acidentes diversos</fullName>
+                    <default>false</default>
+                    <label>Acidentes diversos</label>
+                </value>
+                <value>
+                    <fullName>Mal súbito</fullName>
+                    <default>false</default>
+                    <label>Mal súbito</label>
+                </value>
+                <value>
+                    <fullName>Óbito</fullName>
+                    <default>false</default>
+                    <label>Óbito</label>
+                </value>
+                <value>
+                    <fullName>Predial</fullName>
+                    <default>false</default>
+                    <label>Predial</label>
+                </value>
+                <value>
+                    <fullName>Queda</fullName>
+                    <default>false</default>
+                    <label>Queda</label>
+                </value>
+                <value>
+                    <fullName>Administracao</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Administracao</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Area de atendimento</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Área de atendimento</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <valueName>Atendimento</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <valueName>Clientes x loja</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Estacionamento</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <valueName>Limpeza</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <valueName>Loja x shopping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Manutenção</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Marketing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Outros</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Reclamações</controllingFieldValue>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Segurança</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Administracão</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Arquitetura e Ambiente</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Atendimento brigada</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Comercialização lojas e quiosques</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Contagem de estoque/balanço/troca de coleção e vitrine (até às 10h)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Do lojista</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Envio de currículos para lojas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Envio de currículos para o shopping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Informações diversas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Informações sobre cinema</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Informações sobre eventos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Informações sobre lojas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Informações sobre quiosques</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Limpeza e conservação</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Solicitações</controllingFieldValue>
+                <valueName>Prestadores de serviço</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Sugestões</controllingFieldValue>
+                <valueName>Mix de lojas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Clientes x loja/stands</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Clientes x shopping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Elogios</controllingFieldValue>
+                <valueName>Loja/stands x shopping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Responsabilidade Civil</controllingFieldValue>
+                <valueName>Acidentes diversos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Responsabilidade Civil</controllingFieldValue>
+                <valueName>Mal súbito</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Responsabilidade Civil</controllingFieldValue>
+                <valueName>Óbito</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Responsabilidade Civil</controllingFieldValue>
+                <valueName>Predial</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Responsabilidade Civil</controllingFieldValue>
+                <valueName>Queda</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TW1_Nivel_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Nível 2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>TW1_Nivel_1__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Atendimento</fullName>
+                    <default>false</default>
+                    <label>Atendimento</label>
+                </value>
+                <value>
+                    <fullName>Estrutura da loja</fullName>
+                    <default>false</default>
+                    <label>Estrutura da loja</label>
+                </value>
+                <value>
+                    <fullName>Administracao</fullName>
+                    <default>false</default>
+                    <label>Administracao</label>
+                </value>
+                <value>
+                    <fullName>Area de atendimento</fullName>
+                    <default>false</default>
+                    <label>Area de atendimento</label>
+                </value>
+                <value>
+                    <fullName>Arquitetura e ambiente</fullName>
+                    <default>false</default>
+                    <label>Arquitetura e ambiente</label>
+                </value>
+                <value>
+                    <fullName>Conservação</fullName>
+                    <default>false</default>
+                    <label>Conservação</label>
+                </value>
+                <value>
+                    <fullName>Estacionamento</fullName>
+                    <default>false</default>
+                    <label>Estacionamento</label>
+                </value>
+                <value>
+                    <fullName>Manutenção</fullName>
+                    <default>false</default>
+                    <label>Manutenção</label>
+                </value>
+                <value>
+                    <fullName>Marketing</fullName>
+                    <default>false</default>
+                    <label>Marketing</label>
+                </value>
+                <value>
+                    <fullName>Segurança</fullName>
+                    <default>false</default>
+                    <label>Segurança</label>
+                </value>
+                <value>
+                    <fullName>Área de atendimento</fullName>
+                    <default>false</default>
+                    <label>Área de atendimento</label>
+                </value>
+                <value>
+                    <fullName>Estrutura banheiro familia</fullName>
+                    <default>false</default>
+                    <label>Estrutura banheiro familia</label>
+                </value>
+                <value>
+                    <fullName>Estrutura fraldario</fullName>
+                    <default>false</default>
+                    <label>Estrutura fraldario</label>
+                </value>
+                <value>
+                    <fullName>Serviços concierge/espaço cliente</fullName>
+                    <default>false</default>
+                    <label>Serviços concierge/espaço cliente</label>
+                </value>
+                <value>
+                    <fullName>Serviços do fraldário</fullName>
+                    <default>false</default>
+                    <label>Serviços do fraldário</label>
+                </value>
+                <value>
+                    <fullName>Ações e promoções</fullName>
+                    <default>false</default>
+                    <label>Ações e promoções</label>
+                </value>
+                <value>
+                    <fullName>Adminstração</fullName>
+                    <default>false</default>
+                    <label>Adminstração</label>
+                </value>
+                <value>
+                    <fullName>Limpeza</fullName>
+                    <default>false</default>
+                    <label>Limpeza</label>
+                </value>
+                <value>
+                    <fullName>Site</fullName>
+                    <default>false</default>
+                    <label>Site</label>
+                </value>
+                <value>
+                    <fullName>Telefone</fullName>
+                    <default>false</default>
+                    <label>Telefone</label>
+                </value>
+                <value>
+                    <fullName>Acidentes</fullName>
+                    <default>false</default>
+                    <label>Acidentes</label>
+                </value>
+                <value>
+                    <fullName>Atendimento lojista</fullName>
+                    <default>false</default>
+                    <label>Atendimento lojista</label>
+                </value>
+                <value>
+                    <fullName>Furtos</fullName>
+                    <default>false</default>
+                    <label>Furtos</label>
+                </value>
+                <value>
+                    <fullName>Não conformidade cdc</fullName>
+                    <default>false</default>
+                    <label>Não conformidade cdc</label>
+                </value>
+                <value>
+                    <fullName>Roubos</fullName>
+                    <default>false</default>
+                    <label>Roubos</label>
+                </value>
+                <value>
+                    <fullName>Troca de mercadorias</fullName>
+                    <default>false</default>
+                    <label>Troca de mercadorias</label>
+                </value>
+                <value>
+                    <fullName>Cancela/sem parar</fullName>
+                    <default>false</default>
+                    <label>Cancela/sem parar</label>
+                </value>
+                <value>
+                    <fullName>Cobrança</fullName>
+                    <default>false</default>
+                    <label>Cobrança</label>
+                </value>
+                <value>
+                    <fullName>Dano ao shopping</fullName>
+                    <default>false</default>
+                    <label>Dano ao shopping</label>
+                </value>
+                <value>
+                    <fullName>Danos a motos</fullName>
+                    <default>false</default>
+                    <label>Danos a motos</label>
+                </value>
+                <value>
+                    <fullName>Danos a veículos</fullName>
+                    <default>false</default>
+                    <label>Danos a veículos</label>
+                </value>
+                <value>
+                    <fullName>Furto de acessórios em motos</fullName>
+                    <default>false</default>
+                    <label>Furto de acessórios em motos</label>
+                </value>
+                <value>
+                    <fullName>Furto de acessórios em veículos</fullName>
+                    <default>false</default>
+                    <label>Furto de acessórios em veículos</label>
+                </value>
+                <value>
+                    <fullName>Furto de motos</fullName>
+                    <default>false</default>
+                    <label>Furto de motos</label>
+                </value>
+                <value>
+                    <fullName>Furto de veículos</fullName>
+                    <default>false</default>
+                    <label>Furto de veículos</label>
+                </value>
+                <value>
+                    <fullName>Roubo de motos</fullName>
+                    <default>false</default>
+                    <label>Roubo de motos</label>
+                </value>
+                <value>
+                    <fullName>Roubo de veículos</fullName>
+                    <default>false</default>
+                    <label>Roubo de veículos</label>
+                </value>
+                <value>
+                    <fullName>Serviços valet</fullName>
+                    <default>false</default>
+                    <label>Serviços valet</label>
+                </value>
+                <value>
+                    <fullName>Vagas especiais</fullName>
+                    <default>false</default>
+                    <label>Vagas especiais</label>
+                </value>
+                <value>
+                    <fullName>Banheiros</fullName>
+                    <default>false</default>
+                    <label>Banheiros</label>
+                </value>
+                <value>
+                    <fullName>Docas</fullName>
+                    <default>false</default>
+                    <label>Docas</label>
+                </value>
+                <value>
+                    <fullName>Mall</fullName>
+                    <default>false</default>
+                    <label>Mall</label>
+                </value>
+                <value>
+                    <fullName>Praça de alimentação</fullName>
+                    <default>false</default>
+                    <label>Praça de alimentação</label>
+                </value>
+                <value>
+                    <fullName>Comercial / auditoria</fullName>
+                    <default>false</default>
+                    <label>Comercial / auditoria</label>
+                </value>
+                <value>
+                    <fullName>Novo</fullName>
+                    <default>false</default>
+                    <label>Novo</label>
+                </value>
+                <value>
+                    <fullName>De outra loja/lojista</fullName>
+                    <default>false</default>
+                    <label>De outra loja/lojista</label>
+                </value>
+                <value>
+                    <fullName>Ar condicionado</fullName>
+                    <default>false</default>
+                    <label>Ar condicionado</label>
+                </value>
+                <value>
+                    <fullName>Elevadores/escadas rolantes</fullName>
+                    <default>false</default>
+                    <label>Elevadores/escadas rolantes</label>
+                </value>
+                <value>
+                    <fullName>Vazamentos</fullName>
+                    <default>false</default>
+                    <label>Vazamentos</label>
+                </value>
+                <value>
+                    <fullName>Furto shopping</fullName>
+                    <default>false</default>
+                    <label>Furto shopping</label>
+                </value>
+                <value>
+                    <fullName>Furto e roubo e bicicletas</fullName>
+                    <default>false</default>
+                    <label>Furto e roubo e bicicletas</label>
+                </value>
+                <value>
+                    <fullName>Roubo shopping</fullName>
+                    <default>false</default>
+                    <label>Roubo shopping</label>
+                </value>
+                <value>
+                    <fullName>Administração</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Administração</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Loja/stands x shopping</controllingFieldValue>
+                <controllingFieldValue>Loja x shopping</controllingFieldValue>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <controllingFieldValue>Clientes x shopping</controllingFieldValue>
+                <valueName>Area de atendimento</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loja/stands x shopping</controllingFieldValue>
+                <controllingFieldValue>Loja x shopping</controllingFieldValue>
+                <controllingFieldValue>Clientes x shopping</controllingFieldValue>
+                <valueName>Conservação</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loja/stands x shopping</controllingFieldValue>
+                <controllingFieldValue>Loja x shopping</controllingFieldValue>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <controllingFieldValue>Clientes x shopping</controllingFieldValue>
+                <valueName>Manutenção</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loja/stands x shopping</controllingFieldValue>
+                <controllingFieldValue>Loja x shopping</controllingFieldValue>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <controllingFieldValue>Clientes x shopping</controllingFieldValue>
+                <valueName>Segurança</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loja x shopping</controllingFieldValue>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <controllingFieldValue>Clientes x shopping</controllingFieldValue>
+                <valueName>Administracao</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loja x shopping</controllingFieldValue>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <controllingFieldValue>Clientes x shopping</controllingFieldValue>
+                <valueName>Estacionamento</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loja x shopping</controllingFieldValue>
+                <controllingFieldValue>Clientes x shopping</controllingFieldValue>
+                <valueName>Marketing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loja x shopping</controllingFieldValue>
+                <valueName>Comercial / auditoria</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loja x shopping</controllingFieldValue>
+                <valueName>Novo</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Loja x shopping</controllingFieldValue>
+                <valueName>De outra loja/lojista</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manutenção</controllingFieldValue>
+                <valueName>Ar condicionado</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manutenção</controllingFieldValue>
+                <valueName>Elevadores/escadas rolantes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Manutenção</controllingFieldValue>
+                <valueName>Vazamentos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Marketing</controllingFieldValue>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <valueName>Ações e promoções</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Segurança</controllingFieldValue>
+                <controllingFieldValue>Clientes x loja</controllingFieldValue>
+                <valueName>Acidentes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Segurança</controllingFieldValue>
+                <valueName>Furto shopping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Segurança</controllingFieldValue>
+                <valueName>Furto e roubo e bicicletas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Segurança</controllingFieldValue>
+                <valueName>Roubo shopping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Cancela/sem parar</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Cobrança</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Dano ao shopping</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Danos a motos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Danos a veículos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Furto de acessórios em motos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Furto de acessórios em veículos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Furto de motos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Furto de veículos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Roubo de motos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Roubo de veículos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Serviços valet</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Estacionamento</controllingFieldValue>
+                <valueName>Vagas especiais</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Area de atendimento</controllingFieldValue>
+                <controllingFieldValue>Arquitetura e Ambiente</controllingFieldValue>
+                <valueName>Estrutura banheiro familia</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Area de atendimento</controllingFieldValue>
+                <controllingFieldValue>Arquitetura e Ambiente</controllingFieldValue>
+                <valueName>Estrutura fraldario</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Area de atendimento</controllingFieldValue>
+                <controllingFieldValue>Arquitetura e Ambiente</controllingFieldValue>
+                <valueName>Serviços concierge/espaço cliente</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Area de atendimento</controllingFieldValue>
+                <controllingFieldValue>Arquitetura e Ambiente</controllingFieldValue>
+                <valueName>Serviços do fraldário</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <valueName>Área de atendimento</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <valueName>Adminstração</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <valueName>Limpeza</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <valueName>Site</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Atendimento</controllingFieldValue>
+                <valueName>Telefone</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clientes x loja</controllingFieldValue>
+                <valueName>Atendimento lojista</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clientes x loja</controllingFieldValue>
+                <valueName>Furtos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clientes x loja</controllingFieldValue>
+                <valueName>Não conformidade cdc</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clientes x loja</controllingFieldValue>
+                <valueName>Roubos</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clientes x loja</controllingFieldValue>
+                <valueName>Troca de mercadorias</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clientes x loja/stands</controllingFieldValue>
+                <valueName>Atendimento</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clientes x loja/stands</controllingFieldValue>
+                <valueName>Estrutura da loja</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clientes x shopping</controllingFieldValue>
+                <valueName>Arquitetura e ambiente</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limpeza</controllingFieldValue>
+                <valueName>Banheiros</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limpeza</controllingFieldValue>
+                <valueName>Docas</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limpeza</controllingFieldValue>
+                <valueName>Mall</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Limpeza</controllingFieldValue>
+                <valueName>Praça de alimentação</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TW1_NomeCompleto_Cliente__c</fullName>
+        <externalId>false</externalId>
+        <label>Nome completo (wtc)</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Observacao__c</fullName>
+        <externalId>false</externalId>
+        <label>Observação</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Placa__c</fullName>
+        <externalId>false</externalId>
+        <label>Placa</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Setor__c</fullName>
+        <externalId>false</externalId>
+        <label>Setor</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SAC</fullName>
+                    <default>false</default>
+                    <label>SAC</label>
+                </value>
+                <value>
+                    <fullName>CAL</fullName>
+                    <default>false</default>
+                    <label>CAL</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TW1_Shopping__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Shopping</label>
+        <referenceTo>TW1_Shopping__c</referenceTo>
+        <relationshipLabel>Casos</relationshipLabel>
+        <relationshipName>Casos</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Sinistro__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sinistro</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Solucao__c</fullName>
+        <externalId>false</externalId>
+        <label>Solução</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Telefone_do_Cliente__c</fullName>
+        <externalId>false</externalId>
+        <label>Telefone do Cliente</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <listViews>
+        <fullName>AllOpenCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>CASES.TYPE</columns>
+        <columns>NAME</columns>
+        <columns>CASES.ORIGIN</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <columns>TW1_Shopping__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos os ocorrências abertos</label>
+    </listViews>
+    <listViews>
+        <fullName>MyCases</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.ORIGIN</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>MyOpenCases</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>My Open Cases</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>true</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Elogios</fullName>
+        <active>true</active>
+        <businessProcess>Elogio</businessProcess>
+        <compactLayoutAssignment>Case_compact_layout</compactLayoutAssignment>
+        <label>Elogios</label>
+        <picklistValues>
+            <picklist>Assunto__c</picklist>
+            <values>
+                <fullName>Comercialização</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Espaços Publicitários</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sugestão%2FInformação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trabalhe Conosco</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Administração</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Balcão%2FConcierge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mídias Sociais</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ofício %2F Carta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pessoalmente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portal do Lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recepcionista Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reclame Aqui</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Whatsapp</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Escalado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gerada uma nova ocorrência</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instruções não são claras</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problema Inexistente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolvido</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sem retorno do cliente</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Nivel_1__c</picklist>
+            <values>
+                <fullName>Area de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arquitetura e Ambiente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento brigada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x loja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x loja%2Fstands</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercialização lojas e quiosques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contagem de estoque%2Fbalanço%2Ftroca de coleção e vitrine %28até às 10h%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envio de currículos para lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envio de currículos para o shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações diversas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre cinema</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre eventos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre quiosques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza e conservação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loja x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loja%2Fstands x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mix de lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prestadores de serviço</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Área de atendimento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Nivel_2__c</picklist>
+            <values>
+                <fullName>Acidentes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adminstração</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ar condicionado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arquitetura e ambiente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ações e promoções</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banheiros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancela%2Fsem parar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cobrança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercial %2F auditoria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conservação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dano ao shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danos a motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danos a veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De outra loja%2Flojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Docas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elevadores%2Fescadas rolantes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura banheiro familia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura da loja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura fraldario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de acessórios em motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de acessórios em veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto e roubo e bicicletas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furtos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Novo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Não conformidade cdc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Praça de alimentação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo de motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo de veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços concierge%2Fespaço cliente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços do fraldário</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços valet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Troca de mercadorias</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vagas especiais</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vazamentos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Área de atendimento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Setor__c</picklist>
+            <values>
+                <fullName>CAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Elogios</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Reclamaoes</fullName>
+        <active>true</active>
+        <businessProcess>Reclamação</businessProcess>
+        <compactLayoutAssignment>Case_compact_layout</compactLayoutAssignment>
+        <label>Reclamações</label>
+        <picklistValues>
+            <picklist>Assunto__c</picklist>
+            <values>
+                <fullName>Comercialização</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Espaços Publicitários</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sugestão%2FInformação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trabalhe Conosco</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Administração</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Balcão%2FConcierge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mídias Sociais</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ofício %2F Carta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pessoalmente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portal do Lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recepcionista Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reclame Aqui</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Whatsapp</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Escalado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gerada uma nova ocorrência</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instruções não são claras</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problema Inexistente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolvido</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sem retorno do cliente</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Nivel_1__c</picklist>
+            <values>
+                <fullName>Area de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arquitetura e Ambiente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento brigada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x loja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x loja%2Fstands</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercialização lojas e quiosques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contagem de estoque%2Fbalanço%2Ftroca de coleção e vitrine %28até às 10h%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envio de currículos para lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envio de currículos para o shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações diversas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre cinema</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre eventos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre quiosques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza e conservação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loja x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loja%2Fstands x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mix de lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prestadores de serviço</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Área de atendimento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Nivel_2__c</picklist>
+            <values>
+                <fullName>Acidentes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adminstração</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ar condicionado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arquitetura e ambiente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ações e promoções</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banheiros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancela%2Fsem parar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cobrança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercial %2F auditoria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conservação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dano ao shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danos a motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danos a veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De outra loja%2Flojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Docas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elevadores%2Fescadas rolantes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura banheiro familia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura da loja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura fraldario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de acessórios em motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de acessórios em veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto e roubo e bicicletas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furtos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Novo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Não conformidade cdc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Praça de alimentação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo de motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo de veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços concierge%2Fespaço cliente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços do fraldário</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços valet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Troca de mercadorias</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vagas especiais</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vazamentos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Área de atendimento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Setor__c</picklist>
+            <values>
+                <fullName>CAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Reclamações</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Responsabilidade_Civil</fullName>
+        <active>true</active>
+        <businessProcess>Responsabilidade Civil</businessProcess>
+        <label>Responsabilidade Civil</label>
+        <picklistValues>
+            <picklist>Assunto__c</picklist>
+            <values>
+                <fullName>Comercialização</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Espaços Publicitários</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sugestão%2FInformação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trabalhe Conosco</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Administração</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Balcão%2FConcierge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mídias Sociais</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ofício %2F Carta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pessoalmente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portal do Lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recepcionista Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reclame Aqui</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Whatsapp</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Escalado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gerada uma nova ocorrência</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instruções não são claras</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problema Inexistente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolvido</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sem retorno do cliente</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Nivel_1__c</picklist>
+            <values>
+                <fullName>Acidentes diversos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arquitetura e Ambiente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento brigada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x loja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x loja%2Fstands</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercialização lojas e quiosques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contagem de estoque%2Fbalanço%2Ftroca de coleção e vitrine %28até às 10h%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envio de currículos para lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envio de currículos para o shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações diversas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre cinema</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre eventos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre quiosques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza e conservação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loja x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loja%2Fstands x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mal súbito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mix de lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Predial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prestadores de serviço</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queda</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Área de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Óbito</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Nivel_2__c</picklist>
+            <values>
+                <fullName>Acidentes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adminstração</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ar condicionado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arquitetura e ambiente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ações e promoções</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banheiros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancela%2Fsem parar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cobrança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercial %2F auditoria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conservação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dano ao shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danos a motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danos a veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De outra loja%2Flojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Docas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elevadores%2Fescadas rolantes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura banheiro familia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura da loja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura fraldario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de acessórios em motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de acessórios em veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto e roubo e bicicletas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furtos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Novo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Não conformidade cdc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Praça de alimentação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo de motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo de veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços concierge%2Fespaço cliente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços do fraldário</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços valet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Troca de mercadorias</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vagas especiais</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vazamentos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Área de atendimento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Setor__c</picklist>
+            <values>
+                <fullName>CAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Responsabilidade Civil</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Solicitacoes</fullName>
+        <active>true</active>
+        <businessProcess>Solicitações</businessProcess>
+        <compactLayoutAssignment>Case_compact_layout</compactLayoutAssignment>
+        <label>Solicitações</label>
+        <picklistValues>
+            <picklist>Assunto__c</picklist>
+            <values>
+                <fullName>Comercialização</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Espaços Publicitários</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sugestão%2FInformação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trabalhe Conosco</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Administração</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Balcão%2FConcierge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mídias Sociais</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ofício %2F Carta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pessoalmente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portal do Lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recepcionista Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reclame Aqui</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Whatsapp</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Escalado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gerada uma nova ocorrência</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instruções não são claras</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problema Inexistente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolvido</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sem retorno do cliente</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Nivel_1__c</picklist>
+            <values>
+                <fullName>Area de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arquitetura e Ambiente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento brigada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x loja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x loja%2Fstands</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercialização lojas e quiosques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contagem de estoque%2Fbalanço%2Ftroca de coleção e vitrine %28até às 10h%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envio de currículos para lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envio de currículos para o shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações diversas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre cinema</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre eventos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre quiosques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza e conservação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loja x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loja%2Fstands x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mix de lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prestadores de serviço</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Área de atendimento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Nivel_2__c</picklist>
+            <values>
+                <fullName>Acidentes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adminstração</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ar condicionado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arquitetura e ambiente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ações e promoções</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banheiros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancela%2Fsem parar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cobrança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercial %2F auditoria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conservação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dano ao shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danos a motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danos a veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De outra loja%2Flojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Docas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elevadores%2Fescadas rolantes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura banheiro familia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura da loja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura fraldario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de acessórios em motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de acessórios em veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto e roubo e bicicletas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furtos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Novo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Não conformidade cdc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Praça de alimentação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo de motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo de veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços concierge%2Fespaço cliente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços do fraldário</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços valet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Troca de mercadorias</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vagas especiais</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vazamentos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Área de atendimento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Setor__c</picklist>
+            <values>
+                <fullName>CAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Solicitações</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sugestoes</fullName>
+        <active>true</active>
+        <businessProcess>Sugestão</businessProcess>
+        <compactLayoutAssignment>Case_compact_layout</compactLayoutAssignment>
+        <label>Sugestões</label>
+        <picklistValues>
+            <picklist>Assunto__c</picklist>
+            <values>
+                <fullName>Comercialização</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Espaços Publicitários</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sugestão%2FInformação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trabalhe Conosco</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Administração</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Balcão%2FConcierge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mídias Sociais</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ofício %2F Carta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pessoalmente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portal do Lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recepcionista Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reclame Aqui</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Whatsapp</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Escalado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gerada uma nova ocorrência</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instruções não são claras</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Problema Inexistente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resolvido</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sem retorno do cliente</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Nivel_1__c</picklist>
+            <values>
+                <fullName>Area de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arquitetura e Ambiente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento brigada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x loja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x loja%2Fstands</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clientes x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercialização lojas e quiosques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contagem de estoque%2Fbalanço%2Ftroca de coleção e vitrine %28até às 10h%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envio de currículos para lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Envio de currículos para o shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações diversas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre cinema</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre eventos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Informações sobre quiosques</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza e conservação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loja x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loja%2Fstands x shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mix de lojas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prestadores de serviço</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Área de atendimento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Nivel_2__c</picklist>
+            <values>
+                <fullName>Acidentes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adminstração</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ar condicionado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Area de atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Arquitetura e ambiente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atendimento lojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ações e promoções</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banheiros</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancela%2Fsem parar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cobrança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Comercial %2F auditoria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conservação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dano ao shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danos a motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Danos a veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De outra loja%2Flojista</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Docas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elevadores%2Fescadas rolantes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura banheiro familia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura da loja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Estrutura fraldario</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de acessórios em motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de acessórios em veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto de veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto e roubo e bicicletas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furto shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furtos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Limpeza</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manutenção</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Novo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Não conformidade cdc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Praça de alimentação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo de motos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo de veículos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubo shopping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roubos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Segurança</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços concierge%2Fespaço cliente</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços do fraldário</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serviços valet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telefone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Troca de mercadorias</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vagas especiais</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vazamentos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Área de atendimento</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Setor__c</picklist>
+            <values>
+                <fullName>CAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Sugestões</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>CASES.CASE_NUMBER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.SUBJECT</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CASES.PRIORITY</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.CASE_NUMBER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.SUBJECT</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CASES.STATUS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.CASE_NUMBER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.SUBJECT</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CASES.STATUS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TW1_Telefone_do_Cliente__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CASE_NUMBER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CASES.CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>TW1_VR_Ocorrencia_Solicida_Dados_Veiculo</fullName>
+        <active>false</active>
+        <description>Caso nível 1 de reclamação seja igual a Estacionamento se faz necessário o preenchimento do veículo.</description>
+        <errorConditionFormula>ISPICKVAL(TW1_Nivel_1__c, &apos;Estacionamento&apos;) &amp;&amp; (ISBLANK(TW1_Modelo__c) || ISBLANK(TW1_Marca__c) || ISBLANK(TW1_Placa__c))</errorConditionFormula>
+        <errorMessage>Para ocorrências referente a &quot;Estacionamento&quot; se faz necessário o preenchimento da sessão dados do veículo.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>HTPPV__Printable_View</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Printable View</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/HTPPV__PrintableView?id={!Case.Id}</url>
+    </webLinks>
+</CustomObject>

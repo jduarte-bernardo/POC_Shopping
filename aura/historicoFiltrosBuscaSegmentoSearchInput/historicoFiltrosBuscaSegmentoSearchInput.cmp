@@ -1,0 +1,12 @@
+<aura:component controller="getShoppingsBySegmento">
+	<aura:attribute name="segmentoBuscado" type="String" default="" />
+    
+    <aura:registerEvent name="showListaShopping" type="c:historicoFiltrosBuscaShowListaShopping"/>
+    <aura:registerEvent name="setListaShopping" type="c:historicoFiltrosBuscaSetListaShopping" />
+    <aura:registerEvent name="setSegmentoBuscado" type="c:historicoFiltrosBuscaSetSegmentoBuscado" />
+    
+	<div class="slds-form-element__control slds-input-has-fixed-addon">
+        <ui:inputText class="slds-input" placeholder="Digite o Segmento" value="{!v.segmentoBuscado}" keyup="{!c.keyUpBusca}"></ui:inputText>
+        <lightning:button class="slds-button slds-button_neutral" onclick="{!c.buscarSegmento}">Buscar</lightning:button>
+    </div>
+</aura:component>

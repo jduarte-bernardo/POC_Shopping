@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Documentation for BR_Carousel</aura:description>
+	<aura:example name="BR_Carousel" ref="BR_Carousel" label="BR_Carousel">
+		Example for BR_Carousel
+	</aura:example>
+</aura:documentation>

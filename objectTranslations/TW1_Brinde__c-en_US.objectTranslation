@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Brinde</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Brindes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Descrição --></label>
+        <name>TW1_Descricao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Foto --></label>
+        <name>TW1_Foto__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGL --></label>
+        <name>TW1_SGL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Brindes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tipo --></label>
+        <name>Tipo__c</name>
+        <picklistValues>
+            <masterLabel>Produto</masterLabel>
+            <translation><!-- Produto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voucher</masterLabel>
+            <translation><!-- Voucher --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Valor --></label>
+        <name>Valor__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de Brinde</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,94 @@
+<aura:component controller="TW1_Ancar_Venda_RelatOcup_LP_Ctrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="PropriedadeRelatorio" type="Object" default=""/>
+    <aura:attribute name="LabelBtnPesquisar" type="String" default="Refinar"/>
+    <aura:attribute name="ExisteOportunidadesNoPeriodo" type="Boolean" default="false"/>
+    <aura:attribute name="NaoPermitirPesquisar" type="Boolean" default="false"/>
+    <aura:attribute name="Ocupacoes" type="List" />
+    
+    <aura:handler value="{!this}" name="init" action="{!c.doInit}"/>
+    
+    <aura:method name="RefinarRelatorioOcupacao"
+                 description="Sample method with parameter" action="{!c.RefinarRelatorioOcupacao}" access="global">
+        <aura:attribute name="propriedade" type="Object" />
+    </aura:method>
+    
+    <div class="slds-grid slds-wrap">
+        <div class="slds-size_2-of-2">
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Relatório de disponibilidade">Informações de disponibilidade</span>
+                </h3>
+                <div aria-hidden="false" class="slds-section__content">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-size_2-of-2" style="padding-bottom: 5px">
+            <label class="slds-form-element__label" for="text-input-id-1">Nome da propriedade</label>
+            <div class="slds-form-element__control">
+                <ui:outputDate value="{!v.PropriedadeRelatorio.Name}"/>
+            </div>
+        </div>
+        <div class="slds-size_1-of-2" style="margin-right: .2rem; width:48% !important">
+            <ui:inputdate aura:id="idDtini" value="{!v.PropriedadeRelatorio.DataInicio}" label="Data Início" displayDatePicker="true" />
+        </div>
+        <div class="slds-size_1-of-2" style="margin-left: .2rem; width:50% !important">
+            <ui:inputdate aura:id="idDtfim" value="{!v.PropriedadeRelatorio.DataFim}" label="Data Fim" displayDatePicker="true" />
+        </div>
+        
+        <div class="slds-size_2-of-2" style="padding-top:15px !important; padding-bottom: 5px">
+            <lightning:button disabled="{!v.NaoPermitirPesquisar}" onclick="{!c.Refinar}" class="slds-col slds-size_2-of-2 slds-large-size_12-of-12" variant="brand" label="{!v.LabelBtnPesquisar}" />
+        </div>
+        
+        <div class="slds-size_2-of-2">
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Relatório de disponibilidade">Períodos de ocupação</span>
+                </h3>
+                <div aria-hidden="false" class="slds-section__content">
+                    <aura:if isTrue="{!v.ExisteOportunidadesNoPeriodo}">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1">
+                                <div class="{! $Browser.isAndroid ? 'slds-scrollable' : 'slds-scrollable-ios-friendly' }" style="height:150px;overflow-x:scroll">
+                                    <article>
+                                        <table width="100%" class="slds-table slds-table_bordered slds-table_cell-buffer">
+                                            <thead>
+                                                <tr class="slds-text-title_caps">
+                                                    
+                                                    <th scope="col">
+                                                        <div class="slds-truncate" title="Nome">Data início</div>
+                                                    </th>
+                                                    <th scope="col">
+                                                        <div class="slds-truncate" title="Valor">Data fim</div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <aura:iteration items="{!v.Ocupacoes}" var="tabProp" indexVar="index">
+                                                    <tr>
+                                                        <td class="slds-truncate"><ui:outputDate value="{!tabProp.DataInicio}"/></td>
+                                                        <td class="slds-truncate"><ui:outputDate value="{!tabProp.DataFim}"/></td>
+                                                    </tr>
+                                                </aura:iteration>
+                                            </tbody>
+                                        </table>
+                                    </article>
+                                </div>
+                            </div>
+                        </div> 
+                        
+                        <aura:set attribute="else">
+                            
+                            <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                                <h2>Não existe nenhuma alocação para o período desejado.</h2>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</aura:component>

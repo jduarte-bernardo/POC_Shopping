@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_86558333</developerName>
+        <masterLabel>Forma de Pagamento</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>NTFS__c.TW1_Forma_de_pagamento__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>CartÃ£o Credito</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cartão Credito</sourceValue>
+            </sourceValues>
+            <value>Cartão de Crédito</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>CartÃ£o Debito</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cartão Debito</sourceValue>
+            </sourceValues>
+            <value>Cartão de Débito</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Dinheiro</sourceValue>
+            </sourceValues>
+            <value>Dinheiro</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>NTFS__c.TW1_Valor_RS__c</column>
+        </chartSummaries>
+        <chartType>Donut</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>NTFS__c.Marca__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>true</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>NTFS__c.TW1_Valor_RS__c</field>
+    </columns>
+    <columns>
+        <field>NTFS__c.TW1_Data_da_Nota__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_86558333</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>NTFS__c.Marca__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>NTFS com Forma de pagamento</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$NTFS__c@NTFS__c.TW1_Promocao__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>NTFS__c.TW1_Data_da_Nota__c</dateColumn>
+        <endDate>2018-05-20</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2018-05-01</startDate>
+    </timeFrameFilter>
+</Report>

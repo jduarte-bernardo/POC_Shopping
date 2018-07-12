@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="itemBuscado" type="String" />
+    <aura:attribute name="listaLuc" type="Product2[]" />
+    
+    <aura:attribute name="shoppingId" type="String" />
+    <aura:attribute name="shoppingName" type="String" />
+    
+    Buscando por {! v.itemBuscado }
+    
+    <div class="slds-align_absolute-center slds-grid slds-wrap">
+        {! v.listaLuc.length == 0 ? 'Sem resultados' : ''}
+        <aura:iteration items="{!v.listaLuc}" var="luc">
+            <c:historicoFiltrosBuscaLucItem luc="{! luc }" shoppingId="{! v.shoppingId }" shoppingName="{! v.shoppingName }" />
+        </aura:iteration>
+    </div>
+</aura:component>

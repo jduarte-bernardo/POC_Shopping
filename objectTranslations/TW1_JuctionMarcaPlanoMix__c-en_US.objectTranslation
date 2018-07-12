@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Marca e Plano de mix</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Marcas e Plano de mix</value>
+    </caseValues>
+    <fields>
+        <label><!-- Marca --></label>
+        <name>TW1_Marca__c</name>
+        <relationshipLabel><!-- Plano de mix --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Plano de mix --></label>
+        <name>TW1_Plano_de_mix__c</name>
+        <relationshipLabel><!-- Marcas --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

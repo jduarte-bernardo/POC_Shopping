@@ -1,0 +1,10 @@
+.THIS {
+    
+}
+.THIS .widthClass {
+    width : 300px;
+}
+
+.THIS.scrollerSize {
+	height:300px;
+}

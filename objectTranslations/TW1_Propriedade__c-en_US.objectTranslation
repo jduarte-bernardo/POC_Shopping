@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Propriedade</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Propriedades</value>
+    </caseValues>
+    <fields>
+        <label><!-- Planta --></label>
+        <name>Planta__c</name>
+    </fields>
+    <fields>
+        <label><!-- AMM/M² --></label>
+        <name>TW1_AMM_M2__c</name>
+    </fields>
+    <fields>
+        <label><!-- AMM/OTN --></label>
+        <name>TW1_AMM_OTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- AMM --></label>
+        <name>TW1_AMM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Altura --></label>
+        <name>TW1_Altura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ativa --></label>
+        <name>TW1_Ativa__c</name>
+    </fields>
+    <fields>
+        <label><!-- Condominio --></label>
+        <name>TW1_Condominio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fundo --></label>
+        <name>TW1_Fundo__c</name>
+    </fields>
+    <fields>
+        <label><!-- IPTU --></label>
+        <name>TW1_IPTU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Id Externo --></label>
+        <name>TW1_Id_Externo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Largura --></label>
+        <name>TW1_Largura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Localização --></label>
+        <name>TW1_Localizacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nota de débito ou CTO --></label>
+        <name>TW1_Nota_de_d_bito_ou_CTO__c</name>
+    </fields>
+    <fields>
+        <label><!-- OTN --></label>
+        <name>TW1_OTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observação --></label>
+        <name>TW1_Observacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Piso --></label>
+        <name>TW1_Piso__c</name>
+        <picklistValues>
+            <masterLabel>1º andar</masterLabel>
+            <translation><!-- 1º andar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2º andar</masterLabel>
+            <translation><!-- 2º andar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subsolo</masterLabel>
+            <translation><!-- Subsolo --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RES/m² --></label>
+        <name>TW1_RES_m2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Res Perata --></label>
+        <name>TW1_Res_Perata__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGL Shopping --></label>
+        <name>TW1_SGL_Shopping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Propriedades --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TW1_Status__c</name>
+        <picklistValues>
+            <masterLabel>Contrato assinado</masterLabel>
+            <translation><!-- Contrato assinado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ocupada</masterLabel>
+            <translation><!-- Ocupada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repasse</masterLabel>
+            <translation><!-- Repasse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reservada</masterLabel>
+            <translation><!-- Reservada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vaga</masterLabel>
+            <translation><!-- Vaga --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Prospecção/Proposta aprovada --></label>
+        <name>TW1_Status_da_prospecao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subtipo --></label>
+        <name>TW1_Subtipo__c</name>
+        <picklistValues>
+            <masterLabel>Adesivo Piso</masterLabel>
+            <translation><!-- Adesivo Piso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adesivos de Mesa</masterLabel>
+            <translation><!-- Adesivos de Mesa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adoção Fraldário</masterLabel>
+            <translation><!-- Adoção Fraldário --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adoção de Espaço</masterLabel>
+            <translation><!-- Adoção de Espaço --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antena</masterLabel>
+            <translation><!-- Antena --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banner</masterLabel>
+            <translation><!-- Banner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caixa Eletrônico</masterLabel>
+            <translation><!-- Caixa Eletrônico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancela Estacionamento</masterLabel>
+            <translation><!-- Cancela Estacionamento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colunas Mall</masterLabel>
+            <translation><!-- Colunas Mall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colunas Praça de Alimentação</masterLabel>
+            <translation><!-- Colunas Praça de Alimentação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Depósito</masterLabel>
+            <translation><!-- Depósito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Display Mall</masterLabel>
+            <translation><!-- Display Mall --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Display Mesa</masterLabel>
+            <translation><!-- Display Mesa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escada Rolante</masterLabel>
+            <translation><!-- Escada Rolante --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Espelho de Banheiro</masterLabel>
+            <translation><!-- Espelho de Banheiro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evento Externo</masterLabel>
+            <translation><!-- Evento Externo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evento Interno</masterLabel>
+            <translation><!-- Evento Interno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feiras e Eventos</masterLabel>
+            <translation><!-- Feiras e Eventos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mega Banner</masterLabel>
+            <translation><!-- Mega Banner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Megaloja</masterLabel>
+            <translation><!-- Megaloja --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mock up</masterLabel>
+            <translation><!-- Mock up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Painel</masterLabel>
+            <translation><!-- Painel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Painel Backlight</masterLabel>
+            <translation><!-- Painel Backlight --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Painel Fachada</masterLabel>
+            <translation><!-- Painel Fachada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Painel Frontlight</masterLabel>
+            <translation><!-- Painel Frontlight --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Panfletagem</masterLabel>
+            <translation><!-- Panfletagem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Placas aéreas</masterLabel>
+            <translation><!-- Placas aéreas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Porta de Banheiro</masterLabel>
+            <translation><!-- Porta de Banheiro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portas de Acesso</masterLabel>
+            <translation><!-- Portas de Acesso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portas de Elevador</masterLabel>
+            <translation><!-- Portas de Elevador --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Praça de Eventos</masterLabel>
+            <translation><!-- Praça de Eventos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quiosque</masterLabel>
+            <translation><!-- Quiosque --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satélite</masterLabel>
+            <translation><!-- Satélite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stand Temporário</masterLabel>
+            <translation><!-- Stand Temporário --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testeira</masterLabel>
+            <translation><!-- Testeira --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Totem Digital</masterLabel>
+            <translation><!-- Totem Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Totem Interno</masterLabel>
+            <translation><!-- Totem Interno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voicer de cancela</masterLabel>
+            <translation><!-- Voicer de cancela --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Âncora</masterLabel>
+            <translation><!-- Âncora --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- URL da Imagem 1 --></label>
+        <name>TW1_URL_da_imagem1__c</name>
+    </fields>
+    <fields>
+        <label><!-- URL da Imagem 2 --></label>
+        <name>TW1_URL_da_imagem2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor PEC --></label>
+        <name>TW1_Valor_PEC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor TR --></label>
+        <name>TW1_Valor_TR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor de tabela --></label>
+        <name>TW1_Valor_de_tabela__c</name>
+    </fields>
+    <fields>
+        <label><!-- Área (m²) --></label>
+        <name>TW1_area_m2__c</name>
+    </fields>
+    <layouts>
+        <layout>Loja</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Imagens da Propriedade --></label>
+            <section>Imagens da Propriedade</section>
+        </sections>
+        <sections>
+            <label><!-- Informações de Comercialização --></label>
+            <section>Informações de Comercialização</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Mall</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Imagens da Propriedade --></label>
+            <section>Imagens da Propriedade</section>
+        </sections>
+        <sections>
+            <label><!-- Informações de Comercialização --></label>
+            <section>Informações de Comercialização</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Mídia</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Imagens da Propriedade --></label>
+            <section>Imagens da Propriedade</section>
+        </sections>
+        <sections>
+            <label><!-- Informações de Comercialização --></label>
+            <section>Informações de Comercialização</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Propriedade de loja --></label>
+        <name>TW1_Propriedade_Loja</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Propriedade de mall --></label>
+        <name>TW1_Propriedade_Mall</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Propriedade de mídia --></label>
+        <name>TW1_Propriedade_Midia</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Propriedade feiras e eventos --></label>
+        <name>TW1_Propriedade_feiras_e_eventos</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Você Não tem permissão para alterar o nº da propriedade --></errorMessage>
+        <name>ImpedeEdicaoNumPropriedade</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Você Não tem permissão para alterar o nº da propriedade --></errorMessage>
+        <name>TW1_PropriedadeImpedeEdicaoName</name>
+    </validationRules>
+</CustomObjectTranslation>

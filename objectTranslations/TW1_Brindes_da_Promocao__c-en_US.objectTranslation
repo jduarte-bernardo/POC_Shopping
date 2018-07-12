@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Brinde da Promoção</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Brindes da Promoção</value>
+    </caseValues>
+    <fields>
+        <label><!-- Brinde --></label>
+        <name>TW1_Brinde__c</name>
+        <relationshipLabel><!-- Brindes da Promoção --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Promoção --></label>
+        <name>TW1_Promocao__c</name>
+        <relationshipLabel><!-- Brindes da Promoção --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Layout de Brinde da Promoção</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Stand</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Stands</value>
+    </caseValues>
+    <fields>
+        <label><!-- Localização --></label>
+        <name>TW1_Localizacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Stands --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Layout de Stand</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Fraldário</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Fraldário</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data --></label>
+        <name>TW1_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependente --></label>
+        <lookupFilter>
+            <errorMessage><!-- Esse cliente não possui dependentes cadastrados. --></errorMessage>
+        </lookupFilter>
+        <name>TW1_Dependente__c</name>
+        <relationshipLabel><!-- Fraldário --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ID Externo --></label>
+        <name>TW1_ID_Externo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Itens --></label>
+        <name>TW1_Itens__c</name>
+        <picklistValues>
+            <masterLabel>Alimentação</masterLabel>
+            <translation><!-- Alimentação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amamentação</masterLabel>
+            <translation><!-- Amamentação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banheiro Infantil</masterLabel>
+            <translation><!-- Banheiro Infantil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bebedouro/Lavar as Mãos</masterLabel>
+            <translation><!-- Bebedouro/Lavar as Mãos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ducha</masterLabel>
+            <translation><!-- Ducha --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fralda</masterLabel>
+            <translation><!-- Fralda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Microondas</masterLabel>
+            <translation><!-- Microondas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trocador</masterLabel>
+            <translation><!-- Trocador --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Nome do Cliente --></label>
+        <name>TW1_Nome_do_Cliente__c</name>
+        <relationshipLabel><!-- Fraldário --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Fraldário --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Layout de Fraldário</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Itens --></label>
+            <section>Itens</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

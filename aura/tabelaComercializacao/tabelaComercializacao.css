@@ -1,0 +1,56 @@
+.THIS {
+
+}
+.THIS.hideTabela{
+    display: none;
+}
+.THIS.hideLista{
+    display: none;
+}
+.THIS.hideHead{
+    display: none;
+}
+.THIS.slds-scrollable-ios-friendly{
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.THIS.colunaHide{
+    display: none;
+}
+.THIS #accordion input {
+    display: none;
+}
+.THIS #accordion label {
+    background: #f7f9fb;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 2px;
+    padding: 4px 16px;
+    z-index: 20;
+    border:1px solid #eef2f6;
+}
+
+.THIS #accordion label:hover {
+    background-color: #eef2f6;
+}
+
+.THIS #accordion input:checked + label {
+    background-color: #eef2f6;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    color: black;
+    margin-bottom: 0;
+}
+.THIS #accordion article {
+    background-color: white;
+    height:0px;
+    overflow:hidden;
+    z-index:10;
+}
+.THIS #accordion input:checked ~ article {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: auto;
+    margin-bottom: 2px;
+}

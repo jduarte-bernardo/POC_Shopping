@@ -1,0 +1,14 @@
+<apex:component >
+    <div class="slds-media">
+        <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-standard-opportunity" title="Inf. históricas da propriedade">
+                <img width="32" height="0" src="/img/icon/t4v35/custom/custom18_120.png" class="icon " alt="" title=""/>
+            </span> 
+        </div>
+        <div class="slds-media__body">
+            <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Tabela de Comercialização">
+                Tabela de Comercialização
+            </h1>
+        </div>
+    </div>
+</apex:component>

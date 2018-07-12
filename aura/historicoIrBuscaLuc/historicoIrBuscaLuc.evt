@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" >
+    <aura:attribute name="idShopping" type="String" />
+    <aura:attribute name="nomeShopping" type="String" />
+</aura:event>

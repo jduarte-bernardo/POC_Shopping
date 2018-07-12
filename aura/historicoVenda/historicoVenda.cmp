@@ -1,0 +1,44 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" controller="TabelaHistoricoController">
+    <aura:attribute name="hideHistoricoTipoBusca" type="Boolean" default="false" />
+    <aura:attribute name="hideHistoricoFiltrosBuscaMarca" type="Boolean" default="true" />
+    <aura:attribute name="hideHistoricoFiltrosBuscaSegmento" type="Boolean" default="true" />
+    <aura:attribute name="hideHistoricoFiltrosBuscaShoppingLuc" type="Boolean" default="true" />
+    <aura:attribute name="hideHistoricoTabelaDados" type="Boolean" default="true" />
+    
+    <aura:attribute name="shoppingId" type="String" />
+    <aura:attribute name="shoppingName" type="String" />
+    <aura:attribute name="lucName" type="String" />
+    <aura:attribute name="tipoBusca" type="String" />
+    <aura:attribute name="marcaBuscada" type="String" />
+    <aura:attribute name="segmentoBuscado" type="String" />
+    <aura:attribute name="lucBuscada" type="String" />
+
+    
+    <aura:attribute name="listaHistorico" type="TW1_Informacoes_historicas__c[]" />
+    
+    <aura:registerEvent name="carregarTabelaDados" type="c:historicoIrTabelaDados"/>
+    
+    <aura:handler name="showTipoBusca" event="c:historicoIrTipoBusca" action="{! c.showTipoBusca }" />
+    <aura:handler name="showBuscaMarca" event="c:historicoIrBuscaMarca" action="{! c.showBuscaMarca }" />
+  
+    <aura:handler name="showBuscaSegmento" event="c:historicoIrBuscaSegmento" action="{! c.showBuscaSegmento }" />
+    <aura:handler name="showBuscaShoppingLuc" event="c:historicoIrBuscaShoppingLuc" action="{! c.showBuscaShoppingLuc }" />
+    <aura:handler name="showTabelaDados" event="c:historicoIrTabelaDados" action="{! c.showTabelaDados }" />
+    
+    <div class="{! v.hideHistoricoTipoBusca ? 'hideTela' : '' }">
+        <c:historicoTipoBusca />
+    </div>
+    <div class="{! v.hideHistoricoFiltrosBuscaMarca ? 'hideTela' : '' }">
+        <c:historicoFiltrosBuscaMarca />
+    </div>
+    <div class="{! v.hideHistoricoFiltrosBuscaSegmento ? 'hideTela' : '' }">
+        <c:historicoFiltrosBuscaSegmento />
+    </div>
+    <div class="{! v.hideHistoricoFiltrosBuscaShoppingLuc ? 'hideTela' : '' }">
+        <c:historicoFiltrosBuscaShoppingLuc />
+    </div>
+    <div class="{! v.hideHistoricoTabelaDados ? 'hideTela' : '' }">
+        <c:historicoTabelaDados shoppingId="{! v.shoppingId }" shoppingName="{! v.shoppingName }" lucName="{! v.lucName }" tipoBusca="{! v.tipoBusca }"  listaHistorico="{!v.listaHistorico}" marcaBuscada="{! v.marcaBuscada }" segmentoBuscado="{! v.segmentoBuscado }" />
+    </div>
+
+</aura:component>

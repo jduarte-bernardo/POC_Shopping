@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Brindes Entregues</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Brindes Entregues</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data Entrega --></label>
+        <name>Data_Entrega__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parâmetros da Promoção --></label>
+        <name>Parametros_da_Promocao__c</name>
+        <relationshipLabel><!-- Brindes Entregues --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantidade --></label>
+        <name>Quantidade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brinde --></label>
+        <name>TW1_Brinde__c</name>
+        <relationshipLabel><!-- Brindes Entregues --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cliente --></label>
+        <name>TW1_Cliente__c</name>
+        <relationshipLabel><!-- Brindes Entregues --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Data do Estorno --></label>
+        <name>TW1_Data_do_Estorno__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formas de Pagamento --></label>
+        <name>TW1_Formas_de_Pagamento__c</name>
+        <picklistValues>
+            <masterLabel>CLUBE RIO DESIGN</masterLabel>
+            <translation><!-- CLUBE RIO DESIGN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Caixa</masterLabel>
+            <translation><!-- Cartão Caixa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Caixa ELO</masterLabel>
+            <translation><!-- Cartão Caixa ELO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Credito</masterLabel>
+            <translation><!-- Cartão Credito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Crédito(FDS)</masterLabel>
+            <translation><!-- Cartão Crédito(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Debito</masterLabel>
+            <translation><!-- Cartão Debito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Débito(FDS)</masterLabel>
+            <translation><!-- Cartão Débito(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinheiro</masterLabel>
+            <translation><!-- Dinheiro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinheiro(FDS)</masterLabel>
+            <translation><!-- Dinheiro(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISA INFINITE</masterLabel>
+            <translation><!-- VISA INFINITE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISA PLATINUM</masterLabel>
+            <translation><!-- VISA PLATINUM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visa Vale</masterLabel>
+            <translation><!-- Visa Vale --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Operador do Estorno --></label>
+        <name>TW1_Operador_do_Estorno__c</name>
+        <relationshipLabel><!-- Brindes Entregues --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping_Lookup__c</name>
+        <relationshipLabel><!-- Brindes Entregues --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Stand --></label>
+        <name>TW1_Stand__c</name>
+        <relationshipLabel><!-- Brindes Entregues --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tipo --></label>
+        <name>Tipo__c</name>
+        <picklistValues>
+            <masterLabel>Produto</masterLabel>
+            <translation><!-- Produto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voucher</masterLabel>
+            <translation><!-- Voucher --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Valor (R$) --></label>
+        <name>Valor__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de Brindes Entregues</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,40 @@
+<apex:page standardController="Opportunity" >
+    <apex:includeLightning />
+    <div id="content">
+        <div id="lightningComponent" />
+    </div>
+    <script>
+    var recordId             = '{!$CurrentPage.parameters.IdObjeto}';
+    var TipoRegistro         = '{!$CurrentPage.parameters.TipoRegistro}';
+    var vaTipoChamada        = '{!$CurrentPage.parameters.TipoChamada}';
+	var urlAtual 			 = '{!$CurrentPage.url}';
+    
+    $Lightning.use("c:TW1_Ancar_Venda_NovaCotacaoApp", function() {
+        $Lightning.createComponent("c:TW1_Ancar_Venda_NovaCotacao",
+                                   {
+                                       recordId:recordId,
+                                       TipoRegistro:TipoRegistro,
+                                       TipoChamada:vaTipoChamada,
+                                       urlAtual:urlAtual
+                                   },
+                                   "lightningComponent",
+                                   function(cmp) {
+                                       $A.eventService.addHandler({
+                                           event: 'force:navigateToSObject',
+                                           handler: function(event) {
+                                               if (myUserContext == 'Theme4t' || myUserContext == 'Theme4d') {
+                                                   // The Visualforce page is in S1 or Lightning Experience
+                                                   sforce.one.navigateToSObject(event.getParams().recordId);
+                                               } else if (myUserContext == 'Theme3') {
+                                                   // The Visualforce page is  running in Classic
+                                                   window.parent.location = '/' + event.getParams().recordId;
+                                               } else {
+                                                   console.log("Unsupported theme");   
+                                               }
+                                           }
+                                       });
+                                   }
+                                  );
+    });
+    </script>
+</apex:page>

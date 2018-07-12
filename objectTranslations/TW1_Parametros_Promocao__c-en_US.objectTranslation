@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Parâmetros da Promoção</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Parâmetros da Promoções</value>
+    </caseValues>
+    <fields>
+        <label><!-- Imprime Reg. Automático --></label>
+        <name>Imprime_Reg_Autom_tico__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Max. Cupom Bônus por Cliente --></label>
+        <name>Max_Bonus_Cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max. Brindes por Dia --></label>
+        <name>Max_Brindes_por_Dia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max. Brindes Bônus por Cliente --></label>
+        <name>Max_Brindes_por_Troca__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max. Cupom por Cliente --></label>
+        <name>Max_Cupom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max. NTFS mesma loja, Cliente e dia --></label>
+        <name>Max_NTFS_mesma_loja_Cliente_e_dia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max. NTFS usadas de Troca --></label>
+        <name>Max_NTFS_usadas_de_Troca__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGL Shopping --></label>
+        <name>SGL_Shopping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Acumula Saldo --></label>
+        <name>TW1_Acumula_Saldo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Autorização --></label>
+        <name>TW1_Autorizacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bônus multiplica por --></label>
+        <name>TW1_Bonus_multiplica_por__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campo Vendedor --></label>
+        <name>TW1_CampoVendedor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campo Número do cartão --></label>
+        <name>TW1_Campo_Numero_do_cartao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campo autorização --></label>
+        <name>TW1_Campo_autorizacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campo forma de pagamento --></label>
+        <name>TW1_Campo_forma_de_pagamento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campo nome vendedor --></label>
+        <name>TW1_Campo_nome_vendedor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cert. de Aut. --></label>
+        <name>TW1_Cert_de_Aut__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cidade --></label>
+        <name>TW1_Cidade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Promoção --></label>
+        <name>TW1_CodPromocao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Concurso Cultural --></label>
+        <name>TW1_Concurso_Cultural__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Condições especiais cart. crédito --></label>
+        <name>TW1_Condicoes_especiais_cart_credito__c</name>
+    </fields>
+    <fields>
+        <label><!-- Considerar condição especial --></label>
+        <name>TW1_Contabiliza_Bonus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Fim --></label>
+        <name>TW1_Data_Fim__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Início --></label>
+        <name>TW1_Data_Inicio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data da Nota --></label>
+        <name>TW1_Data_da_Nota__c</name>
+    </fields>
+    <fields>
+        <label><!-- Direito para Aba de Baixo --></label>
+        <name>TW1_Direito_para_Aba_de_Baixo__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Direto para Aba de Baixo --></label>
+        <name>TW1_Direto_para_Aba_de_Baixo__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Foma de Pagamento --></label>
+        <name>TW1_Foma_de_PagamentoCB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formas de Pagamento --></label>
+        <name>TW1_Formas_de_Pagamento__c</name>
+        <picklistValues>
+            <masterLabel>CLUBE RIO DESIGN</masterLabel>
+            <translation><!-- CLUBE RIO DESIGN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Caixa</masterLabel>
+            <translation><!-- Cartão Caixa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Caixa ELO</masterLabel>
+            <translation><!-- Cartão Caixa ELO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Credito</masterLabel>
+            <translation><!-- Cartão Credito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Crédito(FDS)</masterLabel>
+            <translation><!-- Cartão Crédito(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Debito</masterLabel>
+            <translation><!-- Cartão Debito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cartão Débito(FDS)</masterLabel>
+            <translation><!-- Cartão Débito(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinheiro</masterLabel>
+            <translation><!-- Dinheiro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinheiro(FDS)</masterLabel>
+            <translation><!-- Dinheiro(FDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISA INFINITE</masterLabel>
+            <translation><!-- VISA INFINITE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VISA PLATINUM</masterLabel>
+            <translation><!-- VISA PLATINUM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visa Vale</masterLabel>
+            <translation><!-- Visa Vale --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Imprime Cupom Conc. Cult --></label>
+        <name>TW1_Imprime_Cupom_Conc_Cult__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Imprime Cupom --></label>
+        <name>TW1_Imprime_Cupom__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Imprime Regulamento - Botão --></label>
+        <name>TW1_Imprime_Regulamento_Botao__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Imprime Voucher --></label>
+        <name>TW1_Imprime_Voucher__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Imprimir nome do lojista? --></label>
+        <name>TW1_Imprimir_nome_do_lojista__c</name>
+    </fields>
+    <fields>
+        <label><!-- Libera Aba Estorno --></label>
+        <name>TW1_Libera_Aba_Estorno__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Libera Aba Relacionamento --></label>
+        <name>TW1_Libera_Aba_Relacionamento__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Loja --></label>
+        <name>TW1_Loja__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max. Brindes por Clientes --></label>
+        <name>TW1_Max_Brinde_Clientes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max. Brindes por NTFS --></label>
+        <name>TW1_Max_Brindes_por_NTFS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max. Participações --></label>
+        <name>TW1_Max_Participacoes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número NTFS --></label>
+        <name>TW1_Numero_NTFS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número do Cartão --></label>
+        <name>TW1_Numero_do_Cartao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pergunta --></label>
+        <name>TW1_Pergunta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Permitir Numeração Sequenciada --></label>
+        <name>TW1_Permitir_Numeracao_Sequenciada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Possui Limite de Brindes por NTFS --></label>
+        <name>TW1_Possui_Limite_de_Brindes_por_NTFS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Possui Limites de Brindes por NTFS --></label>
+        <name>TW1_Possui_Limites_de_Brindes_por_NTFS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Possui Questionário --></label>
+        <name>TW1_Possui_Questionario__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Questionário Obrigatório --></label>
+        <name>TW1_Questionario_Obrigatorio__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Regional Shopping --></label>
+        <name>TW1_Regional_Shopping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Responde mais de uma vez --></label>
+        <name>TW1_Responde_mais_de_uma_vez__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Responde por Atendimento --></label>
+        <name>TW1_Responde_por_Atendimento__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SGL --></label>
+        <name>TW1_SGL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Senha Supervisor notas acima de (R$) --></label>
+        <name>TW1_Senha_Supervisor_notas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Parâmetros da Promoções --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Transforma Dinheiro --></label>
+        <name>TW1_Transforma_Dinheiro__c</name>
+        <picklistValues>
+            <masterLabel>Não</masterLabel>
+            <translation><!-- Não --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sim</masterLabel>
+            <translation><!-- Sim --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Troca por --></label>
+        <name>TW1_Troca_por__c</name>
+        <picklistValues>
+            <masterLabel>Ambos</masterLabel>
+            <translation><!-- Ambos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brinde</masterLabel>
+            <translation><!-- Brinde --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cupom</masterLabel>
+            <translation><!-- Cupom --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- UF --></label>
+        <name>TW1_UF__c</name>
+        <picklistValues>
+            <masterLabel>AC</masterLabel>
+            <translation><!-- AC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation><!-- AL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AM</masterLabel>
+            <translation><!-- AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AP</masterLabel>
+            <translation><!-- AP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA</masterLabel>
+            <translation><!-- BA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CE</masterLabel>
+            <translation><!-- CE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DF</masterLabel>
+            <translation><!-- DF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES</masterLabel>
+            <translation><!-- ES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GO</masterLabel>
+            <translation><!-- GO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation><!-- MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MG</masterLabel>
+            <translation><!-- MG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation><!-- MS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT</masterLabel>
+            <translation><!-- MT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation><!-- PA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PB</masterLabel>
+            <translation><!-- PB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PE</masterLabel>
+            <translation><!-- PE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PI</masterLabel>
+            <translation><!-- PI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR</masterLabel>
+            <translation><!-- PR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RJ</masterLabel>
+            <translation><!-- RJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RN</masterLabel>
+            <translation><!-- RN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO</masterLabel>
+            <translation><!-- RO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RR</masterLabel>
+            <translation><!-- RR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RS</masterLabel>
+            <translation><!-- RS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation><!-- SC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SE</masterLabel>
+            <translation><!-- SE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SP</masterLabel>
+            <translation><!-- SP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TO</masterLabel>
+            <translation><!-- TO --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Valor Min. Troca (R$) --></label>
+        <name>TW1_Valor_Min_NTFS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor Min. Troca (R$) --></label>
+        <name>TW1_Valor_Min_Troca__c</name>
+    </fields>
+    <fields>
+        <label><!-- Voucher Estacionamento --></label>
+        <name>TW1_Voucher_Estacionamento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cobrar Brinde --></label>
+        <name>Tw1_CobrarBrinde__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de Parâmetros da Promoção</layout>
+        <sections>
+            <label><!-- Concurso Cultural --></label>
+            <section>Concurso Cultural</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dados Regionais --></label>
+            <section>Dados Regionais</section>
+        </sections>
+        <sections>
+            <label><!-- Geral --></label>
+            <section>Geral</section>
+        </sections>
+        <sections>
+            <label><!-- Troca --></label>
+            <section>Troca</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

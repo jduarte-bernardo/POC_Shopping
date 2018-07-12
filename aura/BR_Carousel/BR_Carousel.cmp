@@ -1,0 +1,37 @@
+<aura:component description="acslider.BR_Carousel" implements="forceCommunity:availableForAllPageTypes" access="global"
+                controller="acslider.BR_Carousel">
+    <aura:attribute name="interval" type="Integer" default="3000" access="global"/>
+    <aura:attribute name="slidesLength" type="Integer" default="3"/>
+    <aura:attribute name="currentSlide" type="Integer" default="1"/>
+    <aura:attribute name="data" type="Object"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <aura:if isTrue="{!not(empty(v.data))}">
+        <div class="carousel-container" onmouseenter="{!c.mouseOverCmp}" onmouseleave="{!c.mouseOutCmp}">
+            <div class="carousel-control prev" style="{!'background-image: url(' + $Resource.acslider__files + '/arrow.png)'}"
+                 onclick="{!c.prevSlide}"></div>
+            <div class="carousel-control next" style="{!'background-image: url(' + $Resource.acslider__files + '/arrow.png)'}"
+                 onclick="{!c.nextSlide}"></div>
+            <div class="carousel-switcher-container" role="navigation">
+                <aura:iteration items="{!v.data}" var="slide" indexVar="index">
+                <span data-switcher-for="{!slide.index}" role="button" onclick="{!c.switchSlide}"
+                      class="{!'carousel-switcher ' + if(index == 0, 'selected', '')}">&#8226;</span>
+                </aura:iteration>
+            </div>
+            <ul class="slides">
+                <aura:iteration items="{!v.data}" var="slide" indexVar="index">
+                    <li data-slide="{!slide.index}" class="{!'slide ' + if(index == 0, 'selected', '')}">
+                        <aura:unescapedHtml value="{!slide.background}"/>
+                        <div class="{!'content template ' + if(index == 0, 'text-left', if(index == 2, 'text-right', '')) }">
+                            <aura:unescapedHtml value="{!slide.content}"/>
+                        </div>
+                    </li>
+                </aura:iteration>
+            </ul>
+        </div>
+        <aura:set attribute="else">
+            <div class="slds-align--absolute-center">{!v.slidesLength == 0 ? 'No Items.' : ''}</div>
+        </aura:set>
+    </aura:if>
+</aura:component>

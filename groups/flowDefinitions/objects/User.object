@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteBannerPhotoAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditUserAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FreezeUserAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LinkToSetupUserDetailAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ManagePermSetsAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>PasswordUnlockAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ResetPasswordAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UpdateBannerPhotoAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>UserActivationAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>User_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>User_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Title</fields>
+        <label>User Layout</label>
+    </compactLayouts>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>DB_Region__c</fullName>
+        <description>This is a field that is installed by and used with the Adoption Dashboard AppExchange package. If your org already has a similar field, you can change the reports that are part of the Adoption Dashboard package to use your custom field and then delete this field.</description>
+        <externalId>false</externalId>
+        <label>DB Region</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NA</fullName>
+                    <color>#009900</color>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+                <value>
+                    <fullName>EMEA</fullName>
+                    <color>#3333FF</color>
+                    <default>false</default>
+                    <label>EMEA</label>
+                </value>
+                <value>
+                    <fullName>APAC</fullName>
+                    <color>#CC6600</color>
+                    <default>false</default>
+                    <label>APAC</label>
+                </value>
+                <value>
+                    <fullName>LA</fullName>
+                    <color>#990000</color>
+                    <default>false</default>
+                    <label>LA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ManagerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>TW1_ID_Shopping__c</fullName>
+        <externalId>false</externalId>
+        <label>Id Shopping</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Regional__c</fullName>
+        <externalId>false</externalId>
+        <label>Regional</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>TW1_Loja_Centro_Oeste_Norte_1</fullName>
+                    <default>false</default>
+                    <label>TW1_Loja_Centro_Oeste_Norte_1</label>
+                </value>
+                <value>
+                    <fullName>TW1_Loja_Nordeste</fullName>
+                    <default>false</default>
+                    <label>TW1_Loja_Nordeste</label>
+                </value>
+                <value>
+                    <fullName>TW1_Loja_Rio_de_Janeiro</fullName>
+                    <default>false</default>
+                    <label>TW1_Loja_Rio_de_Janeiro</label>
+                </value>
+                <value>
+                    <fullName>TW1_Loja_Sao_Paulo</fullName>
+                    <default>false</default>
+                    <label>TW1_Loja_Sao_Paulo</label>
+                </value>
+                <value>
+                    <fullName>TW1_Loja_Centro_Oeste_Norte_2</fullName>
+                    <default>false</default>
+                    <label>TW1_Loja_Centro_Oeste_Norte_2</label>
+                </value>
+                <value>
+                    <fullName>TW1_Conta_corporativa</fullName>
+                    <default>false</default>
+                    <label>TW1_Conta_corporativa</label>
+                </value>
+                <value>
+                    <fullName>TW1_Mall_Midia_Rio_de_Janeiro_1</fullName>
+                    <default>false</default>
+                    <label>TW1_Mall_Midia_Rio_de_Janeiro_1</label>
+                </value>
+                <value>
+                    <fullName>TW1_Mall_Midia_Rio_de_Janeiro_2</fullName>
+                    <default>false</default>
+                    <label>TW1_Mall_Midia_Rio_de_Janeiro_2</label>
+                </value>
+                <value>
+                    <fullName>TW1_Mall_Midia_Sao_Paulo_1</fullName>
+                    <default>false</default>
+                    <label>TW1_Mall_Midia_Sao_Paulo_1</label>
+                </value>
+                <value>
+                    <fullName>TW1_Mall_Midia_Sao_Paulo_2</fullName>
+                    <default>false</default>
+                    <label>TW1_Mall_Midia_Sao_Paulo_2</label>
+                </value>
+                <value>
+                    <fullName>TW1_Mall_Mídia_Centro_Oeste_Norte</fullName>
+                    <default>false</default>
+                    <label>TW1_Mall_Mídia_Centro_Oeste_Norte</label>
+                </value>
+                <value>
+                    <fullName>TW1_Mall_Midia_Sul</fullName>
+                    <default>false</default>
+                    <label>TW1_Mall_Midia_Sul</label>
+                </value>
+                <value>
+                    <fullName>TW1_Mall_Midia_Nordeste</fullName>
+                    <default>false</default>
+                    <label>TW1_Mall_Midia_Nordeste</label>
+                </value>
+                <value>
+                    <fullName>TW1_Trade_Midia</fullName>
+                    <default>false</default>
+                    <label>TW1_Trade_Midia</label>
+                </value>
+                <value>
+                    <fullName>Centro-Oeste e Norte</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Centro-Oeste e Norte</label>
+                </value>
+                <value>
+                    <fullName>Nordeste</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Nordeste</label>
+                </value>
+                <value>
+                    <fullName>Rio de Janeiro</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Rio de Janeiro</label>
+                </value>
+                <value>
+                    <fullName>Sul</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Sul</label>
+                </value>
+                <value>
+                    <fullName>São Paulo</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>São Paulo</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TW1_Shopping__c</fullName>
+        <externalId>false</externalId>
+        <label>Shopping</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NORTH SHOPPING JOQUEI</fullName>
+                    <default>false</default>
+                    <label>NORTH SHOPPING JOQUEI</label>
+                </value>
+                <value>
+                    <fullName>NORTH SHOPPING FORTALEZA</fullName>
+                    <default>false</default>
+                    <label>NORTH SHOPPING FORTALEZA</label>
+                </value>
+                <value>
+                    <fullName>VIA SUL SHOPPING</fullName>
+                    <default>false</default>
+                    <label>VIA SUL SHOPPING</label>
+                </value>
+                <value>
+                    <fullName>NORTH SHOPPING MARACANAU</fullName>
+                    <default>false</default>
+                    <label>NORTH SHOPPING MARACANAU</label>
+                </value>
+                <value>
+                    <fullName>SHOPPING CONJUNTO NACIONAL</fullName>
+                    <default>false</default>
+                    <label>SHOPPING CONJUNTO NACIONAL</label>
+                </value>
+                <value>
+                    <fullName>PANTANAL SHOPPING</fullName>
+                    <default>false</default>
+                    <label>PANTANAL SHOPPING</label>
+                </value>
+                <value>
+                    <fullName>SHOPPING NOVA IGUAÇU</fullName>
+                    <default>false</default>
+                    <label>SHOPPING NOVA IGUAÇU</label>
+                </value>
+                <value>
+                    <fullName>RIO DESIGN LEBLON</fullName>
+                    <default>false</default>
+                    <label>RIO DESIGN LEBLON</label>
+                </value>
+                <value>
+                    <fullName>RIO DESIGN BARRA</fullName>
+                    <default>false</default>
+                    <label>RIO DESIGN BARRA</label>
+                </value>
+                <value>
+                    <fullName>SHOPPING NOVA AMERICA</fullName>
+                    <default>false</default>
+                    <label>SHOPPING NOVA AMERICA</label>
+                </value>
+                <value>
+                    <fullName>BOTAFOGO PRAIA SHOPPING</fullName>
+                    <default>false</default>
+                    <label>BOTAFOGO PRAIA SHOPPING</label>
+                </value>
+                <value>
+                    <fullName>DOWNTOWN</fullName>
+                    <default>false</default>
+                    <label>DOWNTOWN</label>
+                </value>
+                <value>
+                    <fullName>BOULEVARD RIO SHOPPING</fullName>
+                    <default>false</default>
+                    <label>BOULEVARD RIO SHOPPING</label>
+                </value>
+                <value>
+                    <fullName>ANCAR</fullName>
+                    <default>false</default>
+                    <label>ANCAR</label>
+                </value>
+                <value>
+                    <fullName>NATAL SHOPPING</fullName>
+                    <default>false</default>
+                    <label>NATAL SHOPPING</label>
+                </value>
+                <value>
+                    <fullName>PORTO VELHO SHOPPING</fullName>
+                    <default>false</default>
+                    <label>PORTO VELHO SHOPPING</label>
+                </value>
+                <value>
+                    <fullName>SHOPPING PARQUE DAS BANDEIRAS</fullName>
+                    <default>false</default>
+                    <label>SHOPPING PARQUE DAS BANDEIRAS</label>
+                </value>
+                <value>
+                    <fullName>GOLDEN SQUARE SHOPPING</fullName>
+                    <default>false</default>
+                    <label>GOLDEN SQUARE SHOPPING</label>
+                </value>
+                <value>
+                    <fullName>CENTERVALE SHOPPING</fullName>
+                    <default>false</default>
+                    <label>CENTERVALE SHOPPING</label>
+                </value>
+                <value>
+                    <fullName>SHOPPING ELDORADO</fullName>
+                    <default>false</default>
+                    <label>SHOPPING ELDORADO</label>
+                </value>
+                <value>
+                    <fullName>SHOPPING METRO ITAQUERA</fullName>
+                    <default>false</default>
+                    <label>SHOPPING METRO ITAQUERA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>User_Unique__c</fullName>
+        <description>Field is used to generate unique user counts on various reports</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User Unique</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>ActiveUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.EMAIL</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Usuários ativos</label>
+    </listViews>
+    <listViews>
+        <fullName>ActiveUsersapagar</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.EMAIL</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>Atendente</value>
+        </filters>
+        <label>Usuários apagar</label>
+    </listViews>
+    <listViews>
+        <fullName>AdminUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>System Administrator</value>
+        </filters>
+        <label>Admin Users</label>
+    </listViews>
+    <listViews>
+        <fullName>AllUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.EMAIL</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos os usuários</label>
+        <language>pt_BR</language>
+    </listViews>
+    <listViews>
+        <fullName>Atendimento</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USER_ROLE.NAME</field>
+            <operation>equals</operation>
+            <value>atendimento</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Atendentes Ativos</label>
+        <language>pt_BR</language>
+    </listViews>
+    <listViews>
+        <fullName>LojaNordeste</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.EMAIL</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USER_ROLE.NAME</field>
+            <operation>equals</operation>
+            <value>Loja Nordeste Usuário de Parceiro</value>
+        </filters>
+        <label>Loja Nordeste</label>
+        <language>pt_BR</language>
+    </listViews>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USER_ROLE.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USERS.ACTIVE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.PROFILE.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.PROFILE.USERTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CORE.USERS.IS_PARTNER</lookupDialogsAdditionalFields>
+        <lookupFilterFields>FULL_NAME</lookupFilterFields>
+        <lookupFilterFields>CORE.USERS.USERNAME</lookupFilterFields>
+        <lookupFilterFields>CORE.USER_ROLE.NAME</lookupFilterFields>
+        <lookupFilterFields>CORE.PROFILE.NAME</lookupFilterFields>
+        <lookupFilterFields>CORE.PROFILE.USERTYPE</lookupFilterFields>
+        <lookupFilterFields>CORE.USERS.IS_PARTNER</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USER_ROLE.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.PHONE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.EXTENSION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.CELL</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.PROFILE.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CORE.USERS.IS_PARTNER</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>FULL_NAME</searchFilterFields>
+        <searchFilterFields>CORE.USER_ROLE.NAME</searchFilterFields>
+        <searchFilterFields>CORE.PROFILE.NAME</searchFilterFields>
+        <searchFilterFields>CORE.PROFILE.USERTYPE</searchFilterFields>
+        <searchFilterFields>CORE.USERS.IS_PARTNER</searchFilterFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.EMAIL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USER_ROLE.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.PROFILE.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.PROFILE.USERTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.IS_PARTNER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

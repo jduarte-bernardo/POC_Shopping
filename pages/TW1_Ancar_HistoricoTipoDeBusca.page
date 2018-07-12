@@ -1,0 +1,594 @@
+<apex:page showHeader="true" controller="TW1_Ancar_HistoricoTipoDeBusca" standardStylesheets="false" sidebar="false" applyHtmlTag="true" applyBodyTag="false" docType="html-5.0">
+    
+    <apex:form >   
+        <html>
+            <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="x-ua-compatible" content="ie=edge" />
+                <title></title>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <!-- Import the Design System style sheet -->
+                <apex:slds />
+                <style>
+                    
+                    *{
+                    margin:0;
+                    padding:0;
+                    }
+                    
+                    .barraDeexibeEsconde{
+                    cursor:pointer;
+                    font-weight:bold;
+                    font-size: 15px;
+                    border:1px solid #cccccc
+                    }
+                    
+                    #exibeEsconde{
+                    cursor:pointer
+                    }
+                    
+                    #tabela{
+                    width:20px
+                    }
+                    
+                    .box-title{
+                    width:100%;
+                    padding:5px;
+                    display:block;
+                    background-color:#EEF2F6;
+                    }
+                    
+                    .itens .item{
+                    width:100%;
+                    padding:5px;
+                    display:block;
+                    background-color:#F7F9FB;
+                    }
+                    
+                    .itens .item:hover{
+                    background-color:#EEF2F6;
+                    }
+                    
+                    .col-scroll{
+                    overflow-x:auto;
+                    }
+                    
+                    .box-body{
+                    height:auto;
+                    min-height:500px;
+                    }
+                    
+                </style>
+            </head>
+            <body>
+                <div class="slds-scope box-body">
+                    <div class="slds-page-header">
+                        <apex:outputpanel rendered="true">
+                            <c:TW1_Ancar_CP_HistoricoHead />
+                        </apex:outputpanel>  
+                    </div>
+                    
+                    <!-- telaTipoDeBusca -->
+                    
+                    
+                    <apex:outputpanel id="telaTipoDeBusca">
+                        <apex:outputPanel layout="block" rendered="{!displayBotaoPesquisa}">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-medium-size--6-of-6 slds-text-heading_large slds-text-align_center">
+                                    <p>&nbsp;</p>
+                                    Selecione uma busca
+                                </div>
+                                <div class="slds-col slds-medium-size--6-of-6 slds-text-align_center">
+                                    <p>&nbsp;</p>
+                                    <p>
+                                        <apex:commandLink value="Marca" styleClass="slds-button slds-button_neutral" action="{!MostraPesquisaMarca}" rerender="telaBuscaMarca,telaBuscaSegmento,telaBuscaShoppingLuc,telaTipoDeBusca,BotaoRetorno,BuscarPainel"/>
+                                        <apex:commandLink value="Segmento" styleClass="slds-button slds-button_neutral" action="{!MostraPesquisaSegmento}" rendered="{!SegmentoPerfil}" rerender="telaBuscaSegmento,telaBuscaMarca,telaBuscaShoppingLuc,telaTipoDeBusca,BotaoRetorno"/>
+                                        <apex:commandLink value="Shopping/Luc" styleClass="slds-button slds-button_neutral" action="{!MostraPesquisaShopping}" rerender="BuscarPainelShoppingluc,telaBuscaShoppingLuc,telaBuscaMarca,telaBuscaSegmento,telaTipoDeBusca,BotaoRetorno"/>                                        
+                                    </p>
+                                </div>
+                            </div>
+                        </apex:outputPanel>        
+                    </apex:outputpanel>  
+                    
+                    <!-- FIM telaTipoDeBusca -->
+                    
+                    <!-- telaBuscaMarca -->
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size--12-of-12 slds-text-align_left">
+                            <apex:outputpanel id="BotaoRetorno">
+                                <apex:outputpanel layout="block" rendered="{!displayBotaoRetorno}">
+                                    <apex:commandLink style="width:98%" value="retornar para Tipo de Busca" styleClass="slds-button slds-button_neutral slds-m-around_x-small slds-size_1-of-1" action="{!TelaInicio}" rerender="telaBuscaSegmento,telaBuscaMarca,telaBuscaShoppingLuc,telaTipoDeBusca,BotaoRetorno,telaBuscaTabelaDeDados"/>
+                                </apex:outputpanel>
+                            </apex:outputpanel>
+                        </div>
+                    </div>
+                    
+                    <apex:outputpanel id="telaBuscaMarca">
+                       <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size--12-of-12 slds-text-align_left">
+                            <apex:outputpanel id="BotaoRetorno2">
+                                <apex:outputpanel layout="block" rendered="{!displayBotaoRetornoMarca}">
+                                    <apex:commandLink style="width:98%" value="retornar para Busca Shopping" styleClass="slds-button slds-button_neutral slds-m-around_x-small slds-size_1-of-1" action="{!BotaoVoltaMarca}" rerender="telaBuscaSegmento,telaBuscaMarca,telaBuscaShoppingLuc,telaTipoDeBusca,BotaoRetorno,telaBuscaTabelaDeDados"/>
+                                </apex:outputpanel>
+                            </apex:outputpanel>
+                        </div>
+                    </div>
+                        <apex:outputpanel layout="block" rendered="{!displayMarca}">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size--4-of-6" Style="margin-left:10px">
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="text-input-id-1">Busca por Marca</label>
+                                        <div class="slds-form-element__control">  
+                                            <apex:inputText styleClass="slds-input" title="Digite a Marca" value="{!valorPesquisaMarca}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size--12-of-12 slds-text-align_center" style="margin-left: 10px;">
+                                        <apex:outputpanel layout="block" rendered="{!displayPesquisaMarcaVazio}">
+                                            <label class="slds-form-element__label" for="text-input-id-1">&nbsp;</label>
+                                            <div class="slds-form-element__control">
+                                                <h2>
+                                                     Não foi encontrado nenhum resultado!
+                                                </h2>
+                                            </div>
+                                        </apex:outputpanel>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size--6-of-6">
+                                    <label class="slds-form-element__label" for="text-input-id-1">&nbsp;</label>
+                                    <apex:outputpanel id="BuscarPainel">
+                                        <apex:outputpanel layout="block" rendered="{!displayPesquisaMarca}">                                            
+                                            <div class="slds-col slds-size--12-of-12 slds-text-align_center">
+                                                <apex:repeat value="{!ListShoppings}" var="acct">
+                                                    <apex:commandLink style="width:95%" value="{!acct.Name}" styleClass="slds-button slds-button_neutral slds-p-around_x-large slds-m-around_x-small" action="{!getMarca}" target="_top" rerender="BuscarPainel,telaBuscaMarca">
+                                                        <apex:param name="DisplayId" value="{!acct.Id}" assignTo="{!IdObjetoDisplay}"></apex:param>
+                                                        <apex:param name="DisplayName" value="{!acct.Name}" assignTo="{!NomeDoShopping}"></apex:param>
+                                                    </apex:commandlink>                                    
+                                                </apex:repeat>
+                                            </div>
+                                        </apex:outputpanel>
+                                        <apex:outputpanel layout="block" rendered="{!displayPesquisaMarcaAccount}">                                            
+                                            <div class="slds-col slds-size--12-of-12 slds-text-align_center">
+                                                <apex:repeat value="{!ListMarcas}" var="accountMarca">
+                                                    <apex:commandLink style="width:95%" value="{!accountMarca.Name}" styleClass="slds-button slds-button_neutral slds-p-around_x-large slds-m-around_x-small" action="{!getTabelaHistorica}" target="_top" rerender="BuscarPainel,telaBuscaTabelaDeDados,telaBuscaMarca">
+                                                        <apex:param name="DisplayId" value="{!accountMarca.Id}" assignTo="{!IdObjetoDisplay}"></apex:param>
+                                                        <apex:param name="DisplayName" value="{!accountMarca.Name}" assignTo="{!NomeDoMarca}"></apex:param>
+                                                    </apex:commandlink>                                    
+                                                </apex:repeat>
+                                            </div>
+                                        </apex:outputpanel>
+                                    </apex:outputpanel>
+                                </div>    
+                                
+                            </div>
+                        </apex:outputpanel>  
+                    </apex:outputpanel>
+                    <!-- FIM telaBuscaMarca -->   
+                    
+                    <!-- telaBuscaSegmento -->
+                    
+                    
+                    <apex:outputpanel id="telaBuscaSegmento">
+                        <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size--12-of-12 slds-text-align_left">
+                            <apex:outputpanel id="BotaoRetorno3">
+                                <apex:outputpanel layout="block" rendered="{!displayBotaoRetornoSegmento}">
+                                    <apex:commandLink style="width:98%" value="retornar para Busca Shopping" styleClass="slds-button slds-button_neutral slds-m-around_x-small slds-size_1-of-1" action="{!BotaoVoltaSegmento}" rerender="telaBuscaSegmento,telaBuscaMarca,telaBuscaShoppingLuc,telaTipoDeBusca,BotaoRetorno,telaBuscaTabelaDeDados"/>
+                                </apex:outputpanel>
+                            </apex:outputpanel>
+                        </div>
+                    </div>
+                        <apex:outputpanel layout="block" rendered="{!displaySegmento}">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size--4-of-6" Style="margin-left:10px">
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="text-input-id-1">Busca por Segmento</label>
+                                        <div class="slds-form-element__control">  
+                                            <apex:inputText styleClass="slds-input" title="Digite o Segmento" value="{!valorPesquisaSegmento}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size--12-of-12 slds-text-align_center" style="margin-left: 10px;">
+                                        <apex:outputpanel layout="block" rendered="{!displayPesquisasegmentoVazio}">
+                                            <label class="slds-form-element__label" for="text-input-id-1">&nbsp;</label>
+                                            <div class="slds-form-element__control">
+                                                <h2>
+                                                     Não foi encontrado nenhum resultado!
+                                                </h2>
+                                            </div>
+                                        </apex:outputpanel>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size--6-of-6">
+                                    <label class="slds-form-element__label" for="text-input-id-1">&nbsp;</label>
+                                    <apex:outputpanel id="BuscarPainelSegnmento">
+                                        <apex:outputpanel layout="block" rendered="{!displayPesquisaSegmento}">                                            
+                                            <div class="slds-col slds-size--12-of-12 slds-text-align_center">
+                                                <apex:repeat value="{!ListShoppings}" var="acct">
+                                                    <apex:commandLink style="width:95%" value="{!acct.Name}" styleClass="slds-button slds-button_neutral slds-p-around_x-large slds-m-around_x-small" action="{!getSegmento}" target="_top" rerender="BuscarPainelSegnmento,telaBuscaSegmento">
+                                                        <apex:param name="DisplayId" value="{!acct.Id}" assignTo="{!IdObjetoDisplay}"></apex:param>
+                                                        <apex:param name="DisplayName" value="{!acct.Name}" assignTo="{!NomeDoShopping}"></apex:param>
+                                                    </apex:commandlink>                                    
+                                                </apex:repeat>
+                                            </div>
+                                        </apex:outputpanel>
+                                        <apex:outputpanel layout="block" rendered="{!displayPesquisaSegmentoAccount}">                                            
+                                            <div class="slds-col slds-size--12-of-12 slds-text-align_center">
+                                                <apex:repeat value="{!ListPlanoMix}" var="accountMarca">
+                                                    <apex:commandLink style="width:95%" value="{!accountMarca.TW1_Segmento__c}" styleClass="slds-button slds-button_neutral slds-p-around_x-large slds-m-around_x-small" action="{!getTabelaHistoricaSegmento}" target="_top" rerender="BuscarPainelSegnmento,telaBuscaTabelaDeDados,telaBuscaSegmento">
+                                                        <apex:param name="DisplayId" value="{!accountMarca.Id}" assignTo="{!IdObjetoDisplay}"></apex:param>
+                                                        <apex:param name="DisplayName" value="{!accountMarca.TW1_Segmento__c}" assignTo="{!NomeDoSegmento}"></apex:param>
+                                                    </apex:commandlink>                                    
+                                                </apex:repeat>
+                                            </div>
+                                        </apex:outputpanel>
+                                    </apex:outputpanel>
+                                </div>    
+                                
+                            </div>
+                        </apex:outputpanel>  
+                    </apex:outputpanel>
+
+                    <!-- telaBuscaShoppingLuc -->
+                    
+                         <apex:outputpanel id="telaBuscaShoppingLuc">
+                             <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size--12-of-12 slds-text-align_left">
+                                    <apex:outputpanel id="BotaoRetorno4">
+                                        <apex:outputpanel layout="block" rendered="{!displayBotaoRetornoLuc}">
+                                            <apex:commandLink style="width:98%" value="retornar para Busca Shopping" styleClass="slds-button slds-button_neutral slds-m-around_x-small slds-size_1-of-1" action="{!BotaoVoltaLuc}" rerender="telaBuscaSegmento,telaBuscaMarca,telaBuscaShoppingLuc,telaTipoDeBusca,BotaoRetorno,telaBuscaTabelaDeDados"/>
+                                        </apex:outputpanel>
+                                    </apex:outputpanel>
+                                </div>
+                            </div>
+                        <apex:outputpanel layout="block" rendered="{!displayLuc}">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size--4-of-6" Style="margin-left:10px">
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label" for="text-input-id-1">Busca por Luc/Shopping</label>
+                                        <div class="slds-form-element__control">  
+                                            <apex:inputText styleClass="slds-input" title="Digite a Luc" value="{!valorPesquisaShoppinLuc}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size--12-of-12 slds-text-align_center" style="margin-left: 10px;">
+                                        <apex:outputpanel layout="block" rendered="{!displayPesquisaLucVazio}">
+                                            <label class="slds-form-element__label" for="text-input-id-1">&nbsp;</label>
+                                            <div class="slds-form-element__control">
+                                                <h2>
+                                                     Não foi encontrado nenhum resultado!
+                                                </h2>
+                                            </div>
+                                        </apex:outputpanel>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size--6-of-6">
+                                    <label class="slds-form-element__label" for="text-input-id-1">&nbsp;</label>
+                                    <apex:outputpanel id="BuscarPainelShoppingluc">
+                                        <apex:outputpanel layout="block" rendered="{!displayPesquisaShoppingLucc}">                                            
+                                            <div class="slds-col slds-size--12-of-12 slds-text-align_center">
+                                                <apex:repeat value="{!ListShoppings}" var="acct">
+                                                    <apex:commandLink style="width:95%" value="{!acct.Name}" styleClass="slds-button slds-button_neutral slds-p-around_x-large slds-m-around_x-small" action="{!getLucsByLuc}" target="_top" rerender="BuscarPainelShoppingluc,telaBuscaShoppingLuc">
+                                                        <apex:param name="DisplayId" value="{!acct.Id}" assignTo="{!IdObjetoDisplay}"></apex:param>
+                                                        <apex:param name="DisplayName" value="{!acct.Name}" assignTo="{!NomeDoShopping}"></apex:param>
+                                                    </apex:commandlink>                                    
+                                                </apex:repeat>
+                                            </div>
+                                        </apex:outputpanel>
+                                        <apex:outputpanel layout="block" rendered="{!displayPesquisaLucc}">                                            
+                                            <div class="slds-col slds-size--12-of-12 slds-text-align_center">
+                                                <apex:repeat value="{!Listpropriedadeluc}" var="accountMarca">
+                                                    <apex:commandLink style="width:95%" value="{!accountMarca.Name}" styleClass="slds-button slds-button_neutral slds-p-around_x-large slds-m-around_x-small" action="{!getTabelaHistoricaLuc}" target="_top" rerender="BuscarPainelShoppingluc,telaBuscaTabelaDeDados,telaBuscaShoppingLuc">
+                                                        <apex:param name="DisplayId" value="{!accountMarca.Id}" assignTo="{!IdObjetoDisplay}"></apex:param>
+                                                        <apex:param name="DisplayName" value="{!accountMarca.Name}" assignTo="{!NomeDaLuc}"></apex:param>
+                                                    </apex:commandlink>                                    
+                                                </apex:repeat>
+                                            </div>
+                                        </apex:outputpanel>
+                                    </apex:outputpanel>
+                                </div>    
+                                
+                            </div>
+                        </apex:outputpanel>  
+                    </apex:outputpanel>
+                    <!-- FIM telaBuscaShoppingLuc --> 
+                    
+                    <!-- telaBuscaTabelaDeDados -->
+                    <apex:outputpanel id="telaBuscaTabelaDeDados">
+                        <apex:outputpanel rendered="{!displayTabela}">
+                            <script type="text/javascript">
+                            
+                            document.getElementById("exibeEsconde").addEventListener("click", function(){
+                                var _opcoes = document.getElementById("opcoes");
+                                var _setinha = document.getElementById("arvore");
+                                if(_opcoes.style.display=='none'){
+                                    _opcoes.style.display='block';
+                                }else{
+                                    _opcoes.style.display='none';
+                                }
+                            });
+                            
+                            </script>
+                            
+                            <div class="slds-grid slds-wrap ">
+                                <div class="slds-col slds-size--6-of-6" >
+                                    <div class="box-title barraDeexibeEsconde" id="exibeEsconde">
+                                        <label>Exibir/ocultar colunas (máx. 2)</label>
+                                    </div>
+                                    <ul class="itens" id="opcoes" style="display:none">
+                                        <apex:outputpanel rendered="{!IF(tipodeBusca=='Segmento',false,true)}">
+                                            <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'Nr_Luc_tbl');" id="Nr_Luc" />&nbsp; Nr Luc</li>
+                                        </apex:outputpanel>    
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'Area_LUC_tbl');" id="Area_LUC" />&nbsp; Área LUC</li>
+                                        <apex:outputpanel rendered="{!IF(tipodeBusca=='Segmento',false,true)}">
+                                            <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'aluguel_tbl');" id="aluguel" />&nbsp; Aluguel %</li>
+                                        </apex:outputpanel>
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'vlrTotal_tbl');" id="vlrTotal" />&nbsp; Venda TT</li> 
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'vlrVendaTotalM_tbl');" id="vlrVendaTotalM" /> &nbsp; Venda TT/m²</li> 
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'AMM_tbl');" id="AMM" />&nbsp; AMM</li> 
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'sobreVenda_tbl');" id="sobreVenda" /> &nbsp;% Sobre Vendas</li> 
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'AMMm_tbl');" id="AMMm" /> &nbsp;AMM/m²</li>
+                                        <apex:outputpanel rendered="{!IF(tipodeBusca=='Segmento',false,true)}">
+                                            <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'vlrCondominioComun_tbl');" id="vlrCondominioComun" />&nbsp; Vlr Condomínio Comum</li> 
+                                        </apex:outputpanel>
+                                        <apex:outputpanel rendered="{!IF(tipodeBusca=='Segmento',false,true)}">
+                                            <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'vlrCondominioComunM_tbl');" id="vlrCondominioComunM" />&nbsp; Vlr Condomínio Comum/m²</li> 
+                                        </apex:outputpanel>
+                                        <apex:outputpanel rendered="{!IF(tipodeBusca=='Segmento',false,true)}">
+                                            <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'Vlr_FPP_tbl');" id="Vlr_FPP" />&nbsp; Vlr FPP</li> 
+                                        </apex:outputpanel>
+                                        <apex:outputpanel rendered="{!IF(tipodeBusca=='Segmento',false,true)}">
+                                            <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'Vlr_FPPm_tbl');" id="Vlr_FPPm" />&nbsp; Vlr FPP/m²</li> 
+                                        </apex:outputpanel>
+                                        <apex:outputpanel rendered="{!IF(tipodeBusca=='Segmento',false,true)}">
+                                            <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'vlrCustoComun_tbl');" id="vlrCustoComun" />&nbsp; Vlr Custo Ocup - Comum</li> 
+                                        </apex:outputpanel>
+                                        <apex:outputpanel rendered="{!IF(tipodeBusca=='Segmento',false,true)}">
+                                            <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'vlrCustoComunM_tbl');" id="vlrCustoComunM" />&nbsp; Vlr Custo Ocup - Comum/m²</li> 
+                                        </apex:outputpanel>
+                                        <apex:outputpanel rendered="{!IF(tipodeBusca=='Segmento',false,true)}">
+                                            <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'vlrGrocc_tbl');" id="vlrGrocc" />&nbsp; Vlr Grocc - Comum</li> 
+                                        </apex:outputpanel>
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'AluguelDobrado_tbl');" id="AluguelDobrado" />&nbsp; Aluguel Dobrado</li> 
+                                        <apex:outputpanel rendered="{!IF(tipodeBusca=='Segmento',false,true)}">
+                                            <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'NomeFantasia_tbl');" id="NomeFantasia" />&nbsp; Nome Fantasia</li> 
+                                        </apex:outputpanel>    
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'GrupoAtividadeBR_tbl');" id="GrupoAtividadeBR" />&nbsp; Grupo de Atividade</li> 
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'RamoAtividadeBR_tbl');" id="RamoAtividadeBR" />&nbsp; Ramo de Atividade</li> 
+                                        <li class="item"><apex:inputCheckbox onclick="ChecaCheckbox(this,'TipoAtividadeBR_tbl');" id="TipoAtividadeBR" />&nbsp; Tipo de Atividade</li>                
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_12-of-12 slds-text-align_center">
+                                    <p>                   
+                                        {!IF(tipodeBusca =='Marca', NomeDoMarca +'/'+ NomeDoShopping, "")}
+                                        {!IF(tipodeBusca =='Segmento', NomeDoSegmento +'/'+ DisplayShopping,"")}
+                                        {!IF(tipodeBusca =='ShoppingLuc', NomeDaLuc +'/'+ NomeDoShopping,"")}
+                                    </p>
+                                </div>
+                                
+                                <div class="slds-col slds-size_12-of-12 col-scroll">
+                                    <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_cell-buffer">
+                                        <thead id="tabela">
+                                            <tr  class="slds-text-title_caps">
+                                                <th id="AnoMes_tbl">
+                                                    <div class="slds-truncate slds-align_absolute-center" title="Ano/Mês"><b>Ano/Mês</b></div>
+                                                </th>
+                                                <th id="Nr_Luc_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Nr Lu</b></div>
+                                                </th>
+                                                <th id="Area_LUC_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Área LUC</b></div>
+                                                </th>
+                                                <th id="aluguel_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Aluguel %</b></div>
+                                                </th>
+                                                <th id="vlrTotal_tbl" style="display:">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Venda TT</b></div>
+                                                </th>
+                                                <th id="vlrVendaTotalM_tbl" style="display:">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Venda TT/m²</b></div>
+                                                </th>
+                                                <th id="AMM_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>AMM</b></div>
+                                                </th>
+                                                <th id="sobreVenda_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>% Sobre Vendas</b></div>
+                                                </th>
+                                                <th id="AMMm_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>AMM/m²</b></div>
+                                                </th>
+                                                <th id="vlrCondominioComun_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Vlr Condomínio Comum</b></div>
+                                                </th>
+                                                <th id="vlrCondominioComunM_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Vlr Condomínio Comum/m²</b></div>
+                                                </th>
+                                                <th id="Vlr_FPP_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b> Vlr FPP</b></div>
+                                                </th>
+                                                <th id="Vlr_FPPm_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b> Vlr FPP/m²</b></div>
+                                                </th>
+                                                <th id="vlrCustoComun_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Vlr Custo Ocup - Comum</b></div>
+                                                </th>
+                                                <th id="vlrCustoComunM_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Vlr Custo Ocup - Comum/m²</b></div>
+                                                </th>
+                                                <th id="vlrGrocc_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Vlr Grocc - Comum</b></div>
+                                                </th>
+                                                <th id="AluguelDobrado_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Aluguel Dobrado</b></div>
+                                                </th>
+                                                <th id="NomeFantasia_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Nome Fantasia</b></div>
+                                                </th>
+                                                <th id="GrupoAtividadeBR_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Grupo de Atividade</b></div>
+                                                </th>
+                                                <th id="RamoAtividadeBR_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Ramo de Atividade</b></div>
+                                                </th>
+                                                <th id="TipoAtividadeBR_tbl" style="display:none">
+                                                    <div class="slds-truncate slds-align_absolute-center" title=""><b>Tipo de Atividade</b></div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tabela">
+                                            <apex:variable var="index" value="{! 0 }" />
+                                            <apex:repeat value="{!InftabelaHistorica}" var="inf" id="dsf">
+                                                <apex:variable var="index" value="{! index + 1 }" />
+                                                <tr>
+                                                    <td id="AnoMes_tbl_2">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">{!inf.Name}</div>
+                                                    </td>
+                                                    <td id="Nr_Luc_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">{! inf.TW1_Propriedade1__c }</div>
+                                                    </td>
+                                                    <td id="Area_LUC_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_Area__c}</div>
+                                                    </td>
+                                                    <td id="aluguel_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_Aluguel_percentual_faturado__c < 0, "-", "") & IF(ABS(inf.TW1_Aluguel_percentual_faturado__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Aluguel_percentual_faturado__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Aluguel_percentual_faturado__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Aluguel_percentual_faturado__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Aluguel_percentual_faturado__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Aluguel_percentual_faturado__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Aluguel_percentual_faturado__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Aluguel_percentual_faturado__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="vlrTotal_tbl_2" class="{!index}" style="display:">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_Venda_Total__c < 0, "-", "") & IF(ABS(inf.TW1_Venda_Total__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Venda_Total__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Venda_Total__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Venda_Total__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Venda_Total__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Venda_Total__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Venda_Total__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Venda_Total__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="vlrVendaTotalM_tbl_2" class="{!index}" style="display:">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.Vendas_Total_m2__c < 0, "-", "") & IF(ABS(inf.Vendas_Total_m2__c) >= 1000000, TEXT(FLOOR(ABS(inf.Vendas_Total_m2__c) / 1000000)) & ".", "") & IF(ABS(inf.Vendas_Total_m2__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.Vendas_Total_m2__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.Vendas_Total_m2__c))), 3) & "," & IF(MOD(ABS(inf.Vendas_Total_m2__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.Vendas_Total_m2__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.Vendas_Total_m2__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="AMM_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_AMM_faturado__c < 0, "-", "") & IF(ABS(inf.TW1_AMM_faturado__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_AMM_faturado__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_AMM_faturado__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_AMM_faturado__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_AMM_faturado__c))), 3) & "," & IF(MOD(ABS(inf.TW1_AMM_faturado__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_AMM_faturado__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_AMM_faturado__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="sobreVenda_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_Percentual_sobre_vendas__c < 0, "-", "") & IF(ABS(inf.TW1_Percentual_sobre_vendas__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Percentual_sobre_vendas__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Percentual_sobre_vendas__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Percentual_sobre_vendas__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Percentual_sobre_vendas__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Percentual_sobre_vendas__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Percentual_sobre_vendas__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Percentual_sobre_vendas__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="AMMm_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_Valor_do_Aluguel_m2__c < 0, "-", "") & IF(ABS(inf.TW1_Valor_do_Aluguel_m2__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Valor_do_Aluguel_m2__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Valor_do_Aluguel_m2__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Valor_do_Aluguel_m2__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Valor_do_Aluguel_m2__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Valor_do_Aluguel_m2__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Valor_do_Aluguel_m2__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Valor_do_Aluguel_m2__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="vlrCondominioComun_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_Condominio_comum__c < 0, "-", "") & IF(ABS(inf.TW1_Condominio_comum__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Condominio_comum__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Condominio_comum__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Condominio_comum__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Condominio_comum__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Condominio_comum__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Condominio_comum__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Condominio_comum__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="vlrCondominioComunM_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_Condominio_comum_m2__c < 0, "-", "") & IF(ABS(inf.TW1_Condominio_comum_m2__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Condominio_comum_m2__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Condominio_comum_m2__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Condominio_comum_m2__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Condominio_comum_m2__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Condominio_comum_m2__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Condominio_comum_m2__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Condominio_comum_m2__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="Vlr_FPP_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_FPP_Total_faturado__c < 0, "-", "") & IF(ABS(inf.TW1_FPP_Total_faturado__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_FPP_Total_faturado__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_FPP_Total_faturado__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_FPP_Total_faturado__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_FPP_Total_faturado__c))), 3) & "," & IF(MOD(ABS(inf.TW1_FPP_Total_faturado__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_FPP_Total_faturado__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_FPP_Total_faturado__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="Vlr_FPPm_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_FPP_m2__c < 0, "-", "") & IF(ABS(inf.TW1_FPP_m2__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_FPP_m2__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_FPP_m2__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_FPP_m2__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_FPP_m2__c))), 3) & "," & IF(MOD(ABS(inf.TW1_FPP_m2__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_FPP_m2__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_FPP_m2__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="vlrCustoComun_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_Custo_Ocupacao_Comum__c < 0, "-", "") & IF(ABS(inf.TW1_Custo_Ocupacao_Comum__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Custo_Ocupacao_Comum__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Custo_Ocupacao_Comum__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Custo_Ocupacao_Comum__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Custo_Ocupacao_Comum__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Custo_Ocupacao_Comum__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Custo_Ocupacao_Comum__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Custo_Ocupacao_Comum__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="vlrCustoComunM_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_Custo_Ocupacao_Comum_m2__c < 0, "-", "") & IF(ABS(inf.TW1_Custo_Ocupacao_Comum_m2__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Custo_Ocupacao_Comum_m2__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Custo_Ocupacao_Comum_m2__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Custo_Ocupacao_Comum_m2__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Custo_Ocupacao_Comum_m2__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Custo_Ocupacao_Comum_m2__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Custo_Ocupacao_Comum_m2__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Custo_Ocupacao_Comum_m2__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="vlrGrocc_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">
+                                                            <span >{!IF(inf.TW1_Grocc_Comum_percentual__c < 0, "-", "") & IF(ABS(inf.TW1_Grocc_Comum_percentual__c) >= 1000000, TEXT(FLOOR(ABS(inf.TW1_Grocc_Comum_percentual__c) / 1000000)) & ".", "") & IF(ABS(inf.TW1_Grocc_Comum_percentual__c) >= 1000, RIGHT(TEXT(FLOOR(ABS(inf.TW1_Grocc_Comum_percentual__c) / 1000)), 3) & ".", "") & RIGHT(TEXT(FLOOR(ABS(inf.TW1_Grocc_Comum_percentual__c))), 3) & "," & IF(MOD(ABS(inf.TW1_Grocc_Comum_percentual__c) , 1) * 100 < 10, "0" & TEXT(ROUND(MOD(ABS(inf.TW1_Grocc_Comum_percentual__c) , 1), 2) * 100), TEXT(MIN(ROUND(MOD(ABS(inf.TW1_Grocc_Comum_percentual__c) , 1), 2) * 100, 99)))}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td id="AluguelDobrado_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_descricao_aluguel_dobrado__c}</div>
+                                                    </td>
+                                                    <td id="NomeFantasia_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_Nome_fantasia__c}</div>
+                                                    </td>
+                                                    <td id="GrupoAtividadeBR_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_Grupo_de_atividade__c}</div>
+                                                    </td>
+                                                    <td id="RamoAtividadeBR_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_Ramo_de_atividade__c}</div>
+                                                    </td>
+                                                    <td id="TipoAtividadeBR_tbl_2" class="{!index}" style="display:none">
+                                                        <div class="slds-truncate slds-align_absolute-center" title="">{!inf.TW1_Tipo_de_Atividade__c}</div>
+                                                    </td>
+                                                </tr>
+                                            </apex:repeat>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <script>
+                            function desmarcarchbox() {
+                                var btnSelect = document.getElementsByTagName('input');
+                                for (var i = 0; i < btnSelect.length; i++) {
+                                    if (btnSelect[i].type == 'checkbox')
+                                        //btnSelect[i].checked = false;
+                                        //console.log(btnSelect[i].id);
+                                        if(btnSelect[i].id == 'j_id0:j_id1:vlrTotal' || btnSelect[i].id == 'j_id0:j_id1:vlrVendaTotalM'){
+                                            btnSelect[i].checked = true;
+                                            
+                                        }else{
+                                            btnSelect[i].checked = false;
+                                        }
+                                }
+                                
+                            }
+                            desmarcarchbox();
+                            
+                            var total=2;
+                            var ChecaCheckbox = function(check,Tabela){
+                                var qtdDeLinhas = document.querySelectorAll('#AnoMes_tbl_2').length;
+                                
+                                if (check.checked){
+                                    total++
+                                    if(total > 2){
+                                        check.checked = false;
+                                        total-- 
+                                    }else{
+                                        document.getElementById(Tabela).style.display='';
+                                        for (var i = 0; i <= qtdDeLinhas; i++) {
+                                            document.querySelectorAll('#'+Tabela+'_2')[i].style.display='';
+                                        }
+                                        
+                                    }
+                                }else{
+                                    document.getElementById(Tabela).style.display='none'
+                                    total-- 
+                                    for (var i = 0; i <= qtdDeLinhas; i++) {
+                                        document.querySelectorAll('#'+Tabela+'_2')[i].style.display='none';
+                                    }
+                                }
+                            };                             
+                            </script>
+                        </apex:outputpanel>
+                    </apex:outputpanel>  
+                    <!-- FIM telaBuscaTabelaDeDados --> 
+                </div>  
+                
+            </body>
+        </html> 
+    </apex:form>
+</apex:page>

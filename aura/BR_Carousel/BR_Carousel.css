@@ -1,0 +1,149 @@
+.THIS.carousel-container {
+    position: relative;
+    background-color: black;
+}
+
+.THIS.carousel-container > ul.slides {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.THIS.carousel-container > ul.slides > li.slide {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    line-height: 0;
+    transition: all 0.75s ease-in;
+}
+
+.THIS.carousel-container > ul.slides > li.slide.selected {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+}
+
+.THIS.carousel-container > ul.slides > li.slide > img,
+.THIS.carousel-container > ul.slides > li.slide > .image {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.THIS.carousel-container > ul.slides > li.slide > .content {
+    position: absolute;
+    line-height: normal;
+    top: 0;
+    z-index: 2;
+    padding: 0;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+/* small devices */
+@media (max-width: 768px) {
+    .THIS.carousel-container > ul.slides > li.slide > img,
+    .THIS.carousel-container > ul.slides > li.slide > .image {
+        width: auto !important;
+        max-width: none;
+        height: 250px !important;
+    }
+}
+
+/**********
+ * Controls
+ */
+.THIS.carousel-container > .carousel-control {
+    position: absolute;
+    margin: auto;
+    width: 63px;
+    height: 100px;
+    background-size: contain;
+    top: 0;
+    left: 15px;
+    bottom: 0;
+    z-index: 1000;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.25s;
+}
+
+.THIS.carousel-container > .carousel-control:hover {
+    opacity: 0.9;
+}
+
+.THIS.carousel-container > .carousel-control.next {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    right: 15px;
+    left: auto;
+}
+
+.THIS.carousel-container > .carousel-switcher-container {
+    position: absolute;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    height: 25px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    z-index: 1000;
+}
+
+.THIS.carousel-container > .carousel-switcher-container > .carousel-switcher {
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, .7);
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, .5);
+    color: transparent;
+    border-radius: 100%;
+    margin: 0 3px;
+    cursor: pointer;
+    -webkit-transition: opacity 0.25s;
+    -moz-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+    font-size: 32px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.THIS.carousel-container > .carousel-switcher-container > .carousel-switcher:hover {
+    background: rgba(255, 255, 255, .9);
+}
+
+.THIS.carousel-container > .carousel-switcher-container > .carousel-switcher.selected {
+    color: inherit;
+}
+
+@media (max-width: 992px) {
+    .THIS.carousel-container > .carousel-control {
+        width: 33px;
+        height: 50px;
+        left: 5px;
+    }
+
+    .THIS.carousel-container > .carousel-control.next {
+        right: 5px;
+    }
+
+    .THIS.carousel-container > .carousel-switcher-container {
+        height: 17px;
+    }
+
+    .THIS.carousel-container > .carousel-switcher-container > .carousel-switcher {
+        width: 17px;
+        height: 17px;
+        line-height: 17px;
+    }
+}
+
+/*
+ * END Controls
+ **************/

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Informação histórica da propriedade</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Informações históricas da propriedade</value>
+    </caseValues>
+    <fields>
+        <label><!-- AMM faturado --></label>
+        <name>TW1_AMM_faturado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aluguel percentual faturado --></label>
+        <name>TW1_Aluguel_percentual_faturado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Área --></label>
+        <name>TW1_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Condomínio comum --></label>
+        <name>TW1_Condominio_comum__c</name>
+    </fields>
+    <fields>
+        <label><!-- Condomínio comum /m2 --></label>
+        <name>TW1_Condominio_comum_m2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custo Ocupação Comum --></label>
+        <name>TW1_Custo_Ocupacao_Comum__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custo Ocupação Comum/m² --></label>
+        <name>TW1_Custo_Ocupacao_Comum_m2__c</name>
+    </fields>
+    <fields>
+        <label><!-- FPP Total faturado --></label>
+        <name>TW1_FPP_Total_faturado__c</name>
+    </fields>
+    <fields>
+        <label><!-- FPP /m2 --></label>
+        <name>TW1_FPP_m2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grocc Comum (%) --></label>
+        <name>TW1_Grocc_Comum_percentual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grupo de atividade --></label>
+        <name>TW1_Grupo_de_atividade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lucs secundárias --></label>
+        <name>TW1_Lucs_secundarias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marca --></label>
+        <lookupFilter>
+            <errorMessage><!-- O valor preenchido no filtro não retornou nenhum registro existente. --></errorMessage>
+        </lookupFilter>
+        <name>TW1_Marca__c</name>
+        <relationshipLabel><!-- Informações históricas da propriedade --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Nome fantasia --></label>
+        <name>TW1_Nome_fantasia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percentual sobre vendas --></label>
+        <name>TW1_Percentual_sobre_vendas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Propriedade --></label>
+        <name>TW1_Propriedade1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Propriedade old --></label>
+        <name>TW1_Propriedade__c</name>
+        <relationshipLabel><!-- Informações históricas da propriedade --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ramo de atividade --></label>
+        <name>TW1_Ramo_de_atividade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Informações históricas da propriedade --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Atividade --></label>
+        <name>TW1_Tipo_de_Atividade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor do Aluguel /m2 --></label>
+        <name>TW1_Valor_do_Aluguel_m2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Venda Total --></label>
+        <name>TW1_Venda_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descrição do aluguel dobrado --></label>
+        <name>TW1_descricao_aluguel_dobrado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendas Total /m2 --></label>
+        <name>Vendas_Total_m2__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

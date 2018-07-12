@@ -1,0 +1,18 @@
+<aura:component >
+	<aura:attribute name="hideLucLista" type="Boolean" default="true" />
+    <aura:attribute name="listaLuc" type="Product2[]" />
+    <aura:attribute name="lucBuscada" type="String" />
+    
+    <aura:attribute name="idShopping" type="String" />
+    <aura:attribute name="nomeShopping" type="String" />
+    
+    <aura:handler name="showListaLuc" event="c:historicoFiltrosBuscaShowListaLuc" action="{! c.showListaLuc }" />
+    <aura:handler name="setListaLuc" event="c:historicoFiltrosBuscaSetListaLuc" action="{! c.setListaLuc }" />
+    <aura:handler name="setLucBuscada" event="c:historicoFiltrosBuscaSetLucBuscada" action="{! c.setLucBuscada }" />
+    
+    <c:historicoFiltrosBuscaLucHead idShopping="{!v.idShopping}" nomeShopping="{!v.nomeShopping}" />
+    
+    <div class="{! v.hideLucLista ? 'hideLista' : '' }">
+        <c:historicoFiltrosBuscaLucLista listaLuc="{! v.listaLuc }" itemBuscado="{! v.lucBuscada }" shoppingId="{!v.idShopping}" shoppingName="{!v.nomeShopping}" />
+    </div>
+</aura:component>

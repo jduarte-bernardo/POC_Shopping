@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Opportunity_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+    </actionOverrides>
+    <brand>
+        <headerColor>#FCFCFD</headerColor>
+        <logo>X049coin</logo>
+        <logoVersion>1</logoVersion>
+    </brand>
+    <formFactors>Large</formFactors>
+    <label>Vendas</label>
+    <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>PersonAccount.PersonAccount</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <tab>standard-home</tab>
+    <tab>standard-Feed</tab>
+    <tab>standard-Account</tab>
+    <tab>TW1_Shopping__c</tab>
+    <tab>TW1_Propriedade__c</tab>
+    <tab>standard-Opportunity</tab>
+    <tab>standard-Quote</tab>
+    <tab>Inf_hist_ricas_da_propriedade1</tab>
+    <tab>Tabela_de_comercializa_o</tab>
+    <tab>standard-Event</tab>
+    <tab>standard-Dashboard</tab>
+    <tab>standard-report</tab>
+    <uiType>Lightning</uiType>
+    <utilityBar>Vendas_UtilityBar</utilityBar>
+</CustomApplication>

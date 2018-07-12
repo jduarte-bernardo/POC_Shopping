@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Relatório Diário</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Relatórios Diários</value>
+    </caseValues>
+    <fields>
+        <label><!-- Ação Almoço --></label>
+        <name>TW1_Acao_Almoco__c</name>
+    </fields>
+    <fields>
+        <label><!-- Acumulado --></label>
+        <name>TW1_Acumulado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Área --></label>
+        <name>TW1_Area__c</name>
+        <picklistValues>
+            <masterLabel>ADM</masterLabel>
+            <translation><!-- ADM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cal</masterLabel>
+            <translation><!-- Cal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clube</masterLabel>
+            <translation><!-- Clube --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Concierge</masterLabel>
+            <translation><!-- Concierge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fraldário</masterLabel>
+            <translation><!-- Fraldário --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Assunto --></label>
+        <name>TW1_Assunto__c</name>
+        <picklistValues>
+            <masterLabel>Comercial</masterLabel>
+            <translation><!-- Comercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conservação</masterLabel>
+            <translation><!-- Conservação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lojas em obra e restaurantes</masterLabel>
+            <translation><!-- Lojas em obra e restaurantes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mall e mídia</masterLabel>
+            <translation><!-- Mall e mídia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manutenção/Arquitetura</masterLabel>
+            <translation><!-- Manutenção/Arquitetura --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ocorrências</masterLabel>
+            <translation><!-- Ocorrências --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portarias</masterLabel>
+            <translation><!-- Portarias --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primeiros socorros</masterLabel>
+            <translation><!-- Primeiros socorros --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Segurança</masterLabel>
+            <translation><!-- Segurança --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TI</masterLabel>
+            <translation><!-- TI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Clube --></label>
+        <name>TW1_Clube__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data --></label>
+        <name>TW1_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descrição --></label>
+        <name>TW1_Descricao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dia da Semana --></label>
+        <name>TW1_Dia_da_Semana__c</name>
+        <picklistValues>
+            <masterLabel>Domingo</masterLabel>
+            <translation><!-- Domingo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarta</masterLabel>
+            <translation><!-- Quarta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quinta</masterLabel>
+            <translation><!-- Quinta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Segunda</masterLabel>
+            <translation><!-- Segunda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sexta</masterLabel>
+            <translation><!-- Sexta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sábado</masterLabel>
+            <translation><!-- Sábado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Terça</masterLabel>
+            <translation><!-- Terça --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gratuidade Clientes --></label>
+        <name>TW1_Gratuidade_Clientes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Infinite --></label>
+        <name>TW1_Infinite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observações --></label>
+        <name>TW1_Observacoes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platinum --></label>
+        <name>TW1_Platinum__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantidade Estacionamento --></label>
+        <name>TW1_Quantidade_Estacionamento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantidade --></label>
+        <name>TW1_Quantidade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Responsável Turno --></label>
+        <name>TW1_Responsavel_Turno__c</name>
+        <relationshipLabel><!-- Relatórios Diários --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Relatórios Diários --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tipo --></label>
+        <name>TW1_Tipo__c</name>
+        <picklistValues>
+            <masterLabel>Abonos</masterLabel>
+            <translation><!-- Abonos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fluxo de clientes</masterLabel>
+            <translation><!-- Fluxo de clientes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fluxo do estacionamento</masterLabel>
+            <translation><!-- Fluxo do estacionamento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informações</masterLabel>
+            <translation><!-- Informações --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LogBook</masterLabel>
+            <translation><!-- LogBook --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Promoção visa</masterLabel>
+            <translation><!-- Promoção visa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RDO</masterLabel>
+            <translation><!-- RDO --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>LogBook</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>RDO</layout>
+        <sections>
+            <label><!-- Abonos --></label>
+            <section>Abonos</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fluxo do Cliente --></label>
+            <section>Fluxo do Cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Informações --></label>
+            <section>Informações</section>
+        </sections>
+        <sections>
+            <label><!-- Promoção Visa --></label>
+            <section>Promoção Visa</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Abonos --></label>
+        <name>Abonos</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Fluxo de clientes --></label>
+        <name>Fluxo_de_clientes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Fluxo do estacionamento --></label>
+        <name>Fluxo_do_estacionamento</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Informações --></label>
+        <name>Informacoes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- LogBook --></label>
+        <name>LogBook</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Promoção visa --></label>
+        <name>Promocao_visa</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- RDO --></label>
+        <name>RDO</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

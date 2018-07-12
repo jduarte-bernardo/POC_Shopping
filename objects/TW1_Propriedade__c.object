@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Propriedade_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>PropriedadeCompactLayout</fullName>
+        <fields>Name</fields>
+        <fields>TW1_area_m2__c</fields>
+        <fields>TW1_Shopping__c</fields>
+        <fields>TW1_Status__c</fields>
+        <fields>TW1_Ativa__c</fields>
+        <label>PropriedadeCompactLayout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Planta__c</fullName>
+        <externalId>false</externalId>
+        <label>Planta</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TW1_AMM_M2__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(TW1_AMM__c = 0,TW1_area_m2__c=0),0,TW1_AMM__c/TW1_area_m2__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AMM/M²</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_AMM_OTN__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(TW1_AMM__c=0,TW1_OTN__c=0),0,TW1_AMM__c/TW1_OTN__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AMM/OTN</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_AMM__c</fullName>
+        <externalId>false</externalId>
+        <label>AMM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Altura__c</fullName>
+        <externalId>false</externalId>
+        <label>Altura</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Ativa__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Ativa</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Condominio__c</fullName>
+        <externalId>false</externalId>
+        <label>Condominio</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Fundo__c</fullName>
+        <externalId>false</externalId>
+        <label>Fundo</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_IPTU__c</fullName>
+        <externalId>false</externalId>
+        <label>IPTU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Id_Externo__c</fullName>
+        <externalId>true</externalId>
+        <label>Id Externo</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Largura__c</fullName>
+        <externalId>false</externalId>
+        <label>Largura</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Localizacao__c</fullName>
+        <externalId>false</externalId>
+        <label>Localização</label>
+        <length>120</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Nota_de_d_bito_ou_CTO__c</fullName>
+        <externalId>false</externalId>
+        <label>Nota de débito ou CTO</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_OTN__c</fullName>
+        <externalId>false</externalId>
+        <label>OTN</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Observacao__c</fullName>
+        <externalId>false</externalId>
+        <label>Observação</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TW1_Piso__c</fullName>
+        <externalId>false</externalId>
+        <label>Piso</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1º andar</fullName>
+                    <default>false</default>
+                    <label>1º andar</label>
+                </value>
+                <value>
+                    <fullName>Subsolo</fullName>
+                    <default>false</default>
+                    <label>Subsolo</label>
+                </value>
+                <value>
+                    <fullName>2º andar</fullName>
+                    <default>false</default>
+                    <label>2º andar</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TW1_RES_m2__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(TW1_Res_Perata__c=0,TW1_area_m2__c=0),0,TW1_Res_Perata__c/TW1_area_m2__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RES/m²</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Res_Perata__c</fullName>
+        <externalId>false</externalId>
+        <label>Res Perata</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_SGL_Shopping__c</fullName>
+        <externalId>false</externalId>
+        <formula>TW1_Shopping__r.TW1_SGL_Empreendimento__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SGL Shopping</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Shopping__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Shopping</label>
+        <referenceTo>TW1_Shopping__c</referenceTo>
+        <relationshipLabel>Propriedades</relationshipLabel>
+        <relationshipName>Propriedades</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contrato assinado</fullName>
+                    <default>false</default>
+                    <label>Contrato assinado</label>
+                </value>
+                <value>
+                    <fullName>Repasse</fullName>
+                    <default>false</default>
+                    <label>Repasse</label>
+                </value>
+                <value>
+                    <fullName>Vaga</fullName>
+                    <default>false</default>
+                    <label>Vaga</label>
+                </value>
+                <value>
+                    <fullName>Ocupada</fullName>
+                    <default>false</default>
+                    <label>Ocupada</label>
+                </value>
+                <value>
+                    <fullName>Reservada</fullName>
+                    <default>false</default>
+                    <label>Reservada</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TW1_Status_da_prospecao__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospecção/Proposta aprovada</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Subtipo__c</fullName>
+        <externalId>false</externalId>
+        <label>Subtipo</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Âncora</fullName>
+                    <default>false</default>
+                    <label>Âncora</label>
+                </value>
+                <value>
+                    <fullName>Depósito</fullName>
+                    <default>false</default>
+                    <label>Depósito</label>
+                </value>
+                <value>
+                    <fullName>Megaloja</fullName>
+                    <default>false</default>
+                    <label>Megaloja</label>
+                </value>
+                <value>
+                    <fullName>Quiosque</fullName>
+                    <default>false</default>
+                    <label>Quiosque</label>
+                </value>
+                <value>
+                    <fullName>Satélite</fullName>
+                    <default>false</default>
+                    <label>Satélite</label>
+                </value>
+                <value>
+                    <fullName>Mega Banner</fullName>
+                    <default>false</default>
+                    <label>Mega Banner</label>
+                </value>
+                <value>
+                    <fullName>Banner</fullName>
+                    <default>false</default>
+                    <label>Banner</label>
+                </value>
+                <value>
+                    <fullName>Totem Digital</fullName>
+                    <default>false</default>
+                    <label>Totem Digital</label>
+                </value>
+                <value>
+                    <fullName>Adesivos de Mesa</fullName>
+                    <default>false</default>
+                    <label>Adesivos de Mesa</label>
+                </value>
+                <value>
+                    <fullName>Portas de Acesso</fullName>
+                    <default>false</default>
+                    <label>Portas de Acesso</label>
+                </value>
+                <value>
+                    <fullName>Totem Interno</fullName>
+                    <default>false</default>
+                    <label>Totem Interno</label>
+                </value>
+                <value>
+                    <fullName>Feiras e Eventos</fullName>
+                    <default>false</default>
+                    <label>Feiras e Eventos</label>
+                </value>
+                <value>
+                    <fullName>Colunas Mall</fullName>
+                    <default>false</default>
+                    <label>Colunas Mall</label>
+                </value>
+                <value>
+                    <fullName>Colunas Praça de Alimentação</fullName>
+                    <default>false</default>
+                    <label>Colunas Praça de Alimentação</label>
+                </value>
+                <value>
+                    <fullName>Painel Backlight</fullName>
+                    <default>false</default>
+                    <label>Painel Backlight</label>
+                </value>
+                <value>
+                    <fullName>Porta de Banheiro</fullName>
+                    <default>false</default>
+                    <label>Porta de Banheiro</label>
+                </value>
+                <value>
+                    <fullName>Testeira</fullName>
+                    <default>false</default>
+                    <label>Testeira</label>
+                </value>
+                <value>
+                    <fullName>Espelho de Banheiro</fullName>
+                    <default>false</default>
+                    <label>Espelho de Banheiro</label>
+                </value>
+                <value>
+                    <fullName>Painel Fachada</fullName>
+                    <default>false</default>
+                    <label>Painel Fachada</label>
+                </value>
+                <value>
+                    <fullName>Painel</fullName>
+                    <default>false</default>
+                    <label>Painel</label>
+                </value>
+                <value>
+                    <fullName>Adoção de Espaço</fullName>
+                    <default>false</default>
+                    <label>Adoção de Espaço</label>
+                </value>
+                <value>
+                    <fullName>Cancela Estacionamento</fullName>
+                    <default>false</default>
+                    <label>Cancela Estacionamento</label>
+                </value>
+                <value>
+                    <fullName>Painel Frontlight</fullName>
+                    <default>false</default>
+                    <label>Painel Frontlight</label>
+                </value>
+                <value>
+                    <fullName>Adesivo Piso</fullName>
+                    <default>false</default>
+                    <label>Adesivo Piso</label>
+                </value>
+                <value>
+                    <fullName>Escada Rolante</fullName>
+                    <default>false</default>
+                    <label>Escada Rolante</label>
+                </value>
+                <value>
+                    <fullName>Display Mall</fullName>
+                    <default>false</default>
+                    <label>Display Mall</label>
+                </value>
+                <value>
+                    <fullName>Panfletagem</fullName>
+                    <default>false</default>
+                    <label>Panfletagem</label>
+                </value>
+                <value>
+                    <fullName>Portas de Elevador</fullName>
+                    <default>false</default>
+                    <label>Portas de Elevador</label>
+                </value>
+                <value>
+                    <fullName>Display Mesa</fullName>
+                    <default>false</default>
+                    <label>Display Mesa</label>
+                </value>
+                <value>
+                    <fullName>Stand Temporário</fullName>
+                    <default>false</default>
+                    <label>Stand Temporário</label>
+                </value>
+                <value>
+                    <fullName>Adoção Fraldário</fullName>
+                    <default>false</default>
+                    <label>Adoção Fraldário</label>
+                </value>
+                <value>
+                    <fullName>Voicer de cancela</fullName>
+                    <default>false</default>
+                    <label>Voicer de cancela</label>
+                </value>
+                <value>
+                    <fullName>Mock up</fullName>
+                    <default>false</default>
+                    <label>Mock up</label>
+                </value>
+                <value>
+                    <fullName>Placas aéreas</fullName>
+                    <default>false</default>
+                    <label>Placas aéreas</label>
+                </value>
+                <value>
+                    <fullName>Praça de Eventos</fullName>
+                    <default>false</default>
+                    <label>Praça de Eventos</label>
+                </value>
+                <value>
+                    <fullName>Evento Interno</fullName>
+                    <default>false</default>
+                    <label>Evento Interno</label>
+                </value>
+                <value>
+                    <fullName>Evento Externo</fullName>
+                    <default>false</default>
+                    <label>Evento Externo</label>
+                </value>
+                <value>
+                    <fullName>Antena</fullName>
+                    <default>false</default>
+                    <label>Antena</label>
+                </value>
+                <value>
+                    <fullName>Caixa Eletrônico</fullName>
+                    <default>false</default>
+                    <label>Caixa Eletrônico</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TW1_URL_da_imagem1__c</fullName>
+        <externalId>false</externalId>
+        <label>URL da Imagem 1</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>TW1_URL_da_imagem2__c</fullName>
+        <externalId>false</externalId>
+        <label>URL da Imagem 2</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Valor_PEC__c</fullName>
+        <externalId>false</externalId>
+        <label>Valor PEC</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Valor_TR__c</fullName>
+        <externalId>false</externalId>
+        <label>Valor TR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Valor_de_tabela__c</fullName>
+        <externalId>false</externalId>
+        <label>Valor de tabela</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_area_m2__c</fullName>
+        <externalId>false</externalId>
+        <label>Área (m²)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Propriedade</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>TW1_Shopping__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Loja</fullName>
+        <columns>NAME</columns>
+        <columns>TW1_Shopping__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TW1_Propriedade__c.TW1_Propriedade_Loja</value>
+        </filters>
+        <label>Propriedade de Loja</label>
+        <language>pt_BR</language>
+    </listViews>
+    <listViews>
+        <fullName>TW1_Propriedade_de_FeirasEventos_ListView</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>TW1_Shopping__c</columns>
+        <columns>TW1_Status__c</columns>
+        <columns>TW1_Subtipo__c</columns>
+        <columns>TW1_area_m2__c</columns>
+        <columns>TW1_Altura__c</columns>
+        <columns>TW1_Largura__c</columns>
+        <columns>TW1_Localizacao__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TW1_Propriedade__c.TW1_Propriedade_feiras_e_eventos</value>
+        </filters>
+        <label>Propriedade de Feiras e Eventos</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>TW1_Propriedade_de_Mall_ListView</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>TW1_Shopping__c</columns>
+        <columns>TW1_Status__c</columns>
+        <columns>TW1_Subtipo__c</columns>
+        <columns>TW1_area_m2__c</columns>
+        <columns>TW1_Altura__c</columns>
+        <columns>TW1_Largura__c</columns>
+        <columns>TW1_Localizacao__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TW1_Propriedade__c.TW1_Propriedade_Mall</value>
+        </filters>
+        <label>Propriedade de Mall</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>TW1_Propriedade_de_Midia_ListView</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>TW1_Shopping__c</columns>
+        <columns>TW1_Status__c</columns>
+        <columns>TW1_Subtipo__c</columns>
+        <columns>TW1_area_m2__c</columns>
+        <columns>TW1_Altura__c</columns>
+        <columns>TW1_Largura__c</columns>
+        <columns>TW1_Localizacao__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TW1_Propriedade__c.TW1_Propriedade_Midia</value>
+        </filters>
+        <filters>
+            <field>TW1_Shopping__c</field>
+            <operation>equals</operation>
+            <value>Shopping Leblon</value>
+        </filters>
+        <label>Propriedade de Mídia</label>
+    </listViews>
+    <listViews>
+        <fullName>Todas_as_propriedades</fullName>
+        <columns>NAME</columns>
+        <columns>TW1_Shopping__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todas as propriedades</label>
+        <language>pt_BR</language>
+    </listViews>
+    <nameField>
+        <label>Nº da Propriedade</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Propriedades</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>TW1_Propriedade_Loja</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>PropriedadeCompactLayout</compactLayoutAssignment>
+        <description>Utilizar este tipo de registro para cadastrar propriedades do tipo loja.</description>
+        <label>Propriedade de loja</label>
+        <picklistValues>
+            <picklist>TW1_Piso__c</picklist>
+            <values>
+                <fullName>1º andar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Status__c</picklist>
+            <values>
+                <fullName>Contrato assinado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repasse</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vaga</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Subtipo__c</picklist>
+            <values>
+                <fullName>Megaloja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Satélite</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Âncora</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>TW1_Propriedade_Mall</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>PropriedadeCompactLayout</compactLayoutAssignment>
+        <description>Utilizar este tipo de registro para cadastrar propriedades do tipo mall.</description>
+        <label>Propriedade de mall</label>
+        <picklistValues>
+            <picklist>TW1_Piso__c</picklist>
+            <values>
+                <fullName>1º andar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Status__c</picklist>
+            <values>
+                <fullName>Ocupada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reservada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vaga</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Subtipo__c</picklist>
+            <values>
+                <fullName>Antena</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caixa Eletrônico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Depósito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quiosque</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>TW1_Propriedade_Midia</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>PropriedadeCompactLayout</compactLayoutAssignment>
+        <description>Utilizar este tipo de registro para cadastrar propriedades do tipo mídia.</description>
+        <label>Propriedade de mídia</label>
+        <picklistValues>
+            <picklist>TW1_Piso__c</picklist>
+            <values>
+                <fullName>1º andar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Status__c</picklist>
+            <values>
+                <fullName>Ocupada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reservada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vaga</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Subtipo__c</picklist>
+            <values>
+                <fullName>Adesivo Piso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adesivos de Mesa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adoção Fraldário</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adoção de Espaço</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancela Estacionamento</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Colunas Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Colunas Praça de Alimentação</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Display Mall</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Display Mesa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escada Rolante</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Espelho de Banheiro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feiras e Eventos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mega Banner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mock up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Painel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Painel Backlight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Painel Fachada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Painel Frontlight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Panfletagem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Placas aéreas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Porta de Banheiro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portas de Acesso</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Portas de Elevador</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Stand Temporário</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Testeira</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Totem Digital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Totem Interno</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicer de cancela</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>TW1_Propriedade_feiras_e_eventos</fullName>
+        <active>true</active>
+        <description>Utilizar este tipo de registro para cadastrar propriedades do tipo feiras e eventos.</description>
+        <label>Propriedade feiras e eventos</label>
+        <picklistValues>
+            <picklist>TW1_Piso__c</picklist>
+            <values>
+                <fullName>1º andar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Status__c</picklist>
+            <values>
+                <fullName>Ocupada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reservada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vaga</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TW1_Subtipo__c</picklist>
+            <values>
+                <fullName>Evento Externo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Evento Interno</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Praça de Eventos</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>TW1_Shopping__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>TW1_Shopping__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TW1_Shopping__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>TW1_Shopping__c</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchResultsAdditionalFields>TW1_Shopping__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>ImpedeEdicaoNumPropriedade</fullName>
+        <active>false</active>
+        <description>Impede a edição do nº da propriedade pelo perfil EV</description>
+        <errorConditionFormula>AND($User.ProfileId = &quot;00e0R000000IHSK&quot;,PRIORVALUE(Name)&lt;&gt;Name)</errorConditionFormula>
+        <errorMessage>Você Não tem permissão para alterar o nº da propriedade</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TW1_PropriedadeImpedeEdicaoName</fullName>
+        <active>false</active>
+        <description>Impede a edição do nº da propriedade pelo perfil EV</description>
+        <errorConditionFormula>AND($User.ProfileId &lt;&gt; &quot;00e1I000000xiXe&quot;,PRIORVALUE(Name)&lt;&gt;Name)</errorConditionFormula>
+        <errorMessage>Você Não tem permissão para alterar o nº da propriedade</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

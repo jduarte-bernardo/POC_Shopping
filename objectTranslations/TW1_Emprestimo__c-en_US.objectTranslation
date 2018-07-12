@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Empréstimo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Empréstimos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data da Devolução --></label>
+        <name>TW1_Data_da_Devolucao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data do Empréstimo --></label>
+        <name>TW1_Data_do_Emprestimo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependente --></label>
+        <lookupFilter>
+            <errorMessage><!-- Esse cliente não possui dependentes cadastrados. --></errorMessage>
+        </lookupFilter>
+        <name>TW1_Dependente__c</name>
+        <relationshipLabel><!-- Empréstimos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ID Externo --></label>
+        <name>TW1_ID_Externo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item --></label>
+        <name>TW1_Item__c</name>
+        <relationshipLabel><!-- Empréstimos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Nome do Cliente --></label>
+        <name>TW1_Nome_do_Cliente__c</name>
+        <relationshipLabel><!-- Empréstimos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Observação --></label>
+        <name>TW1_Observacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Empréstimos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TW1_Status__c</name>
+        <picklistValues>
+            <masterLabel>Devolvido</masterLabel>
+            <translation><!-- Devolvido --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Em uso</masterLabel>
+            <translation><!-- Em uso --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Empréstimo --></label>
+        <name>TW1_Tipo_de_Emprestimo__c</name>
+        <picklistValues>
+            <masterLabel>Armário</masterLabel>
+            <translation><!-- Armário --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cadeira de Rodas</masterLabel>
+            <translation><!-- Cadeira de Rodas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cadeira de Rodas motorizada</masterLabel>
+            <translation><!-- Cadeira de Rodas motorizada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carregador Portátil</masterLabel>
+            <translation><!-- Carregador Portátil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carrinho de Bebê</masterLabel>
+            <translation><!-- Carrinho de Bebê --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PetCar</masterLabel>
+            <translation><!-- PetCar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sala</masterLabel>
+            <translation><!-- Sala --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Layout de Empréstimo</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Armário --></label>
+        <name>Armario</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cadeira de Rodas --></label>
+        <name>Cadeira_de_Rodas</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cadeira de Rodas motorizada --></label>
+        <name>Cadeira_de_Rodas_motorizada</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Carregador Portátil --></label>
+        <name>Carregador_Portatil</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Carrinho de Bebê --></label>
+        <name>Carrinho_de_Bebe</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- PetCar --></label>
+        <name>PetCar</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sala --></label>
+        <name>Sala</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Favor preencher data de devolução. --></errorMessage>
+        <name>TW1_VR_Emprestimo_Solicita_Data_Devolu</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Se a data de devolução for preenchida alterar o status para Devolvido. --></errorMessage>
+        <name>TW1_VR_Emprestimo_Solicita_status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Não é possível vincular um item com status de locado a um empréstimo já existente, por favor selecione um item vago. --></errorMessage>
+        <name>TW1_VR_Emprestimo_Valida_status_item</name>
+    </validationRules>
+</CustomObjectTranslation>

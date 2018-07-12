@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Itens</value>
+    </caseValues>
+    <fields>
+        <label><!-- Empréstimo --></label>
+        <name>TW1_Emprestimo_del__c</name>
+        <relationshipLabel><!-- Itens --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ID Externo --></label>
+        <name>TW1_ID_Externo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observação --></label>
+        <name>TW1_Observacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Patrimônio --></label>
+        <name>TW1_Patrimonio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Itens --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TW1_Status__c</name>
+        <picklistValues>
+            <masterLabel>Inativo</masterLabel>
+            <translation><!-- Inativo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Locado</masterLabel>
+            <translation><!-- Locado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reservado</masterLabel>
+            <translation><!-- Reservado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vago</masterLabel>
+            <translation><!-- Vago --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo --></label>
+        <name>TW1_Tipo__c</name>
+        <picklistValues>
+            <masterLabel>Armário</masterLabel>
+            <translation><!-- Armário --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cadeira de Rodas</masterLabel>
+            <translation><!-- Cadeira de Rodas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cadeira de rodas Motorizada</masterLabel>
+            <translation><!-- Cadeira de rodas Motorizada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carregador Portátil</masterLabel>
+            <translation><!-- Carregador Portátil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carrinho de Bebê</masterLabel>
+            <translation><!-- Carrinho de Bebê --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PetCar</masterLabel>
+            <translation><!-- PetCar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sala</masterLabel>
+            <translation><!-- Sala --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Layout de Item</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

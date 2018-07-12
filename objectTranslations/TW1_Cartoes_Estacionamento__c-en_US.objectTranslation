@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cartão Estacionamento</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cartões Estacionamento</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cartão Gerado --></label>
+        <name>TW1_Cartao_Gerado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Fim --></label>
+        <name>TW1_Data_Fim__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data início --></label>
+        <name>TW1_Data_inicio__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID Externo --></label>
+        <name>TW1_ID_Externo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marca --></label>
+        <name>TW1_Marca__c</name>
+    </fields>
+    <fields>
+        <label><!-- Modelo --></label>
+        <name>TW1_Modelo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número Fidelidade --></label>
+        <name>TW1_Numero_Fidelidade__c</name>
+        <relationshipLabel><!-- Cartões Estacionamento --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Número --></label>
+        <name>TW1_Numero__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número do Cartão --></label>
+        <name>TW1_Numero_do_Cartao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Placa --></label>
+        <name>TW1_Placa__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TW1_Status__c</name>
+        <picklistValues>
+            <masterLabel>Ativo</masterLabel>
+            <translation><!-- Ativo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inativo</masterLabel>
+            <translation><!-- Inativo --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Layout de Cartão Estacionamento</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dados do Veículo --></label>
+            <section>Dados do Veículo</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Gerar Cartão --></label>
+        <name>Gerar_Cartao</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reimpressão do Cartão --></label>
+        <name>Reimpressao_do_Cartao</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

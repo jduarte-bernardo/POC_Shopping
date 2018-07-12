@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Terminal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Terminais</value>
+    </caseValues>
+    <fields>
+        <label><!-- Operador --></label>
+        <name>TW1_Operador__c</name>
+        <relationshipLabel><!-- Terminais --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Terminais --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Stand --></label>
+        <name>TW1_Stand__c</name>
+        <relationshipLabel><!-- Terminais --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Layout de Terminal</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

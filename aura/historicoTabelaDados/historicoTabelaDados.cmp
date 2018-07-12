@@ -1,0 +1,461 @@
+<aura:component controller="TabelaHistoricoController" >
+    <aura:attribute name="tipoBusca" type="String" />
+    <aura:attribute name="shoppingId" type="String" />
+    <aura:attribute name="shoppingName" type="String" />
+    <aura:attribute name="marcaBuscada" type="String" />
+    <aura:attribute name="segmentoBuscado" type="String" />
+
+    <aura:attribute name="lucName" type="String" default="" />
+    <aura:attribute name="listaHistorico" type="TW1_Informacoes_historicas__c[]" />
+    
+    <aura:attribute name="nrLuc" type="Boolean" default="false" />
+    <aura:attribute name="areaLuc" type="Boolean" default="false" />
+    <aura:attribute name="vlrVendaTotal" type="Boolean" default="true" />
+    <aura:attribute name="vlrVendaTotalM2" type="Boolean" default="true" />
+    <aura:attribute name="aluguelPercentual" type="Boolean" default="false" />
+    <aura:attribute name="amm" type="Boolean" default="false" />
+    <aura:attribute name="porcentagemSobreVendas" type="Boolean" default="false" />
+    <aura:attribute name="ammM2" type="Boolean" default="false" />
+    <aura:attribute name="vlrCondominioComum" type="Boolean" default="false" />
+    <aura:attribute name="vlrCondominioComumM2" type="Boolean" default="false" />
+    <aura:attribute name="vlrFpp" type="Boolean" default="false" />
+    <aura:attribute name="vlrFppM2" type="Boolean" default="false" />
+    <aura:attribute name="vlrCustoOcupComum" type="Boolean" default="false" />
+    <aura:attribute name="vlrCustoOcupComumM2" type="Boolean" default="false" />
+    <aura:attribute name="vlrGroccComum" type="Boolean" default="false" />
+    <aura:attribute name="aluguelDobrado" type="Boolean" default="false" />
+    <aura:attribute name="nomeFantasia" type="Boolean" default="false" />
+    <aura:attribute name="grupoAtividadeBr" type="Boolean" default="false" />
+    <aura:attribute name="ramoAtividadeBr" type="Boolean" default="false" />
+    <aura:attribute name="tipoAtividadeBr" type="Boolean" default="false" />
+    
+    <aura:handler name="exibirOcultarColuna" event="c:historicoTabelaDadosExibeOcultaColuna" action="{! c.exibirOcultarColuna }" />
+    <aura:handler name="mostrarMarcaBuscada" event="c:historicoFiltrosBuscaSetMarcaBuscada" action="{! c.mostrarMarcaBuscada }" />
+    
+    <aura:registerEvent name="showTipoBusca" type="c:historicoIrTipoBusca"/>
+    <aura:registerEvent name="showBuscaMarca" type="c:historicoIrBuscaMarca"/>
+    <aura:registerEvent name="showBuscaSegmento" type="c:historicoIrBuscaSegmento"/>
+    <aura:registerEvent name="showBuscaShoppingLuc" type="c:historicoIrBuscaShoppingLuc"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:registerEvent name="exibirOcultarTodasColunas" type="c:historicoTabelaDadosExibeOcultaTodasColunas" />
+    
+    <div class="slds-align_absolute-center slds-grid slds-wrap">
+        <div class="slds-size_12-of-12" />
+        <button class="slds-button slds-button_neutral slds-size_12-of-12" onclick="{! c.showTipoBusca }">
+            &lt;&lt; Tipo de Busca 
+        </button>
+        <div class="slds-size_12-of-12" />
+    </div>
+    <div class="slds-align_absolute-center slds-grid slds-wrap">
+        <div class="slds-size_12-of-12" />
+        <aura:if isTrue="{! v.tipoBusca == 'marca' }" >
+            <button class="slds-button slds-button_neutral slds-size_12-of-12" onclick="{! c.showBuscaMarca }">
+                &lt;&lt; Busca por Marca 
+            </button>
+        </aura:if>
+        <aura:if isTrue="{! v.tipoBusca == 'segmento' }" >
+            <button class="slds-button slds-button_neutral slds-size_12-of-12" onclick="{! c.showBuscaSegmento }">
+                &lt;&lt; Busca por Segmento 
+            </button>
+        </aura:if>
+        <aura:if isTrue="{! v.tipoBusca == 'shopping_luc' }" >
+            <button class="slds-button slds-button_neutral slds-size_12-of-12" onclick="{! c.showBuscaShoppingLuc }">
+                &lt;&lt; Busca por Shopping/LUC 
+            </button>
+        </aura:if>
+        <div class="slds-size_1-of-12" />
+    </div>
+    <div class="slds-grid slds-wrap">
+        <!--<div class="slds-size_1-of-12" />-->
+        <div class="slds-size_12-of-12 slds-card">
+            <div class="slds-m-around--medium">
+                <section id="accordion">
+                    <input type="checkbox" checked="false" name="accordion-role" id="colorIdHistorico" />
+                    <label for="colorIdHistorico">Exibir/ocultar colunas (máx. 2)</label>
+                    
+                    <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Nr Luc" exibeColuna="{! v.nrLuc }" />
+                    </aura:if>
+                    <c:historicoTabelaDadosCheckbox nomeColuna="Área LUC" exibeColuna="{! v.areaLuc }" />
+                    <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Aluguel %" exibeColuna="{! v.aluguelPercentual }" />
+                    </aura:if>
+                    <c:historicoTabelaDadosCheckbox nomeColuna="Vlr Venda Total" exibeColuna="{! v.vlrVendaTotal }" />
+                    <c:historicoTabelaDadosCheckbox nomeColuna="Vlr Venda Total/m²" exibeColuna="{! v.vlrVendaTotalM2 }" />
+                    <c:historicoTabelaDadosCheckbox nomeColuna="AMM" exibeColuna="{! v.amm }" />
+                    <c:historicoTabelaDadosCheckbox nomeColuna="% Sobre Vendas" exibeColuna="{! v.porcentagemSobreVendas }" />
+                    <c:historicoTabelaDadosCheckbox nomeColuna="AMM/m²" exibeColuna="{! v.ammM2 }" />
+                    <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Vlr Condomínio Comum" exibeColuna="{! v.vlrCondominioComum }" />
+                    </aura:if>
+                    <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Vlr Condomínio Comum/m²" exibeColuna="{! v.vlrCondominioComumM2 }" />
+                    </aura:if>
+                    <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Vlr FPP" exibeColuna="{! v.vlrFpp }" />
+                    </aura:if>
+                    <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Vlr FPP/m²" exibeColuna="{! v.vlrFppM2 }" />
+                    </aura:if>
+                    <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Vlr Custo Ocup - Comum" exibeColuna="{! v.vlrCustoOcupComum }" />
+                    </aura:if>
+                    <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Vlr Custo Ocup - Comum/m²" exibeColuna="{! v.vlrCustoOcupComumM2 }" />
+                    </aura:if>
+                    <c:historicoTabelaDadosCheckbox nomeColuna="Vlr Grocc - Comum" exibeColuna="{! v.vlrGroccComum }" />
+                    <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Aluguel Dobrado" exibeColuna="{! v.aluguelDobrado }" />
+                    </aura:if>
+                    <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                        <c:historicoTabelaDadosCheckbox nomeColuna="Nome Fantasia" exibeColuna="{! v.nomeFantasia }" />
+                    </aura:if>
+                    <c:historicoTabelaDadosCheckbox nomeColuna="Grupo Atividade" exibeColuna="{! v.grupoAtividadeBr }" />
+                    <c:historicoTabelaDadosCheckbox nomeColuna="Ramo Atividade" exibeColuna="{! v.ramoAtividadeBr }" />
+                    <c:historicoTabelaDadosCheckbox nomeColuna="Tipo Atividade" exibeColuna="{! v.tipoAtividadeBr }" />
+                </section>
+            </div> 
+        </div>
+        <!--<div class="slds-size_1-of-12" />-->
+    </div>
+    <div class="slds-align_absolute-center lucSegMarca">
+        {! v.lucName == null ? '' : (v.lucName ) }
+        {! v.marcaBuscada == null ? '' : (v.marcaBuscada ) }
+        {! v.segmentoBuscado == null ? '' : (v.segmentoBuscado ) } /  {! v.shoppingName }
+    </div>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-size_4-of-12" >
+            <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_cell-buffer" id="tblano">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate slds-align_absolute-center" title="Ano/Mês">Ano/Mês</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.listaHistorico}" var="historico">
+                        <tr>
+                            <td data-label="Ano/Mês">
+                                <div class="slds-truncate slds-align_absolute-center" title="{! historico.Name }">{! historico.Name }</div>
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+        <div class="slds-size_8-of-12" >
+            <ui:scrollerWrapper >
+                <div class="{! $Browser.isAndroid ? 'slds-scrollable' : 'slds-scrollable-ios-friendly' }">
+                    <article>
+                            <table class="slds-table slds-table_bordered slds-table_col-bordered slds-table_cell-buffer">
+                                <thead>
+                                    <tr class="slds-text-title_caps">
+                                       <!-- <th scope="col">
+                                            <div class="slds-truncate slds-align_absolute-center" title="Ano/Mês">Ano/Mês</div>
+                                        </th>-->
+                                        <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                            <aura:if isTrue="{! v.nrLuc }" >
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="Nr Luc">Nr Luc</div>
+                                                </th>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.areaLuc }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Área LUC">Área LUC</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.tipoBusca != 'segmento'}">
+                                            <aura:if isTrue="{! v.aluguelPercentual }" >
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="Aluguel %">Aluguel %</div>
+                                                </th>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.vlrVendaTotal }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Vlr Venda Total">Vlr Venda Total</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.vlrVendaTotalM2 }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Vlr Venda Total/m²">Vlr Venda Total/m²</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.amm }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="AMM">AMM</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.porcentagemSobreVendas }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="% Sobre Vendas">% Sobre Vendas</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.ammM2 }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="AMM/m²">AMM/m²</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                            <aura:if isTrue="{! v.vlrCondominioComum }">
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="Vlr Condomínio Comum">Vlr Condomínio Comum</div>
+                                                </th>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                            <aura:if isTrue="{! v.vlrCondominioComumM2 }" >
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="Vlr Condomínio Comum/m²">Vlr Condomínio Comum/m²</div>
+                                                </th>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                            <aura:if isTrue="{! v.vlrFpp }" >
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="Vlr FPP">Vlr FPP</div>
+                                                </th>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                            <aura:if isTrue="{! v.vlrFppM2 }">
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="Vlr FPP/m²">Vlr FPP/m²</div>
+                                                </th>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                            <aura:if isTrue="{!v.vlrCustoOcupComum}">
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="Vlr Custo Ocup - Comum">Vlr Custo Ocup - Comum</div>
+                                                </th>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                            <aura:if isTrue="{!v.vlrCustoOcupComumM2}">
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="Vlr Custo Ocup - Comum/m²">Vlr Custo Ocup - Comum/m²</div>
+                                                </th>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.vlrGroccComum }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Vlr Grocc - Comum">Vlr Grocc - Comum</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                            <aura:if isTrue="{! v.aluguelDobrado }">
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="Aluguel Dobrado">Aluguel Dobrado</div>
+                                                </th>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                            <aura:if isTrue="{! v.nomeFantasia }">
+                                                <th scope="col">
+                                                    <div class="slds-truncate" title="Nome Fantasia">Nome Fantasia</div>
+                                                </th>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.grupoAtividadeBr }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Grupo Atividade">Grupo Atividade</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.ramoAtividadeBr }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Ramo Atividade">Ramo Atividade</div>
+                                            </th>
+                                        </aura:if>
+                                        <aura:if isTrue="{! v.tipoAtividadeBr }" >
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Tipo Atividade">Tipo Atividade</div>
+                                            </th>
+                                        </aura:if>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.listaHistorico}" var="historico">
+                                        <tr>
+                                            <!--<td data-label="Ano/Mês">
+                                                <div class="slds-truncate slds-align_absolute-center" title="{! historico.Name }">{! historico.Name }</div>
+                                            </td>-->
+                                            <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                                <aura:if isTrue="{! v.nrLuc }" >
+                                                    <td data-label="Nr Luc" aura:id="Nr Luc" class="colunaHide">
+                                                        <div class="slds-truncate" title="{! historico.TW1_Propriedade__r.Name + ' - ' + historico.TW1_Lucs_secundarias__c }">&nbsp;{! historico.TW1_Propriedade__r.Name + '' + historico.TW1_Lucs_secundarias__c }</div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.areaLuc }" >
+                                                <td data-label="Área LUC">
+                                                    <div class="slds-truncate" title="{! historico.TW1_Area__c }">&nbsp;{! historico.TW1_Area__c }</div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                                <aura:if isTrue="{! v.aluguelPercentual }" >
+                                                    <td data-label="Aluguel %">
+                                                        <div class="slds-truncate" title="{! historico.TW1_Aluguel_percentual_faturado__c}">
+                                                        	<!--&nbsp;<lightning:formattedNumber value="{! historico.TW1_Aluguel_percentual_faturado__c}" style="currency" currencyCode="BRL"/>-->
+                                                            &nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_Aluguel_percentual_faturado__c }"/>
+                                                        </div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.vlrVendaTotal }" >
+                                                <td data-label="Vlr Venda Total">
+                                                    <div class="slds-truncate" title="{! historico.TW1_Venda_Total__c }">
+														<!--&nbsp;<lightning:formattedNumber value="{! historico.TW1_Venda_Total__c }" style="currency" currencyCode="BRL"/>--> 
+                                                    	&nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_Venda_Total__c }"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.vlrVendaTotalM2 }" >
+                                                <td data-label="Vlr Venda Total/m²">
+                                                    <div class="slds-truncate" title="{! historico.Vendas_Total_m2__c }">
+                                                        <!--&nbsp;{! historico.Vendas_Total_m2__c == null ? '':'R$'}<ui:outputNumber value="{! historico.Vendas_Total_m2__c }" format=".00"/>-->
+                                                        <!--&nbsp;<lightning:formattedNumber value="{! historico.Vendas_Total_m2__c}" style="currency" currencyCode="BRL" /> -->
+                                                        &nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.Vendas_Total_m2__c }"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.amm }" >
+                                                <td data-label="AMM">
+                                                    <div class="slds-truncate" title="{! historico.TW1_AMM_faturado__c }">
+                                                        <!--&nbsp;<lightning:formattedNumber value="{! historico.TW1_AMM_faturado__c }" style="currency" currencyCode="BRL"/> -->
+                                                        &nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_AMM_faturado__c }"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.porcentagemSobreVendas }" >
+                                                <td data-label="% Sobre Vendas">
+                                                    <div class="slds-truncate" title="{!historico.TW1_Percentual_sobre_vendas__c }">
+                                                    	<!--&nbsp;<lightning:formattedNumber value="{!historico.TW1_Percentual_sobre_vendas__c}" style="currency" currencyCode="BRL"/>-->
+                                                        &nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_Percentual_sobre_vendas__c }"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.ammM2 }" >
+                                                <td data-label="AMM/m²">
+                                                    <div class="slds-truncate" title="{! historico.TW1_Valor_do_Aluguel_m2__c}">
+                                                        <!--&nbsp;{! historico.TW1_Valor_do_Aluguel_m2__c == null ? '':'R$'}<ui:outputNumber value="{! historico.TW1_Valor_do_Aluguel_m2__c }" format=".00"/>-->
+                                                        <!--<lightning:formattedNumber value="{! historico.TW1_Valor_do_Aluguel_m2__c}" style="currency" currencyCode="BRL"/>-->
+                                                    	&nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_Valor_do_Aluguel_m2__c }"/>
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                                <aura:if isTrue="{! v.vlrCondominioComum }" >
+                                                    <td data-label="Vlr Condomínio Comum">
+                                                        <div class="slds-truncate" title="{! historico.TW1_Condominio_comum__c }">
+                                                            <!--&nbsp;<lightning:formattedNumber value="{! historico.TW1_Condominio_comum__c }" style="currency" currencyCode="BRL"/>-->
+                                                            &nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_Condominio_comum__c }"/>
+                                                        </div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                                <aura:if isTrue="{! v.vlrCondominioComumM2 }" >
+                                                    <td data-label="Vlr Condomínio Comum/m²">
+                                                        <div class="slds-truncate" title="{! historico.TW1_Condominio_comum_m2__c }">
+                                                         	<!--&nbsp;{! historico.TW1_Condominio_comum_m2__c == null ? '':'R$'}<ui:outputNumber value="{! historico.TW1_Condominio_comum_m2__c }" format=".00"/>-->
+                                                            <!--<lightning:formattedNumber value="{! historico.TW1_Condominio_comum_m2__c }" style="currency" currencyCode="BRL"/>-->
+                                                            &nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_Condominio_comum_m2__c }"/>
+                                                        </div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                                <aura:if isTrue="{! v.vlrFpp }" >
+                                                    <td data-label="Vlr FPP">
+                                                        <div class="slds-truncate" title="{! historico.TW1_FPP_Total_faturado__c }">
+                                                        	<!--&nbsp;<lightning:formattedNumber value="{! historico.TW1_FPP_Total_faturado__c }" style="currency" currencyCode="BRL"/>-->
+                                                        	&nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_FPP_Total_faturado__c }"/>
+                                                        </div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                                <aura:if isTrue="{! v.vlrFppM2 }" >
+                                                    <td data-label="Vlr FPP/m²">
+                                                        <div class="slds-truncate" title="{! historico.TW1_FPP_m2__c }">
+                                                        	<!--&nbsp;{! historico.TW1_FPP_m2__c == null ? '':'R$'}<ui:outputNumber value="{! historico.TW1_FPP_m2__c }" format=".00"/>-->
+                                                            <!--<lightning:formattedNumber value="{! historico.TW1_FPP_m2__c }" style="currency" currencyCode="BRL"/>-->
+                                                            &nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_FPP_m2__c }"/>
+                                                        </div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                                <aura:if isTrue="{! v.vlrCustoOcupComum }" >
+                                                    <td data-label="Vlr Custo Ocup - Comum">
+                                                        <div class="slds-truncate" title="{! historico.TW1_Custo_Ocupacao_Comum__c }">
+                                                        	<!--&nbsp;<lightning:formattedNumber value="{! historico.TW1_Custo_Ocupacao_Comum__c }" style="currency" currencyCode="BRL"/>-->
+                                                            &nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_Custo_Ocupacao_Comum__c }"/>
+                                                        </div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                                <aura:if isTrue="{! v.vlrCustoOcupComumM2 }" >
+                                                    <td data-label="Vlr Custo Ocup - Comum/m²">
+                                                        <div class="slds-truncate" title="{! historico.TW1_Custo_Ocupacao_Comum_m2__c }">
+                                                            <!--&nbsp;{! historico.TW1_Custo_Ocupacao_Comum_m2__c == null ? '':'R$'}<ui:outputNumber value="{! historico.TW1_Custo_Ocupacao_Comum_m2__c }" format=".00"/>-->
+                                                            <!--<lightning:formattedNumber value="{! historico.TW1_Custo_Ocupacao_Comum_m2__c }" style="currency" currencyCode="BRL"/>-->
+                                                            &nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_Custo_Ocupacao_Comum_m2__c }"/>
+                                                        </div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.vlrGroccComum }" >
+                                                <td data-label="Vlr Grocc - Comum">
+                                                    <div class="slds-truncate" title="{! historico.TW1_Grocc_Comum_percentual__c }">
+                                                        <!--&nbsp;{! historico.TW1_Grocc_Comum_percentual__c == null ? '':'R$'}<ui:outputNumber value="{! historico.TW1_Grocc_Comum_percentual__c }" format=".00"/>-->
+                                                        &nbsp;<ui:outputCurrency aura:id="curr" currencySymbol="R$" value="{! historico.TW1_Grocc_Comum_percentual__c }"/>
+                                                        <!--<lightning:formattedNumber value="{! historico.TW1_Grocc_Comum_percentual__c }" style="currency" currencyCode="BRL"/>-->
+                                                    </div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                                <aura:if isTrue="{! v.aluguelDobrado }" >
+                                                    <td data-label="Aluguel Dobrado">
+                                                        <div class="slds-truncate" title="{! historico.TW1_descricao_aluguel_dobrado__c }">&nbsp;{! historico.TW1_descricao_aluguel_dobrado__c }</div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.tipoBusca != 'segmento' }" >
+                                                <aura:if isTrue="{! v.nomeFantasia }" >
+                                                    <td data-label="Nome Fantasia">
+                                                        <div class="slds-truncate" title="{! historico.TW1_Nome_fantasia__c }">&nbsp;{! historico.TW1_Nome_fantasia__c }</div>
+                                                    </td>
+                                                </aura:if>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.grupoAtividadeBr }" >
+                                                <td data-label="Grupo Atividade">
+                                                    <div class="slds-truncate" title="{! historico.TW1_Grupo_de_atividade__c }">&nbsp;{! historico.TW1_Grupo_de_atividade__c }</div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.ramoAtividadeBr }" >
+                                                <td data-label="Ramo Atividade">
+                                                    <div class="slds-truncate" title="{! historico.TW1_Ramo_de_atividade__c }">&nbsp;{! historico.TW1_Ramo_de_atividade__c }</div>
+                                                </td>
+                                            </aura:if>
+                                            <aura:if isTrue="{! v.tipoAtividadeBr }" >
+                                                <td data-label="Tipo Atividade">
+                                                    <div class="slds-truncate" title="{! historico.TW1_Tipo_de_Atividade__c }">&nbsp;{! historico.TW1_Tipo_de_Atividade__c }</div>
+                                                </td>
+                                            </aura:if>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                    </article>
+                </div>
+            </ui:scrollerWrapper>
+        </div>
+    </div>
+</aura:component>

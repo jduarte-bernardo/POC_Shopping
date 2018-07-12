@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Plano de mix</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Planos de mix</value>
+    </caseValues>
+    <fields>
+        <label><!-- Id Externo --></label>
+        <name>Id_Externo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ramo de atividade --></label>
+        <name>Ramo_de_atividade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grupo de atividade --></label>
+        <name>TW1_Grupo_de_atividade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Segmento --></label>
+        <name>TW1_Segmento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de atividade --></label>
+        <name>TW1_Tipo_de_atividade__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dependente</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dependentes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Conta Associada --></label>
+        <name>TW1_Conta_Associada__c</name>
+        <relationshipLabel><!-- Dependentes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Nascimento --></label>
+        <name>TW1_Nascimento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parentesco --></label>
+        <name>TW1_Parentesco__c</name>
+        <picklistValues>
+            <masterLabel>Avó</masterLabel>
+            <translation><!-- Avó --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Avô</masterLabel>
+            <translation><!-- Avô --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cônjuge</masterLabel>
+            <translation><!-- Cônjuge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enteado(a)</masterLabel>
+            <translation><!-- Enteado(a) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filho(a)</masterLabel>
+            <translation><!-- Filho(a) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Madrasta</masterLabel>
+            <translation><!-- Madrasta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mãe</masterLabel>
+            <translation><!-- Mãe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neto(a)</masterLabel>
+            <translation><!-- Neto(a) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Padrasto</masterLabel>
+            <translation><!-- Padrasto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pai</masterLabel>
+            <translation><!-- Pai --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sobrinho(a)</masterLabel>
+            <translation><!-- Sobrinho(a) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tio(a)</masterLabel>
+            <translation><!-- Tio(a) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sexo --></label>
+        <name>TW1_Sexo__c</name>
+        <picklistValues>
+            <masterLabel>F</masterLabel>
+            <translation><!-- F --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M</masterLabel>
+            <translation><!-- M --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Layout de Dependente</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

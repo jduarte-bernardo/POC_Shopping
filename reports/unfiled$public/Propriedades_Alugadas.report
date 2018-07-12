@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>TW1_Calendario_de_propriedades__c.TW1_Opportunidade__c</field>
+    </columns>
+    <columns>
+        <field>TW1_Calendario_de_propriedades__c.TW1_Status__c</field>
+    </columns>
+    <columns>
+        <field>TW1_Calendario_de_propriedades__c.TW1_Data_de_inicio__c</field>
+    </columns>
+    <columns>
+        <field>TW1_Calendario_de_propriedades__c.TW1_Data_de_fim__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$TW1_Propriedade__c.TW1_Shopping__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Propriedades Alugadas</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$TW1_Calendario_de_propriedades__c@TW1_Calendario_de_propriedades__c.TW1_Propriedade__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>TW1_Calendario_de_propriedades__c.TW1_Data_de_fim__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

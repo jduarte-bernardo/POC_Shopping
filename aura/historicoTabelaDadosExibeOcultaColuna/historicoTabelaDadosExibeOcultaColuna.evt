@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" >
+    <aura:attribute name="nomeColuna" type="String" />
+    <aura:attribute name="exibeColuna" type="Boolean" default="true" />
+</aura:event>

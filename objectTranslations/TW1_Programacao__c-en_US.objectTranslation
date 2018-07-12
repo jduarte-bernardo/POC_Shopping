@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Programação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programações</value>
+    </caseValues>
+    <fields>
+        <label><!-- Link --></label>
+        <name>Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Atores --></label>
+        <name>TW1_Atores__c</name>
+    </fields>
+    <fields>
+        <label><!-- Categoria --></label>
+        <name>TW1_Categoria__c</name>
+        <picklistValues>
+            <masterLabel>Animação</masterLabel>
+            <translation><!-- Animação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Animação/Infantil</masterLabel>
+            <translation><!-- Animação/Infantil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aventura</masterLabel>
+            <translation><!-- Aventura --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ação</masterLabel>
+            <translation><!-- Ação --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ação/Aventura</masterLabel>
+            <translation><!-- Ação/Aventura --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ação/Comédia</masterLabel>
+            <translation><!-- Ação/Comédia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biografia</masterLabel>
+            <translation><!-- Biografia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comédia</masterLabel>
+            <translation><!-- Comédia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comédia Dramática</masterLabel>
+            <translation><!-- Comédia Dramática --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comédia Romântica</masterLabel>
+            <translation><!-- Comédia Romântica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Desenho</masterLabel>
+            <translation><!-- Desenho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Documentário</masterLabel>
+            <translation><!-- Documentário --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drama</masterLabel>
+            <translation><!-- Drama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Erótico</masterLabel>
+            <translation><!-- Erótico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Esporte</masterLabel>
+            <translation><!-- Esporte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Família</masterLabel>
+            <translation><!-- Família --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fantasia</masterLabel>
+            <translation><!-- Fantasia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Faroeste</masterLabel>
+            <translation><!-- Faroeste --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Festival</masterLabel>
+            <translation><!-- Festival --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ficção</masterLabel>
+            <translation><!-- Ficção --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Infantil</masterLabel>
+            <translation><!-- Infantil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Musical</masterLabel>
+            <translation><!-- Musical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Policial</masterLabel>
+            <translation><!-- Policial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Romance</masterLabel>
+            <translation><!-- Romance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suspense</masterLabel>
+            <translation><!-- Suspense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suspense/Terror</masterLabel>
+            <translation><!-- Suspense/Terror --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Terror</masterLabel>
+            <translation><!-- Terror --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thriller</masterLabel>
+            <translation><!-- Thriller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trailer</masterLabel>
+            <translation><!-- Trailer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Violência</masterLabel>
+            <translation><!-- Violência --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Épico</masterLabel>
+            <translation><!-- Épico --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Classificação --></label>
+        <name>TW1_Classificacao__c</name>
+        <picklistValues>
+            <masterLabel>10 anos</masterLabel>
+            <translation><!-- 10 anos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12 anos</masterLabel>
+            <translation><!-- 12 anos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14 anos</masterLabel>
+            <translation><!-- 14 anos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16 anos</masterLabel>
+            <translation><!-- 16 anos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18 anos</masterLabel>
+            <translation><!-- 18 anos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Livre</masterLabel>
+            <translation><!-- Livre --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Direção --></label>
+        <name>TW1_Direcao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duração(min) --></label>
+        <name>TW1_Duracao_min__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nome Original --></label>
+        <name>TW1_Nome_Original__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nome do Filmes --></label>
+        <name>TW1_Nome_do_Filmes__c</name>
+    </fields>
+    <fields>
+        <label><!-- País --></label>
+        <name>TW1_Pais__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sinopse --></label>
+        <name>TW1_Sinopse__c</name>
+    </fields>
+    <fields>
+        <label><!-- URL Trailer --></label>
+        <name>TW1_URL_Trailer__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de Programação</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

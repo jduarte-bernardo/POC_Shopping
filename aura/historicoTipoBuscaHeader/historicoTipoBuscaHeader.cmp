@@ -1,0 +1,5 @@
+<aura:component >
+	<div class="slds-text-align_center slds-m-around_x-small slds-text-heading_large">
+        Selecione uma busca
+    </div>
+</aura:component>

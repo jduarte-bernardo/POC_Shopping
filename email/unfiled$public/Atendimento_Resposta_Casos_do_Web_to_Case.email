@@ -1,0 +1,6 @@
+Prezado(a) {!Case.SuppliedName},
+
+Obrigado por nos enviar sua solicitação on-line. A ocorrência # {! Case.CaseNumber}: "{! Case.Subject}" foi criada e nossa área de atendimento responderá em breve.
+
+Obrigado,
+Equipe de Atendimento ao Cliente {! Organization.Name}

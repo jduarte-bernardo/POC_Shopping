@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Propriedade da Cotação</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Propriedades da Cotação</value>
+    </caseValues>
+    <fields>
+        <label><!-- Área --></label>
+        <name>TW1_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cotação --></label>
+        <name>TW1_Cotacao__c</name>
+        <relationshipLabel><!-- Propriedades da Cotação --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Data de fim --></label>
+        <name>TW1_Data_de_fim__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data de início --></label>
+        <name>TW1_Data_de_inicio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Localização --></label>
+        <name>TW1_Localizacao__c</name>
+    </fields>
+    <fields>
+        <label><!-- Propriedade --></label>
+        <name>TW1_Propriedade__c</name>
+        <relationshipLabel><!-- Propriedades da Cotação --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Valor --></label>
+        <name>TW1_Valor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de propriedade --></label>
+        <name>TW1_tipo_de_propriedade__c</name>
+    </fields>
+    <layouts>
+        <layout>Layout de Propriedade da Cotação</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Estoque</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Estoques</value>
+    </caseValues>
+    <fields>
+        <label><!-- Brinde --></label>
+        <name>TW1_Brinde__c</name>
+        <relationshipLabel><!-- Estoques --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantidade --></label>
+        <name>TW1_Quantidade__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGL --></label>
+        <name>TW1_SGL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shopping --></label>
+        <name>TW1_Shopping__c</name>
+        <relationshipLabel><!-- Estoques --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Stand --></label>
+        <name>TW1_Stand__c</name>
+        <relationshipLabel><!-- Estoques --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tipo --></label>
+        <name>TW1_Tipo__c</name>
+        <picklistValues>
+            <masterLabel>Estoque Shopping</masterLabel>
+            <translation><!-- Estoque Shopping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estoque Stand</masterLabel>
+            <translation><!-- Estoque Stand --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Layout de Estoque</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

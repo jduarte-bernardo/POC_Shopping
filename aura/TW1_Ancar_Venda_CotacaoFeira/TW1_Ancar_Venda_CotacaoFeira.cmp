@@ -1,0 +1,352 @@
+<aura:component controller="TW1_Ancar_Venda_CotacaoFeira_LP_ctrl" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="PrimeiraEtapaAtiva" type="Boolean" default="true" />
+    <aura:attribute name="SegundaEtapaAtiva" type="Boolean" default="false" />
+    <aura:attribute name="RelatorioDisponibilidade" type="Boolean" default="false" />
+    
+    <aura:attribute name="ExistePropriedadeSelecionada" type="Boolean" />
+    <aura:attribute name="ExisteResultadoParaFiltro" type="Boolean" />
+    <aura:attribute name="BtnHideVoltar" type="Boolean" />
+    
+    <aura:attribute name="exibeBotaoDeVoltar" type="Boolean" default="false" />
+    <aura:attribute name="CotacaoSucesso" type="Boolean" default="false" />
+    
+    <aura:attribute name="NaoPermitirPesquisar" type="Boolean" default="false" />
+    <aura:attribute name="LabelBtnPesquisar" type="String" default="Pesquisar" />
+    
+    <aura:attribute name="NaoPermitirAcoes" type="Boolean" default="false" />
+    <aura:attribute name="LabelBtnSalvar" type="String" default="Salvar" />
+    
+    <aura:attribute name="recordId" type="String" default=""/>
+    <aura:attribute name="opportunityId" type="String" default=""/>
+    <aura:attribute name="TipoChamada" type="String" default=""/>
+    <aura:attribute name="urlAtual" type="String" default=""/>
+    
+    <aura:attribute name="MsgErroSalvarCotacao" type="string" />
+    <aura:attribute name="DataAtual" type="Date" />
+    <aura:attribute name="OcorreuErroEmSalvar" type="Boolean" default="false" />
+    
+    <aura:attribute name="ResultadoFiltroPropriedades" type="List" />
+    <aura:attribute name="SubTipoDePropriedade" type="List" />
+    <aura:attribute name="PropriedadesSeleciondas" type="List" />
+    <aura:attribute name="ListaTipoDePropriedade" type="List" />
+    
+    <aura:attribute name="RequestPesquisarPropriedadeDto" type="Object" />
+    <aura:attribute name="CotacaoRequestDto" type="Object" />
+    
+    <aura:attribute name="ExibeStatusTabela" type="Object" />
+    
+      <aura:attribute name="PropriedadeRelatorio" type="Object" />
+    
+    <aura:handler value="{!this}" name="init" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.PrimeiraEtapaAtiva}">
+        <div id="pnPesquisaPropriedade" class="slds-grid slds-wrap">
+            <div class="slds-size_2-of-2">
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Pesquisar propriedades">Pesquisar propriedades</span>
+                    </h3>
+                    <div aria-hidden="false" class="slds-section__content">
+                        <lightning:select aura:id="isTipos" label="Tipo de propriedades" value="{!v.RequestPesquisarPropriedadeDto.Tipo}" onchange="{!c.selecionarSubTipo}">
+                            <aura:iteration items="{!v.ListaTipoDePropriedade}" var="optTipos">
+                                <ui:inputSelectOption text="{!optTipos}" label="{!optTipos}"/>
+                            </aura:iteration>
+                        </lightning:select>
+                    </div>
+                    <div aria-hidden="false" class="slds-section__content">
+                        <lightning:select aura:id="idSubTipos" label="SubTipos" value="{!v.RequestPesquisarPropriedadeDto.SubTipo}" onchange="{!c.MudancaNoFiltro}">
+                            <aura:iteration items="{!v.SubTipoDePropriedade}" var="optSubTipos">
+                                <ui:inputSelectOption text="{!optSubTipos}" label="{!optSubTipos}"/>
+                            </aura:iteration>
+                        </lightning:select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slds-size_1-of-2" style="margin-right: .2rem; width:48% !important">
+                <ui:inputdate aura:id="idDtini" value="{!v.RequestPesquisarPropriedadeDto.DataInicio}" label="Data Início" displayDatePicker="true" change="{!c.MudancaNoFiltro}"/>
+            </div>
+            <div class="slds-size_1-of-2" style="margin-left: .2rem; width:50% !important">
+                <ui:inputdate aura:id="idDtfim" value="{!v.RequestPesquisarPropriedadeDto.DataFim}" label="Data Fim" displayDatePicker="true" change="{!c.MudancaNoFiltro}" />
+            </div>
+            
+            <div class="slds-size_2-of-2" style="padding-top:15px !important">
+                <lightning:button disabled="{!v.NaoPermitirPesquisar}" onclick="{!c.PesquisarPropriedade}" class="slds-col slds-size_2-of-2 slds-large-size_12-of-12" variant="brand" label="{!v.LabelBtnPesquisar}" />
+            </div>
+            
+            <div class="slds-size_2-of-2">
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Resultado de pesquisa">Resultado da pesquisa de propriedade</span>
+                    </h3>
+                    <div aria-hidden="false" class="slds-section__content">
+                        <!-- Caso o filtro retorne valor, então mostra lista || Mostra mensagem de filtro não tem nenhum item -->
+                        <aura:if isTrue="{!v.ExisteResultadoParaFiltro}">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-1">
+                                    <div class="{! $Browser.isAndroid ? 'slds-scrollable' : 'slds-scrollable-ios-friendly' }" style="height:150px;overflow-x:scroll">
+                                        <article>
+                                            <ui:scrollerWrapper class="scrollerSize">
+                                                <table width="100%" class="slds-table slds-table_bordered slds-table_cell-buffer">
+                                                    <thead>
+                                                        <tr class="slds-text-title_caps">
+                                                            <th scope="col">
+                                                                <div class="slds-truncate" title="Adicionar">-</div>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <div class="slds-truncate" title="Nome">Nome</div>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <div class="slds-truncate" title="Nome">Status</div>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <div class="slds-truncate" title="Valor">Valor</div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <aura:iteration items="{!v.ResultadoFiltroPropriedades}" var="linhaPropriedade" indexVar="index">
+                                                            <tr>
+                                                                <td class="slds-truncate">
+                                                                    <aura:if isTrue="{!linhaPropriedade.Status == 'Vaga'}">
+                                                                        <button class=".slds-button_x-small" onclick="{!c.AdcionarPropriedadeLista}" id="{!linhaPropriedade.Id}">+</button>
+                                                                    </aura:if>
+                                                                </td>
+                                                                <td class="slds-truncate"><a onclick="{!c.AbrirRelatorioOcupacoes}"  name="{!linhaPropriedade.Id}">{!linhaPropriedade.Name}</a></td>
+                                                                <td class="slds-truncate">{!linhaPropriedade.Status}</td>
+                                                                <td class="slds-truncate">
+                                                                    <span>
+                                                                        <lightning:formattedNumber value="{!linhaPropriedade.Valor_de_tabela }" style="currency" currencyCode="BRL" />    
+                                                                    </span>                          
+                                                                </td>
+                                                            </tr>
+                                                        </aura:iteration>
+                                                    </tbody>
+                                                </table>
+                                            </ui:scrollerWrapper>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div> 
+                            <aura:set attribute="else">
+                                
+                                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                                    <h2>Nenhum resultado encontrado para o filtro.</h2>
+                                </div>
+                            </aura:set>
+                            
+                        </aura:if>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slds-size_2-of-2">
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Lista de propriedades escolhidas">Lista de propriedades escolhidas</span>
+                    </h3>
+                    <div aria-hidden="false" class="slds-section__content">
+                        <aura:if isTrue="{!v.ExistePropriedadeSelecionada}">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-1">
+                                    <div class="{! $Browser.isAndroid ? 'slds-scrollable' : 'slds-scrollable-ios-friendly' }" style="height:150px;overflow-x:scroll">
+                                        <article>
+                                            <ui:scrollerWrapper class="scrollerSize">
+                                                <table width="100%" class="slds-table slds-table_bordered slds-table_cell-buffer">
+                                                    <thead>
+                                                        <tr class="slds-text-title_caps">
+                                                            <th scope="col">
+                                                                <div class="slds-truncate" title="Adicionar">-</div>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <div class="slds-truncate" title="Nome">Nome</div>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <div class="slds-truncate" title="Nome">Data início</div>
+                                                            </th>
+                                                            <th scope="col">
+                                                                <div class="slds-truncate" title="Valor">Data fim</div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <aura:iteration items="{!v.PropriedadesSeleciondas}" var="tabProp" indexVar="index">
+                                                            <tr>
+                                                                <td class="slds-truncate">
+                                                                    <button class=".slds-button_x-small" onclick="{!c.RemoverPropriedadeLista}" id="{!tabProp.IdPropriedade + tabProp.DataInicio + tabProp.DataFim}">-</button>
+                                                                </td>
+                                                                <td class="slds-truncate">{!tabProp.Name} </td>
+                                                                <td class="slds-truncate"><ui:outputDate value="{!tabProp.DataInicio}"/></td>
+                                                                <td class="slds-truncate"><ui:outputDate value="{!tabProp.DataFim}"/></td>
+                                                            </tr>
+                                                        </aura:iteration>
+                                                    </tbody>
+                                                </table>
+                                            </ui:scrollerWrapper>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1">
+                                    <lightning:button class="slds-col slds-size_2-of-2 slds-large-size_12-of-12" variant="brand" label="Próximo" onclick="{!c.MontarCotacao}" />
+                                </div>
+                            </div> 
+                            
+                            <aura:set attribute="else">
+                                
+                                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                                    <h2>Nenhuma propriedade foi selecionada.</h2>
+                                </div>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.SegundaEtapaAtiva}">
+        
+        <div class="slds-grid slds-wrap">
+            <div class="slds-section slds-is-open" style="width:100% !important">
+                <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Pesquisar propriedades">Dados da cotação</span>
+                </h3>
+                <div aria-hidden="false" class="slds-section__content">
+                    <!--
+                    <div class="slds-form slds-form_stacked">
+                        <div class="slds-form-element">
+                            <div class="slds-form-element__control">
+                                <ui:inputdate aura:id="idDtini" value="{!v.CotacaoRequestDto.DataPagamento}" label="Data Pagamento" displayDatePicker="true" required="true" />
+                            </div>
+                        </div>
+                  
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="input-id-02">Atividade (Tipo de operação)</label>
+                            <div class="slds-form-element__control">
+                                <ui:inputTextArea aura:id="txtAtividade" class="slds-textarea" placeholder="Atividade (Tipo de operação)" value="{!v.CotacaoRequestDto.Atividade}"/>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="input-id-02">Observação</label>
+                            <div class="slds-form-element__control">
+                                <ui:inputTextArea aura:id="txtObservacao" class="slds-textarea" placeholder="Observação" value="{!v.CotacaoRequestDto.Observacao}"/>
+                            </div>
+                        </div>
+                    </div>
+-->
+                </div>
+            </div>
+                <div class="slds-col slds-size_1-of-2" style="margin-right: .2rem; width:48% !important;">
+                <div class="slds-form-element">
+                    <span>
+                        <ui:inputdate aura:id="idDtini" value="{!v.CotacaoRequestDto.DataPagamento}" label="Primeiro Pagamento" displayDatePicker="true" required="true" />
+                    </span>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-2" style="margin-left: .2rem; width:50% !important;">
+                <div class="slds-form-element">
+                    <span>
+                        <ui:inputdate aura:id="idDtFim" value="{!v.CotacaoRequestDto.SegundaDataPagamento}" label="Segundo pagamento" displayDatePicker="true" />
+                    </span>
+                </div>
+            </div>
+            
+            <div class="slds-col slds-size_2-of-2">
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="input-id-02">Atividade (Descrição da ação)</label>
+                    <div class="slds-form-element__control">
+                        <ui:inputTextArea aura:id="txtAtividade" class="slds-textarea" placeholder="Atividade (Descrição da ação)" value="{!v.CotacaoRequestDto.Atividade}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_2-of-2" >
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="input-id-02">Observação</label>
+                    <div class="slds-form-element__control">
+                        <ui:inputTextArea aura:id="txtObservacao" class="slds-textarea" placeholder="Observação" value="{!v.CotacaoRequestDto.Observacao}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-2" style="margin-right: .2rem; width:48% !important;">
+                <div class="slds-form-element">
+                    <span>
+                        <lightning:input aura:id="txtValorDesconto" label="Valor do desconto" type="number" step="0.01" name="Alugueldoperiodo" formatter="currency" value="{!v.CotacaoRequestDto.ValorDesconto}"  />
+                    </span>
+                </div>
+            </div>
+            <aura:iteration items="{!v.CotacaoRequestDto.ListaDePropriedade}" var="linhaPropriedade" indexVar="index">
+                <div class="slds-section slds-is-open" style="width:100% !important">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Pesquisar propriedades">{!linhaPropriedade.Nome}</span>
+                    </h3>
+                    <div aria-hidden="false" class="slds-section__content">
+                    </div>
+                </div>
+                <div class="slds-size_1-of-2" style="margin-right: .2rem; width:48% !important;">
+                    <!-- <ui:inputdate aura:id="idDtini" value="{!linhaPropriedade.DataInicio}" label="Data de Início" displayDatePicker="true"  />-->
+                    <label class="slds-form-element__label" for="text-input-id-1">Data fim de vigência</label>
+                    <div class="slds-form-element__control">
+                        <ui:outputDate value="{!linhaPropriedade.DataInicio}"/>
+                    </div>
+                </div>
+                <div class="slds-size_1-of-2" style="margin-left: .2rem; width:50% !important;" >
+                    <!--<ui:inputdate aura:id="idDtFim" value="{!linhaPropriedade.DataFim}" label="Data de Fim" displayDatePicker="true"  />-->
+                    
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="text-input-id-1">Data fim de vigência</label>
+                        <div class="slds-form-element__control">
+                            <ui:outputDate value="{!linhaPropriedade.DataFim}"/>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="slds-col slds-size_1-of-2" style="margin-right: .2rem; width:48% !important;">
+                    <span>
+                        <lightning:input aura:id="vidAlugueldoperiodo" label="Aluguel do período" type="number" step="0.01" name="Alugueldoperiodo" formatter="currency" value="{!linhaPropriedade.ValorAluguel}"  required="true" />
+                    </span>
+                </div>
+                <div class="slds-col slds-size_1-of-2" style="margin-left: .2rem; width:50% !important;">
+                    <span>
+                        <lightning:input aura:id="vidAmm2" label="Área utilizada" value="{!linhaPropriedade.AreaUtilizada}" type="number" step='0.01'  maxlength="40"  name="AreaUtilizada"  />
+                    </span>
+                </div>  
+            </aura:iteration>
+            <aura:if isTrue="{!v.BtnHideVoltar}">
+                <div class="slds-size_1-of-2" style="margin-right: .2rem; width:48% !important; padding-top: 15px">
+                    <lightning:button aura:id="BtnVoltar" disabled="{!v.NaoPermitirAcoes}" class="slds-col slds-size_2-of-2 slds-large-size_12-of-12" variant="brand" label="Voltar" onclick="{!c.VoltarPrimeiraEtapa}" />
+                </div>
+            </aura:if>
+            <div class="slds-size_1-of-2" style="margin-left: .2rem; width:50% !important; padding-top: 15px">
+                <lightning:button disabled="{!v.NaoPermitirAcoes}" class="slds-col slds-size_2-of-2 slds-large-size_12-of-12" variant="brand" label="{!v.LabelBtnSalvar}" onclick="{!c.SalvarCotacao}" />
+            </div>
+            <aura:if isTrue="{!v.OcorreuErroEmSalvar}">
+                <div class="slds-col slds-size_2-of-2" style="padding-top:5px">
+                    <div  class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                        <h2>{!v.MsgErroSalvarCotacao}</h2>
+                    </div>
+                </div>
+            </aura:if>
+            
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.CotacaoSucesso}">
+        <div class="slds-size_2-of-2">
+            <div class="slds-align_absolute-center slds-text-heading_medium" style="height:100px;">
+                Cotação salva com sucesso!
+            </div>
+            <div align="center">
+                <aura:if isTrue="{!v.exibeBotaoDeVoltar}">
+                    <br/>
+                    <lightning:button class="slds-col" variant="brand" label="voltar" onclick="{!c.acionaBotaoDevoltar}" />
+                </aura:if>
+            </div>
+        </div>       
+    </aura:if>
+     <aura:if isTrue="{!v.RelatorioDisponibilidade}">
+        <c:TW1_Ancar_Venda_RelatorioDisponibilidadePeriodo aura:id="child"  />
+        <div style="padding-top:15px !important;">
+            <lightning:button class="slds-col" variant="brand" label="voltar" onclick="{!c.VoltarPrimeiraEtapaPosRelatorio}" />
+        </div>
+    </aura:if>
+</aura:component>

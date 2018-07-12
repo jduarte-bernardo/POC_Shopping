@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="shoppingBuscado" type="String" default="" />
+    
+    <aura:registerEvent name="setShoppingBuscado" type="c:historicoFiltrosBuscaSetShoppingBuscado" />
+    <aura:registerEvent name="showTabelaDados" type="c:historicoIrTabelaDados"/>
+    
+    <div class="slds-form-element slds-p-around_xx-large slds-box">
+        <label class="slds-form-element__label" for="text-input-id-1">Busca por Shopping</label>
+        
+        <div class="slds-form-element__control slds-input-has-fixed-addon">
+            <ui:inputText class="slds-input" placeholder="Digite o Shopping" value="{!v.shoppingBuscado}" ></ui:inputText>
+            <lightning:button class="slds-button slds-button_neutral" onclick="{!c.buscarShopping}">Buscar</lightning:button>
+        </div>
+        
+    </div>
+</aura:component>
